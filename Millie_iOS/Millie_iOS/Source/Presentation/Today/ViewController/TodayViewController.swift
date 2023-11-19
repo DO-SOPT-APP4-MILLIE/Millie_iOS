@@ -8,12 +8,18 @@
 import UIKit
 
 class TodayViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+//        target()
+//        register()
+//        
+//        setStyle()
+//        setHieararchy()
+//        setLayout()
     }
-
-
+    
+    
 }
 
