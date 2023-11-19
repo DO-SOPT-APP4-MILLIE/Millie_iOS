@@ -7,27 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C17E34D2B0885C800F58D32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17E34C2B0885C800F58D32 /* AppDelegate.swift */; };
-		2C17E34F2B0885C800F58D32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17E34E2B0885C800F58D32 /* SceneDelegate.swift */; };
-		2C17E3512B0885C800F58D32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17E3502B0885C800F58D32 /* ViewController.swift */; };
-		2C17E3542B0885C800F58D32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C17E3522B0885C800F58D32 /* Main.storyboard */; };
-		2C17E3562B0885CA00F58D32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C17E3552B0885CA00F58D32 /* Assets.xcassets */; };
-		2C17E3592B0885CA00F58D32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C17E3572B0885CA00F58D32 /* LaunchScreen.storyboard */; };
+		2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */; };
+		2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */; };
+		2CA96A822B0A7D00007074F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A812B0A7D00007074F8 /* ViewController.swift */; };
+		2CA96A872B0A7D01007074F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA96A862B0A7D01007074F8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C17E3492B0885C800F58D32 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C17E34C2B0885C800F58D32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C17E34E2B0885C800F58D32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C17E3502B0885C800F58D32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C17E3532B0885C800F58D32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2C17E3552B0885CA00F58D32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2C17E3582B0885CA00F58D32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2C17E35A2B0885CA00F58D32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2CA96A812B0A7D00007074F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CA96A862B0A7D01007074F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CA96A8B2B0A7D01007074F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C17E3462B0885C800F58D32 /* Frameworks */ = {
+		2CA96A772B0A7D00007074F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +33,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C17E3402B0885C800F58D32 = {
+		2CA96A712B0A7D00007074F8 = {
 			isa = PBXGroup;
 			children = (
-				2C17E34B2B0885C800F58D32 /* Millie_iOS */,
-				2C17E34A2B0885C800F58D32 /* Products */,
+				2CA96A7C2B0A7D00007074F8 /* Millie_iOS */,
+				2CA96A7B2B0A7D00007074F8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2C17E34A2B0885C800F58D32 /* Products */ = {
+		2CA96A7B2B0A7D00007074F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C17E3492B0885C800F58D32 /* Millie_iOS.app */,
+				2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C17E34B2B0885C800F58D32 /* Millie_iOS */ = {
+		2CA96A7C2B0A7D00007074F8 /* Millie_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2C17E34C2B0885C800F58D32 /* AppDelegate.swift */,
-				2C17E34E2B0885C800F58D32 /* SceneDelegate.swift */,
-				2C17E3502B0885C800F58D32 /* ViewController.swift */,
-				2C17E3522B0885C800F58D32 /* Main.storyboard */,
-				2C17E3552B0885CA00F58D32 /* Assets.xcassets */,
-				2C17E3572B0885CA00F58D32 /* LaunchScreen.storyboard */,
-				2C17E35A2B0885CA00F58D32 /* Info.plist */,
+				2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */,
+				2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */,
+				2CA96A812B0A7D00007074F8 /* ViewController.swift */,
+				2CA96A862B0A7D01007074F8 /* Assets.xcassets */,
+				2CA96A8B2B0A7D01007074F8 /* Info.plist */,
 			);
 			path = Millie_iOS;
 			sourceTree = "<group>";
@@ -70,13 +64,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C17E3482B0885C800F58D32 /* Millie_iOS */ = {
+		2CA96A792B0A7D00007074F8 /* Millie_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C17E35D2B0885CA00F58D32 /* Build configuration list for PBXNativeTarget "Millie_iOS" */;
+			buildConfigurationList = 2CA96A8E2B0A7D01007074F8 /* Build configuration list for PBXNativeTarget "Millie_iOS" */;
 			buildPhases = (
-				2C17E3452B0885C800F58D32 /* Sources */,
-				2C17E3462B0885C800F58D32 /* Frameworks */,
-				2C17E3472B0885C800F58D32 /* Resources */,
+				2CA96A762B0A7D00007074F8 /* Sources */,
+				2CA96A772B0A7D00007074F8 /* Frameworks */,
+				2CA96A782B0A7D00007074F8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +78,25 @@
 			);
 			name = Millie_iOS;
 			productName = Millie_iOS;
-			productReference = 2C17E3492B0885C800F58D32 /* Millie_iOS.app */;
+			productReference = 2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2C17E3412B0885C800F58D32 /* Project object */ = {
+		2CA96A722B0A7D00007074F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					2C17E3482B0885C800F58D32 = {
+					2CA96A792B0A7D00007074F8 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 2C17E3442B0885C800F58D32 /* Build configuration list for PBXProject "Millie_iOS" */;
+			buildConfigurationList = 2CA96A752B0A7D00007074F8 /* Build configuration list for PBXProject "Millie_iOS" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,63 +104,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 2C17E3402B0885C800F58D32;
-			productRefGroup = 2C17E34A2B0885C800F58D32 /* Products */;
+			mainGroup = 2CA96A712B0A7D00007074F8;
+			productRefGroup = 2CA96A7B2B0A7D00007074F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C17E3482B0885C800F58D32 /* Millie_iOS */,
+				2CA96A792B0A7D00007074F8 /* Millie_iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C17E3472B0885C800F58D32 /* Resources */ = {
+		2CA96A782B0A7D00007074F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C17E3592B0885CA00F58D32 /* LaunchScreen.storyboard in Resources */,
-				2C17E3562B0885CA00F58D32 /* Assets.xcassets in Resources */,
-				2C17E3542B0885C800F58D32 /* Main.storyboard in Resources */,
+				2CA96A872B0A7D01007074F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2C17E3452B0885C800F58D32 /* Sources */ = {
+		2CA96A762B0A7D00007074F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C17E3512B0885C800F58D32 /* ViewController.swift in Sources */,
-				2C17E34D2B0885C800F58D32 /* AppDelegate.swift in Sources */,
-				2C17E34F2B0885C800F58D32 /* SceneDelegate.swift in Sources */,
+				2CA96A822B0A7D00007074F8 /* ViewController.swift in Sources */,
+				2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */,
+				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		2C17E3522B0885C800F58D32 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C17E3532B0885C800F58D32 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2C17E3572B0885CA00F58D32 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C17E3582B0885CA00F58D32 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		2C17E35B2B0885CA00F58D32 /* Debug */ = {
+		2CA96A8C2B0A7D01007074F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,7 +202,7 @@
 			};
 			name = Debug;
 		};
-		2C17E35C2B0885CA00F58D32 /* Release */ = {
+		2CA96A8D2B0A7D01007074F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -285,7 +258,7 @@
 			};
 			name = Release;
 		};
-		2C17E35E2B0885CA00F58D32 /* Debug */ = {
+		2CA96A8F2B0A7D01007074F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -297,7 +270,6 @@
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		2C17E35F2B0885CA00F58D32 /* Release */ = {
+		2CA96A902B0A7D01007074F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -325,7 +297,6 @@
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C17E3442B0885C800F58D32 /* Build configuration list for PBXProject "Millie_iOS" */ = {
+		2CA96A752B0A7D00007074F8 /* Build configuration list for PBXProject "Millie_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C17E35B2B0885CA00F58D32 /* Debug */,
-				2C17E35C2B0885CA00F58D32 /* Release */,
+				2CA96A8C2B0A7D01007074F8 /* Debug */,
+				2CA96A8D2B0A7D01007074F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C17E35D2B0885CA00F58D32 /* Build configuration list for PBXNativeTarget "Millie_iOS" */ = {
+		2CA96A8E2B0A7D01007074F8 /* Build configuration list for PBXNativeTarget "Millie_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C17E35E2B0885CA00F58D32 /* Debug */,
-				2C17E35F2B0885CA00F58D32 /* Release */,
+				2CA96A8F2B0A7D01007074F8 /* Debug */,
+				2CA96A902B0A7D01007074F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2C17E3412B0885C800F58D32 /* Project object */;
+	rootObject = 2CA96A722B0A7D00007074F8 /* Project object */;
 }

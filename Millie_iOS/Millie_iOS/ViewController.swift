@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Millie_iOS
 //
-//  Created by 신지원 on 11/18/23.
+//  Created by 신지원 on 11/20/23.
 //
 
 import UIKit
