@@ -21,6 +21,7 @@
 		2CA96AAE2B0A8578007074F8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2CA96AAD2B0A8578007074F8 /* Kingfisher */; };
 		2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AAF2B0A8590007074F8 /* UIImageView+.swift */; };
 		2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB12B0A85AE007074F8 /* UIButton+.swift */; };
+		2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB32B0A865B007074F8 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		2CA96AAA2B0A8314007074F8 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		2CA96AAF2B0A8590007074F8 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		2CA96AB12B0A85AE007074F8 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		2CA96AB32B0A865B007074F8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				2CA96AAA2B0A8314007074F8 /* UIFont+.swift */,
 				2CA96AAF2B0A8590007074F8 /* UIImageView+.swift */,
 				2CA96AB12B0A85AE007074F8 /* UIButton+.swift */,
+				2CA96AB32B0A865B007074F8 /* UIColor+.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */,
+				2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */,
 				2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
 				2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */,
