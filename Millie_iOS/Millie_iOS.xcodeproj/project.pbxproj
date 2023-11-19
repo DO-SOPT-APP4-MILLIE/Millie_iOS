@@ -13,6 +13,7 @@
 		2CA96A872B0A7D01007074F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA96A862B0A7D01007074F8 /* Assets.xcassets */; };
 		2CA96A9F2B0A7F62007074F8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2CA96A9E2B0A7F62007074F8 /* SnapKit */; };
 		2CA96AA12B0A7F62007074F8 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2CA96AA02B0A7F62007074F8 /* SnapKit-Dynamic */; };
+		2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AA22B0A7FC9007074F8 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2CA96A812B0A7D00007074F8 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2CA96A862B0A7D01007074F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CA96A8B2B0A7D01007074F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA96AA22B0A7FC9007074F8 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		2CA96A932B0A7E13007074F8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				2CA96AA22B0A7FC9007074F8 /* Image.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
+				2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */,
 				2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */,
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 			);
