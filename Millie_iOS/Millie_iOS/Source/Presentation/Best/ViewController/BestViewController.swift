@@ -23,7 +23,10 @@ final class BestViewController: UIViewController {
         return button
     }()
     
-    private let scrollView: UIScrollView = {
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
+    
+    private let categoryScrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
@@ -62,20 +65,32 @@ final class BestViewController: UIViewController {
     }
     
     private func setupHierarchy() {
-        view.addSubviews(scrollView)
-        scrollView.addSubview(categoryStackView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubviews(categoryScrollView)
+        categoryScrollView.addSubview(categoryStackView)
     }
     
     private func setupLayout() {
         scrollView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(16)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.trailing.bottom.equalToSuperview()
+        }
+        
+        contentView.snp.makeConstraints {
+            $0.edges.width.equalToSuperview()
+            $0.height.equalTo(1000)
+        }
+        
+        categoryScrollView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(16)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(42)
         }
         
         categoryStackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.left.right.equalToSuperview().inset(25)
+            $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
     
