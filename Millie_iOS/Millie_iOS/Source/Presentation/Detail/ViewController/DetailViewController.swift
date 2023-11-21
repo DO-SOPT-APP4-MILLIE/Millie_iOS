@@ -268,6 +268,42 @@ class DetailViewController: UIViewController {
         view.backgroundColor = .lightGrey02
         return view
     }()
+    
+    private let popularTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "성별·연령별 인기 분포"
+        label.textColor = .darkGrey03
+        label.font = .spoqaHanSanNeo(.bold, size: 16)
+        return label
+    }()
+    
+    private let popularImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "detail_popular_gragh")
+        imageView.contentMode = .scaleAspectFill
+        
+        imageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.06).cgColor
+        imageView.layer.shadowOpacity = 1
+        imageView.layer.shadowRadius = 20
+        imageView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        
+        return imageView
+    }()
+    
+    private let popularDescriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "이 책이 속한 경제경영 분야\n역시 20대 여성이 가장 즐겨보고 있어요."
+        label.textColor = .darkGrey03
+        label.font = .spoqaHanSanNeo(.bold, size: 16)
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 10
+        label.backgroundColor = .lightGrey02
+        
+        return label
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -401,6 +437,32 @@ class DetailViewController: UIViewController {
             $0.centerY.equalTo(wandokPointIconImageView.snp.centerY)
             $0.leading.equalTo(wandokDivider.snp.trailing).offset(8)
         }
+        
+        contentView.addSubviews(divider2, popularTitleLabel, popularImageView, popularDescriptionLabel)
+        
+        divider2.snp.makeConstraints {
+            $0.top.equalTo(wandokTextLabel.snp.bottom).offset(16)
+            $0.leading.trailing.equalTo(contentView)
+            $0.height.equalTo(11)
+        }
+        
+        popularTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(divider2.snp.bottom).offset(22)
+            $0.leading.equalTo(contentView.snp.leading).offset(24)
+        }
+        
+        popularImageView.snp.makeConstraints {
+            $0.top.equalTo(popularTitleLabel.snp.bottom).offset(12)
+//            $0.width.equalTo(contentView.snp.width)
+            $0.leading.trailing.equalTo(contentView)
+        }
+        
+        popularDescriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(popularImageView.snp.bottom).offset(10)
+            $0.leading.trailing.equalTo(contentView).inset(24)
+            $0.height.equalTo(74)
+        }
+        
     }
     
     @objc
