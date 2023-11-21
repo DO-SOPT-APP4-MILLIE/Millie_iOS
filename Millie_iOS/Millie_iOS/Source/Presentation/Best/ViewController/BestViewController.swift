@@ -42,6 +42,12 @@ final class BestViewController: UIViewController {
         return label
     }()
     
+    private let dividerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGrey04
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,7 +82,8 @@ final class BestViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubviews(categoryScrollView,
-                               descriptionLabel)
+                                descriptionLabel,
+                                dividerView)
         categoryScrollView.addSubview(categoryStackView)
     }
     
@@ -105,6 +112,12 @@ final class BestViewController: UIViewController {
         descriptionLabel.snp.makeConstraints {
             $0.top.equalTo(categoryScrollView.snp.bottom).offset(10)
             $0.leading.equalToSuperview().inset(24)
+        }
+        
+        dividerView.snp.makeConstraints {
+            $0.top.equalTo(descriptionLabel.snp.bottom).offset(27)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(1)
         }
     }
     
