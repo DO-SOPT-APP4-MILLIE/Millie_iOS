@@ -403,6 +403,13 @@ class DetailViewController: UIViewController {
         
         return label
     }()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.bookInfoDividerView.layer.addBorder([.right, .left], color: .lightGrey04, width: 1)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
