@@ -55,6 +55,168 @@ class DetailViewController: UIViewController {
         return button
     }()
     
+    private let bookImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "detail_img_book")
+        imageView.contentMode = .scaleAspectFit
+        
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1).cgColor
+        
+        imageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        imageView.layer.shadowOpacity = 1
+        imageView.layer.shadowRadius = 8
+        imageView.layer.shadowOffset = CGSize(width: 4, height: 8)
+        
+        return imageView
+    }()
+    
+    private let bookTitle: UILabel = {
+        let label = UILabel()
+        label.text = "트렌드 코리아 2024"
+        label.textColor = .darkGrey03
+        label.font = .spoqaHanSanNeo(.bold, size: 20)
+        
+        return label
+    }()
+    
+    private let bookAuthors: UILabel = {
+        let label = UILabel()
+        label.text = "김난도, 전미영, 최지혜, 이수진, 권정윤, 한다혜, 이준영, 이향은,…"
+        label.textColor = .lightGrey07
+        label.font = .spoqaHanSanNeo(.regular, size: 12)
+        
+        return label
+    }()
+    
+    private let bookInfoStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.backgroundColor = .clear
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
+        stackView.spacing = 60
+        
+        return stackView
+    }()
+    
+    private let bookInfoDividerView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    private let archivedStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .equalCentering
+        stackView.alignment = .center
+        stackView.spacing = 2
+        
+        return stackView
+    }()
+    
+    private let postStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.backgroundColor = .clear
+        stackView.axis = .vertical
+        stackView.distribution = .equalCentering
+        stackView.alignment = .center
+        stackView.spacing = 2
+        
+        return stackView
+    }()
+    
+    private let reviewStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .equalCentering
+        stackView.alignment = .center
+        stackView.spacing = 2
+        
+        return stackView
+    }()
+    
+    private let archivedIcon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "detail_profile")
+        imageView.contentMode = .scaleAspectFit
+        
+        return imageView
+    }()
+    
+    private let archivedLabel: UILabel = {
+        let label = UILabel()
+        label.text = "이 책이 담긴 서재"
+        label.textColor = .darkGrey01
+        label.font = .spoqaHanSanNeo(.regular, size: 10)
+        return label
+    }()
+    
+    private let archivedCountLabel: UILabel = {
+        let label = UILabel()
+        label.text = "2.6만 개+"
+        label.textColor = .darkGrey03
+        label.font = .spoqaHanSanNeo(.bold, size: 14)
+        
+        return label
+    }()
+    
+    private let postIcon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "detail_ic_post_line")
+        imageView.contentMode = .scaleAspectFit
+        
+        return imageView
+    }()
+    
+    private let postLabel: UILabel = {
+        let label = UILabel()
+        label.text = "포스트"
+        label.textColor = .darkGrey01
+        label.font = .spoqaHanSanNeo(.regular, size: 10)
+        return label
+    }()
+    
+    private let postCountLabel: UILabel = {
+        let label = UILabel()
+        label.text = "4개"
+        label.textColor = .darkGrey03
+        label.font = .spoqaHanSanNeo(.bold, size: 14)
+        
+        return label
+    }()
+    
+    private let reviewIcon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "detail_ic_post_line")
+        imageView.contentMode = .scaleAspectFit
+        
+        return imageView
+    }()
+    
+    private let reviewLabel: UILabel = {
+        let label = UILabel()
+        label.text = "한 줄 리뷰"
+        label.textColor = .darkGrey01
+        label.font = .spoqaHanSanNeo(.regular, size: 10)
+        return label
+    }()
+    
+    private let reviewCountLabel: UILabel = {
+        let label = UILabel()
+        label.text = "29개"
+        label.textColor = .darkGrey03
+        label.font = .spoqaHanSanNeo(.bold, size: 14)
+        
+        return label
+    }()
+    
+    private let divider1: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGrey02
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,6 +267,55 @@ class DetailViewController: UIViewController {
             $0.width.equalTo(97)
             $0.height.equalTo(36)
         }
+        
+        contentView.addSubviews(bookImageView, bookTitle, bookAuthors)
+        
+        bookImageView.snp.makeConstraints {
+            $0.top.equalTo(electricBookButton.snp.bottom).offset(26)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(220)
+        }
+        
+        bookTitle.snp.makeConstraints {
+            $0.top.equalTo(bookImageView.snp.bottom).offset(24)
+            $0.centerX.equalToSuperview()
+        }
+        
+        bookAuthors.snp.makeConstraints {
+            $0.top.equalTo(bookTitle.snp.bottom).offset(4)
+            $0.centerX.equalToSuperview()
+        }
+        
+        contentView.addSubviews(bookInfoStackView, bookInfoDividerView)
+        bookInfoStackView.addArrangedSubviews(archivedStackView, postStackView, reviewStackView)
+        
+        bookInfoStackView.snp.makeConstraints {
+            $0.top.equalTo(bookAuthors.snp.bottom).offset(14)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(65)
+        }
+        
+        bookInfoDividerView.snp.makeConstraints {
+            $0.top.equalTo(bookAuthors.snp.bottom).offset(26)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(127)
+            $0.height.equalTo(40)
+        }
+        
+        archivedStackView.addArrangedSubviews(archivedIcon, archivedLabel, archivedCountLabel)
+        
+        postStackView.addArrangedSubviews(postIcon, postLabel, postCountLabel)
+        
+        reviewStackView.addArrangedSubviews(reviewIcon, reviewLabel, reviewCountLabel)
+        
+        contentView.addSubview(divider1)
+        
+        divider1.snp.makeConstraints {
+            $0.top.equalTo(bookInfoStackView.snp.bottom).offset(26)
+            $0.leading.trailing.equalTo(contentView)
+            $0.height.equalTo(11)
+        }
+        
     }
     
     @objc
