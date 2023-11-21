@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_feed_line.png",
+      "filename" : "best_ic_feed_line.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "best_ic_feed_line@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "best_ic_feed_line@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

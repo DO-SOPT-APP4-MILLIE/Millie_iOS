@@ -109,6 +109,33 @@ final class BestViewController: UIViewController {
         return view
     }()
     
+    private let countLabel: UILabel = {
+        let label = UILabel()
+        label.font = .millieSubHeader2
+        label.textColor = .darkGrey03
+        return label
+    }()
+    
+    private let feedButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Image.feed, for: .normal)
+        return button
+    }()
+    
+    private let gridButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Image.grid, for: .normal)
+        return button
+    }()
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.separatorColor = .lightGrey02
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+        tableView.isScrollEnabled = false
+        return tableView
+    }()
+    
     private let upButton: UIButton = {
         let button = UIButton()
         button.setImage(Image.arrowTop, for: .normal)
@@ -126,6 +153,7 @@ final class BestViewController: UIViewController {
         
         target()
         register()
+        delegate()
 
         setupStyle()
         setupHierarchy()
@@ -143,7 +171,11 @@ final class BestViewController: UIViewController {
     }
     
     private func register() {
-        
+        tableView.register(BestTableViewCell.self, forCellReuseIdentifier: BestTableViewCell.identifier)
+    }
+    
+    private func delegate() {
+        tableView.dataSource = self
     }
     
     private func setupStyle() {
@@ -153,6 +185,9 @@ final class BestViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: heartButton)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.millieHeader3]
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        
+        countLabel.text = "총 \(booksList.count)권"
     }
     
     private func setupHierarchy() {
@@ -161,6 +196,10 @@ final class BestViewController: UIViewController {
         contentView.addSubviews(categoryScrollView,
                                 descriptionLabel,
                                 dividerView,
+                                countLabel,
+                                feedButton,
+                                gridButton,
+                                tableView,
                                 upButton)
         categoryScrollView.addSubview(categoryStackView)
     }
@@ -173,7 +212,6 @@ final class BestViewController: UIViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalToSuperview()
-            $0.height.equalTo(1000)
         }
         
         categoryScrollView.snp.makeConstraints {
@@ -198,6 +236,29 @@ final class BestViewController: UIViewController {
             $0.height.equalTo(1)
         }
         
+        countLabel.snp.makeConstraints {
+            $0.centerY.equalTo(feedButton.snp.centerY)
+            $0.leading.equalToSuperview().inset(22)
+        }
+        
+        feedButton.snp.makeConstraints {
+            $0.top.equalTo(dividerView.snp.bottom).offset(24)
+            $0.trailing.equalTo(gridButton.snp.leading)
+            $0.size.equalTo(24)
+        }
+        
+        gridButton.snp.makeConstraints {
+            $0.top.equalTo(dividerView.snp.bottom).offset(24)
+            $0.trailing.equalToSuperview().inset(22)
+            $0.size.equalTo(24)
+        }
+        
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(gridButton.snp.bottom).offset(12)
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.height.equalTo(booksList.count * 128 - 8)
+        }
+        
         upButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(24)
             $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-24)
@@ -211,5 +272,22 @@ final class BestViewController: UIViewController {
     
     @objc func upButtonDidTap() {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+}
+
+extension BestViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return booksList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: BestTableViewCell.identifier,
+            for: indexPath
+        ) as? BestTableViewCell else {return UITableViewCell()}
+        
+        cell.selectionStyle = .none
+        cell.bindData(index: indexPath.row, book: booksList[indexPath.row])
+        return cell
     }
 }
