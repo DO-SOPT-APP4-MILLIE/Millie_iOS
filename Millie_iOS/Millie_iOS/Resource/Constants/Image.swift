@@ -14,5 +14,6 @@ public enum Image {
     static let arrowLeft = UIImage(named: "ic_arrow_left_line")!
     static let arrowTop = UIImage(named: "ic_arrow_top")!
     static let heart = UIImage(named: "ic_heart")!
+    static let wandok = UIImage(named: "ic_wandok_line")!
 
 }
