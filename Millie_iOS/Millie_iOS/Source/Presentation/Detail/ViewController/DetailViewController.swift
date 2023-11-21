@@ -217,6 +217,57 @@ class DetailViewController: UIViewController {
         return view
     }()
     
+    private let bookDescriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "국내 최고 트렌드 전망서\n청룡의 해, 2024년을 분석하다"
+        label.textColor = .darkGrey03
+        label.font = .spoqaHanSanNeo(.bold, size: 16)
+        label.numberOfLines = 2
+        label.textAlignment = .left
+        return label
+    }()
+    
+    private let wandokImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "detail_img_wandok_graph")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    private let wandokPointIconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "shelf_ic_wandok_small")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    private let wandokAreaLabel: UILabel = {
+        let label = UILabel()
+        label.text = "히든"
+        label.textColor = .darkGrey01
+        label.font = .spoqaHanSanNeo(.bold, size: 14)
+        return label
+    }()
+    
+    private let wandokDivider: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGrey07
+        return view
+    }()
+    
+    private let wandokTextLabel: UILabel = {
+        let label = UILabel()
+        label.text = "밀리 회원들의 발견을 기다리고 있는 책"
+        label.textColor = .darkGrey01
+        label.font = .spoqaHanSanNeo(.regular, size: 14)
+        return label
+    }()
+    
+    private let divider2: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGrey02
+        return view
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -316,6 +367,40 @@ class DetailViewController: UIViewController {
             $0.height.equalTo(11)
         }
         
+        contentView.addSubviews(bookDescriptionLabel, wandokImageView, wandokPointIconImageView, wandokAreaLabel, wandokDivider, wandokTextLabel)
+        
+        bookDescriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(divider1.snp.bottom).offset(22)
+            $0.leading.equalTo(contentView.snp.leading).offset(24)
+        }
+        
+        wandokImageView.snp.makeConstraints {
+            $0.top.equalTo(bookDescriptionLabel.snp.bottom).offset(31)
+            $0.width.equalTo(contentView.snp.width)
+        }
+        
+        wandokPointIconImageView.snp.makeConstraints {
+            $0.top.equalTo(wandokImageView.snp.bottom).offset(2)
+            $0.leading.equalTo(contentView.snp.leading).offset(50)
+            $0.width.equalTo(16)
+        }
+        
+        wandokAreaLabel.snp.makeConstraints {
+            $0.centerY.equalTo(wandokPointIconImageView.snp.centerY)
+            $0.leading.equalTo(wandokPointIconImageView.snp.trailing).offset(8)
+        }
+        
+        wandokDivider.snp.makeConstraints {
+            $0.centerY.equalTo(wandokPointIconImageView.snp.centerY)
+            $0.leading.equalTo(wandokAreaLabel.snp.trailing).offset(5)
+            $0.width.equalTo(1)
+            $0.height.equalTo(11)
+        }
+        
+        wandokTextLabel.snp.makeConstraints {
+            $0.centerY.equalTo(wandokPointIconImageView.snp.centerY)
+            $0.leading.equalTo(wandokDivider.snp.trailing).offset(8)
+        }
     }
     
     @objc
