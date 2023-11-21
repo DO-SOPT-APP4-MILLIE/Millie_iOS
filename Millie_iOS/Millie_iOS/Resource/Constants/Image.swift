@@ -12,6 +12,7 @@ public enum Image {
 //    static let arrowDown = UIImage(named: "back")!
     
     static let arrowLeft = UIImage(named: "ic_arrow_left_line")!
+    static let arrowTop = UIImage(named: "ic_arrow_top")!
     static let heart = UIImage(named: "ic_heart")!
 
 }

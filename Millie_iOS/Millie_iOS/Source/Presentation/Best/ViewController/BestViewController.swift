@@ -48,6 +48,18 @@ final class BestViewController: UIViewController {
         return view
     }()
     
+    private let upButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Image.arrowTop, for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 22
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.06
+        button.layer.shadowOffset = CGSize(width: 0, height: 0)
+        button.layer.shadowRadius = 18
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,6 +74,10 @@ final class BestViewController: UIViewController {
     private func target() {
         backButton.addTarget(self,
                              action: #selector(backButtonDidTap),
+                             for: .touchUpInside)
+        
+        upButton.addTarget(self,
+                             action: #selector(upButtonDidTap),
                              for: .touchUpInside)
     }
     
@@ -83,7 +99,8 @@ final class BestViewController: UIViewController {
         scrollView.addSubview(contentView)
         contentView.addSubviews(categoryScrollView,
                                 descriptionLabel,
-                                dividerView)
+                                dividerView,
+                                upButton)
         categoryScrollView.addSubview(categoryStackView)
     }
     
@@ -119,9 +136,19 @@ final class BestViewController: UIViewController {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(1)
         }
+        
+        upButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(24)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-24)
+            $0.size.equalTo(44)
+        }
     }
     
     @objc func backButtonDidTap() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func upButtonDidTap() {
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
 }
