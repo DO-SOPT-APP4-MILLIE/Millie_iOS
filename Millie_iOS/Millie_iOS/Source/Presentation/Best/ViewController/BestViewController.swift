@@ -34,6 +34,14 @@ final class BestViewController: UIViewController {
     
     private let categoryStackView = CategoryStackView()
     
+    private let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "서점 3사 100위 내, 70권을 밀리에서 만나보세요."
+        label.font = .millieBody6
+        label.textColor = .darkGrey01
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,7 +75,8 @@ final class BestViewController: UIViewController {
     private func setupHierarchy() {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
-        contentView.addSubviews(categoryScrollView)
+        contentView.addSubviews(categoryScrollView,
+                               descriptionLabel)
         categoryScrollView.addSubview(categoryStackView)
     }
     
@@ -91,6 +100,11 @@ final class BestViewController: UIViewController {
         categoryStackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(24)
+        }
+        
+        descriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(categoryScrollView.snp.bottom).offset(10)
+            $0.leading.equalToSuperview().inset(24)
         }
     }
     
