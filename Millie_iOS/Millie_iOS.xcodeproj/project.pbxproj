@@ -24,6 +24,8 @@
 		2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB32B0A865B007074F8 /* UIColor+.swift */; };
 		2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB52B0A8A11007074F8 /* UIView+.swift */; };
 		CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925AD2B0C6E0500C4823D /* BestViewController.swift */; };
+		CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925B02B0C810800C4823D /* CategoryView.swift */; };
+		CD7925B32B0C842900C4823D /* CategoryStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925B22B0C842900C4823D /* CategoryStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		2CA96AB32B0A865B007074F8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		2CA96AB52B0A8A11007074F8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CD7925AD2B0C6E0500C4823D /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
+		CD7925B02B0C810800C4823D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		CD7925B22B0C842900C4823D /* CategoryStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 		CD7925AA2B0C6DEA00C4823D /* Best */ = {
 			isa = PBXGroup;
 			children = (
+				CD7925AF2B0C80E600C4823D /* View */,
 				CD7925AB2B0C6DF300C4823D /* ViewController */,
 			);
 			path = Best;
@@ -199,6 +204,15 @@
 				CD7925AD2B0C6E0500C4823D /* BestViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CD7925AF2B0C80E600C4823D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD7925B02B0C810800C4823D /* CategoryView.swift */,
+				CD7925B22B0C842900C4823D /* CategoryStackView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,10 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */,
+				CD7925B32B0C842900C4823D /* CategoryStackView.swift in Sources */,
 				2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */,
 				2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */,
 				2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
+				CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */,
 				2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */,
 				2CA96AAB2B0A8314007074F8 /* UIFont+.swift in Sources */,
 				2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */,

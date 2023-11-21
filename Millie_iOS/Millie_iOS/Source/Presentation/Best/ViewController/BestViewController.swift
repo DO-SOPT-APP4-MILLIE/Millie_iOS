@@ -23,6 +23,14 @@ final class BestViewController: UIViewController {
         return button
     }()
     
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsHorizontalScrollIndicator = false
+        return scrollView
+    }()
+    
+    private let categoryStackView = CategoryStackView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,11 +62,21 @@ final class BestViewController: UIViewController {
     }
     
     private func setupHierarchy() {
-        
+        view.addSubviews(scrollView)
+        scrollView.addSubview(categoryStackView)
     }
     
     private func setupLayout() {
+        scrollView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(16)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(42)
+        }
         
+        categoryStackView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.left.right.equalToSuperview().inset(25)
+        }
     }
     
     @objc func backButtonDidTap() {
