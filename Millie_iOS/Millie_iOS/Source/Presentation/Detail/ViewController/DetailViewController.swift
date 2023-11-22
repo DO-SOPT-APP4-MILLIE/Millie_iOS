@@ -100,10 +100,7 @@ class DetailViewController: UIViewController {
         return stackView
     }()
     
-    private let bookInfoDividerView: UIView = {
-        let view = UIView()
-        return view
-    }()
+    private let bookInfoDividerView = UIView()
     
     private let archivedStackView: UIStackView = {
         let stackView = UIStackView()
