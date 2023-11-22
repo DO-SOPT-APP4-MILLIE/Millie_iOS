@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140AFF2B0E075F006ECA2C /* TodayView.swift */; };
+		2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */; };
 		2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */; };
 		2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */; };
 		2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A812B0A7D00007074F8 /* TodayViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C140AFF2B0E075F006ECA2C /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C140B032B0E1250006ECA2C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2CA96A712B0A7D00007074F8 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +198,7 @@
 		2CA96A9A2B0A7F02007074F8 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				2C140B032B0E1250006ECA2C /* Cell */,
 				2CA96A9C2B0A7F13007074F8 /* ViewController */,
 				2CA96A9B2B0A7F09007074F8 /* View */,
 			);
@@ -195,6 +208,7 @@
 		2CA96A9B2B0A7F09007074F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C140AFF2B0E075F006ECA2C /* TodayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +381,7 @@
 				3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
 				CD4DF3702B0D05F700FA2EC7 /* Dummy.swift in Sources */,
+				2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */,
 				3CBFE3D22B0DBE310057A3F5 /* DetailViewController.swift in Sources */,
 				CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */,
 				2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */,
@@ -375,6 +390,7 @@
 				2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */,
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 				3CBFE3C82B0DBD520057A3F5 /* UIStackView+.swift in Sources */,
+				2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */,
 				CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
