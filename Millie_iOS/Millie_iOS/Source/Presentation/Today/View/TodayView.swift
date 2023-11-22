@@ -11,10 +11,9 @@ import SnapKit
 
 class TodayView: UIView {
     
-    let todayTableView: UITableView = {
+    public let todayTableView: UITableView = {
         let view = UITableView()
-        view.backgroundColor = .white
-        view.register(TodayTableViewCell.self, forCellReuseIdentifier: TodayTableViewCell.identifier)
+        view.backgroundColor = .milWhite
         return view
     }()
     

@@ -18,9 +18,12 @@ final class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        target()
-//        register()
+        register()
         delegate()
+    }
+    
+    private func register() {
+        rootView.todayTableView.register(TodayTableViewCell.self, forCellReuseIdentifier: TodayTableViewCell.identifier)
     }
     
     private func delegate() {
@@ -31,7 +34,7 @@ final class TodayViewController: UIViewController {
 
 extension TodayViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 4165.0
+        return 4165.0 //수정예정
     }
 }
 
@@ -45,4 +48,3 @@ extension TodayViewController: UITableViewDataSource {
         return cell
     }
 }
-

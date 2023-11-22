@@ -17,9 +17,9 @@ class TodayTableViewCell: UITableViewCell {
         return view
     }()
     
-    private let favoriteView: UIView =  {
-        let view = UIView()
-        view.backgroundColor = .cyan
+    public let favoriteView: FavoriteView =  {
+        let view = FavoriteView()
+        view.backgroundColor = .white
         return view
     }()
     
@@ -56,6 +56,8 @@ class TodayTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        delegate()
+        
         setupHierarchy()
         setupLayout()
     }
@@ -63,6 +65,11 @@ class TodayTableViewCell: UITableViewCell {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    private func delegate() {
+        favoriteView.favoriteCollectionView.delegate = self
+        favoriteView.favoriteCollectionView.dataSource = self
     }
     
     private func setupHierarchy() {
@@ -113,3 +120,55 @@ class TodayTableViewCell: UITableViewCell {
         }
     }
 }
+
+extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch collectionView {
+        case favoriteView.favoriteCollectionView:
+            return CGSize(width: 56, height: 81)
+        default:
+            return CGSize.zero
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        switch collectionView {
+        case favoriteView.favoriteCollectionView:
+            return 16.0
+        default:
+            return 0.0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        switch collectionView {
+        case favoriteView.favoriteCollectionView:
+            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
+        default:
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+    }
+}
+
+extension TodayTableViewCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch collectionView {
+        case favoriteView.favoriteCollectionView:
+            return 7
+        default:
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch collectionView {
+        case favoriteView.favoriteCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCollectionViewCell.identifier, for: indexPath) as? FavoriteCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
+    }
+}
+
+
