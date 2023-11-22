@@ -80,6 +80,10 @@ extension UIFont {
         return UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)!
     }
     
+    class var millieBody5: UIFont {
+        return UIFont(name: "SpoqaHanSansNeo-Regular", size: 13)!
+    }
+    
     class var millieBody6: UIFont {
         return UIFont(name: "SpoqaHanSansNeo-Regular", size: 12)!
     }

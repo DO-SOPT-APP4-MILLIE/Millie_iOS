@@ -18,4 +18,10 @@ extension UIButton {
                         progressBlock: nil)
         }
     }
+    
+    static func todayButton() -> UIButton {
+        let button = UIButton()
+        button.setImage(Image.arrowRight, for: .normal)
+        return button
+    }
 }

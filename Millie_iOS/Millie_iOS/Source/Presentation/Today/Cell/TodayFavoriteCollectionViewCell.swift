@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class FavoriteCollectionViewCell: UICollectionViewCell {
+class TodayFavoriteCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "FavoriteCollectionViewCell"
     private var circleDiameter = 56.0

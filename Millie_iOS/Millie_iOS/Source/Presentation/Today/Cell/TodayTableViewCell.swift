@@ -17,14 +17,14 @@ class TodayTableViewCell: UITableViewCell {
         return view
     }()
     
-    public let favoriteView: FavoriteView =  {
-        let view = FavoriteView()
+    public let favoriteView: TodayFavoriteView =  {
+        let view = TodayFavoriteView()
         view.backgroundColor = .white
         return view
     }()
     
-    private let bestView: UIView = {
-        let view = UIView()
+    private let nowBestView: TodayBestView = {
+        let view = TodayBestView()
         view.backgroundColor = .red
         return view
     }()
@@ -73,7 +73,7 @@ class TodayTableViewCell: UITableViewCell {
     }
     
     private func setupHierarchy() {
-        contentView.addSubviews(mainView, favoriteView, bestView, fistView, monthlyView, originalView, preferenceView)
+        contentView.addSubviews(mainView, favoriteView, nowBestView, fistView, monthlyView, originalView, preferenceView)
     }
     
     private func setupLayout() {
@@ -89,14 +89,14 @@ class TodayTableViewCell: UITableViewCell {
             $0.height.equalTo(135)
         }
         
-        bestView.snp.makeConstraints() {
+        nowBestView.snp.makeConstraints() {
             $0.top.equalTo(favoriteView.snp.bottom).offset(45)
             $0.width.equalToSuperview()
             $0.height.equalTo(352)
         }
         
         fistView.snp.makeConstraints() {
-            $0.top.equalTo(bestView.snp.bottom).offset(55)
+            $0.top.equalTo(nowBestView.snp.bottom).offset(55)
             $0.width.equalToSuperview()
             $0.height.equalTo(501)
         }
@@ -163,7 +163,7 @@ extension TodayTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCollectionViewCell.identifier, for: indexPath) as? FavoriteCollectionViewCell else { return UICollectionViewCell() }
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayFavoriteCollectionViewCell.identifier, for: indexPath) as? TodayFavoriteCollectionViewCell else { return UICollectionViewCell() }
             return cell
         default:
             return UICollectionViewCell()

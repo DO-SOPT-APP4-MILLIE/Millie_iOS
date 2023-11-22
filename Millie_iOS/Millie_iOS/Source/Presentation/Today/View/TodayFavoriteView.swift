@@ -7,30 +7,16 @@
 
 import UIKit
 
-class FavoriteView: UIView {
+class TodayFavoriteView: UIView {
 
     private var favoriteLabel: UILabel = {
-        let label = UILabel()
+        let label = UILabel.todayLabel()
         label.text = "즐겨찾기"
-        label.font = .millieHeader3
-        label.textColor = .milBlack
         return label
     }()
     
-    private var favoriteButton: UIButton = {
-        let button = UIButton()
-        button.setImage(Image.arrowRight, for: .normal)
-        return button
-    }()
-    
-    public var favoriteCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.collectionViewLayout = layout
-        collectionView.showsHorizontalScrollIndicator = false
-        return collectionView
-    }()
+    private var favoriteButton = UIButton.todayButton()
+    public var favoriteCollectionView = UICollectionView.todayCollectionView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,7 +32,7 @@ class FavoriteView: UIView {
     }
     
     private func register() {
-        favoriteCollectionView.register(FavoriteCollectionViewCell.self, forCellWithReuseIdentifier: FavoriteCollectionViewCell.identifier)
+        favoriteCollectionView.register(TodayFavoriteCollectionViewCell.self, forCellWithReuseIdentifier: TodayFavoriteCollectionViewCell.identifier)
     }
     
     private func setupHierarchy() {
