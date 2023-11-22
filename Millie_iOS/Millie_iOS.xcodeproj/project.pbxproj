@@ -23,9 +23,6 @@
 		2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB12B0A85AE007074F8 /* UIButton+.swift */; };
 		2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB32B0A865B007074F8 /* UIColor+.swift */; };
 		2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB52B0A8A11007074F8 /* UIView+.swift */; };
-		3C585A1A2B0B5CEE00D20A30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C585A192B0B5CEE00D20A30 /* DetailViewController.swift */; };
-		3C585A1E2B0CB92300D20A30 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C585A1D2B0CB92300D20A30 /* UIStackView+.swift */; };
-		3C585A202B0CBE2E00D20A30 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C585A1F2B0CBE2E00D20A30 /* CALayer+.swift */; };
 		CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B98C52B0DA34900CACFA1 /* BestView.swift */; };
 		CD4DF3702B0D05F700FA2EC7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DF36F2B0D05F700FA2EC7 /* Dummy.swift */; };
 		CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925AD2B0C6E0500C4823D /* BestViewController.swift */; };
@@ -51,9 +48,6 @@
 		2CA96AB12B0A85AE007074F8 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		2CA96AB32B0A865B007074F8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		2CA96AB52B0A8A11007074F8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		3C585A192B0B5CEE00D20A30 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		3C585A1D2B0CB92300D20A30 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
-		3C585A1F2B0CBE2E00D20A30 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		CD0B98C52B0DA34900CACFA1 /* BestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestView.swift; sourceTree = "<group>"; };
 		CD4DF36F2B0D05F700FA2EC7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		CD7925AD2B0C6E0500C4823D /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -142,8 +136,6 @@
 				2CA96AB12B0A85AE007074F8 /* UIButton+.swift */,
 				2CA96AB32B0A865B007074F8 /* UIColor+.swift */,
 				2CA96AB52B0A8A11007074F8 /* UIView+.swift */,
-				3C585A1D2B0CB92300D20A30 /* UIStackView+.swift */,
-				3C585A1F2B0CBE2E00D20A30 /* CALayer+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,7 +155,6 @@
 			children = (
 				CD7925AA2B0C6DEA00C4823D /* Best */,
 				2CA96A9A2B0A7F02007074F8 /* Today */,
-				3C585A162B0B5CC500D20A30 /* Detail */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -207,19 +198,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		3C585A162B0B5CC500D20A30 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				3C585A172B0B5CD000D20A30 /* ViewController */,
-				3C585A182B0B5CD700D20A30 /* View */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		3C585A172B0B5CD000D20A30 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3C585A192B0B5CEE00D20A30 /* DetailViewController.swift */,
 		CD7925AA2B0C6DEA00C4823D /* Best */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,7 +329,6 @@
 				CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */,
 				CD7925B32B0C842900C4823D /* CategoryStackView.swift in Sources */,
 				2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */,
-				3C585A202B0CBE2E00D20A30 /* CALayer+.swift in Sources */,
 				2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */,
 				2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
@@ -360,8 +337,6 @@
 				2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */,
 				2CA96AAB2B0A8314007074F8 /* UIFont+.swift in Sources */,
 				2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */,
-				3C585A1A2B0B5CEE00D20A30 /* DetailViewController.swift in Sources */,
-				3C585A1E2B0CB92300D20A30 /* UIStackView+.swift in Sources */,
 				2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */,
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 				CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */,
