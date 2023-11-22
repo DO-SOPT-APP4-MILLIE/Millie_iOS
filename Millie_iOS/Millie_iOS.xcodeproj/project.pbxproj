@@ -13,6 +13,8 @@
 		2C140B072B0E28DC006ECA2C /* TodayFavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B062B0E28DB006ECA2C /* TodayFavoriteCollectionViewCell.swift */; };
 		2C140B0C2B0E73A1006ECA2C /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B0B2B0E73A1006ECA2C /* UILabel+.swift */; };
 		2C140B0E2B0E7844006ECA2C /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B0D2B0E7844006ECA2C /* UICollectionView+.swift */; };
+		2C140B102B0E79A5006ECA2C /* TodayBestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B0F2B0E79A5006ECA2C /* TodayBestView.swift */; };
+		2C140B122B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */; };
 		2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */; };
 		2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */; };
 		2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A812B0A7D00007074F8 /* TodayViewController.swift */; };
@@ -48,6 +50,8 @@
 		2C140B062B0E28DB006ECA2C /* TodayFavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C140B0B2B0E73A1006ECA2C /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		2C140B0D2B0E7844006ECA2C /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		2C140B0F2B0E79A5006ECA2C /* TodayBestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBestView.swift; sourceTree = "<group>"; };
+		2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBestCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			children = (
 				2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */,
 				2C140B062B0E28DB006ECA2C /* TodayFavoriteCollectionViewCell.swift */,
+				2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			children = (
 				2C140AFF2B0E075F006ECA2C /* TodayView.swift */,
 				2C140B042B0E1E13006ECA2C /* TodayFavoriteView.swift */,
+				2C140B0F2B0E79A5006ECA2C /* TodayBestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,12 +407,14 @@
 				2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */,
 				2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */,
 				2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */,
+				2C140B122B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift in Sources */,
 				3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
 				CD4DF3702B0D05F700FA2EC7 /* Dummy.swift in Sources */,
 				2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */,
 				3CBFE3D22B0DBE310057A3F5 /* DetailViewController.swift in Sources */,
 				CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */,
+				2C140B102B0E79A5006ECA2C /* TodayBestView.swift in Sources */,
 				2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */,
 				2CA96AAB2B0A8314007074F8 /* UIFont+.swift in Sources */,
 				2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */,

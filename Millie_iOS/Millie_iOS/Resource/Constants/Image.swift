@@ -18,5 +18,6 @@ public enum Image {
     static let grid = UIImage(named: "ic_feed_num_line")!
     
     static let thumbsUp = UIImage(named: "today_ic_thumbs_up")!
+    static let smallBookImage = UIImage(named: "today_img_best_01")
 
 }

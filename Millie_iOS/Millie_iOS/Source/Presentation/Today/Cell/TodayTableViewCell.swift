@@ -25,7 +25,7 @@ class TodayTableViewCell: UITableViewCell {
     
     private let nowBestView: TodayBestView = {
         let view = TodayBestView()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         return view
     }()
     
@@ -70,6 +70,8 @@ class TodayTableViewCell: UITableViewCell {
     private func delegate() {
         favoriteView.favoriteCollectionView.delegate = self
         favoriteView.favoriteCollectionView.dataSource = self
+        nowBestView.bestCollectionView.delegate = self
+        nowBestView.bestCollectionView.dataSource = self
     }
     
     private func setupHierarchy() {
@@ -126,6 +128,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
             return CGSize(width: 56, height: 81)
+        case nowBestView.bestCollectionView:
+            return CGSize(width: 221, height: 87)
         default:
             return CGSize.zero
         }
@@ -135,6 +139,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
             return 16.0
+        case nowBestView.bestCollectionView:
+            return 60.0
         default:
             return 0.0
         }
@@ -143,9 +149,22 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
-            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
+            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+        case nowBestView.bestCollectionView:
+            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         default:
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        switch collectionView {
+        case favoriteView.favoriteCollectionView:
+            return 1
+        case nowBestView.bestCollectionView:
+            return 3
+        default:
+            return 1
         }
     }
 }
@@ -155,6 +174,8 @@ extension TodayTableViewCell: UICollectionViewDataSource {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
             return 7
+        case nowBestView.bestCollectionView:
+            return 6
         default:
             return 0
         }
@@ -164,6 +185,9 @@ extension TodayTableViewCell: UICollectionViewDataSource {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayFavoriteCollectionViewCell.identifier, for: indexPath) as? TodayFavoriteCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case nowBestView.bestCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayBestCollectionViewCell.identifier, for: indexPath) as? TodayBestCollectionViewCell else { return UICollectionViewCell() }
             return cell
         default:
             return UICollectionViewCell()
