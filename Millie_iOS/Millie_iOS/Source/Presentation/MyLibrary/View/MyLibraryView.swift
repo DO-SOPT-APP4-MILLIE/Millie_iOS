@@ -67,7 +67,7 @@ final class MyLibraryView: UIView {
     public let followingView = FollowView()
     public let followerView = FollowView()
     
-    public let dividerView: UIView = {
+    public let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .darkGrey02
         view.layer.cornerRadius = 1
@@ -76,6 +76,14 @@ final class MyLibraryView: UIView {
     
     public let recentAudioView = BookmarkView()
     public let favoriteBookView = BookmarkView()
+    
+    public let dividerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGrey03
+        return view
+    }()
+    
+    public let shelfStackView = ShelfStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -111,10 +119,12 @@ final class MyLibraryView: UIView {
                                 libraryLabel,
                                 subscribeButton,
                                 followingView,
-                                dividerView,
+                                separatorView,
                                 followerView,
                                 recentAudioView,
-                                favoriteBookView)
+                                favoriteBookView,
+                                dividerView,
+                                shelfStackView)
     }
     
     private func setupLayout() {
@@ -152,7 +162,7 @@ final class MyLibraryView: UIView {
             $0.leading.equalTo(profileImageView.snp.trailing).offset(16)
         }
         
-        dividerView.snp.makeConstraints {
+        separatorView.snp.makeConstraints {
             $0.centerY.equalTo(followingView.snp.centerY)
             $0.leading.equalTo(followingView.snp.trailing).offset(4)
             $0.size.equalTo(2)
@@ -160,7 +170,7 @@ final class MyLibraryView: UIView {
         
         followerView.snp.makeConstraints {
             $0.centerY.equalTo(followingView.snp.centerY)
-            $0.leading.equalTo(dividerView.snp.trailing).offset(4)
+            $0.leading.equalTo(separatorView.snp.trailing).offset(4)
         }
         
         recentAudioView.snp.makeConstraints {
@@ -175,6 +185,17 @@ final class MyLibraryView: UIView {
             $0.leading.equalTo(recentAudioView.snp.trailing).offset(10)
             $0.width.equalTo(125)
             $0.height.equalTo(117)
+        }
+
+        dividerView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(8)
+            $0.bottom.equalTo(shelfStackView.snp.bottom)
+            $0.height.equalTo(1)
+        }
+        
+        shelfStackView.snp.makeConstraints {
+            $0.top.equalTo(recentAudioView.snp.bottom).offset(56)
+            $0.left.equalToSuperview().offset(24)
         }
     }
 }
