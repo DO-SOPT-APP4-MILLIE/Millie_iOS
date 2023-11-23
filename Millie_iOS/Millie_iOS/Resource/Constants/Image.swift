@@ -20,5 +20,7 @@ public enum Image {
     static let add = UIImage(named: "ic_add post_line")!
     static let hamburger = UIImage(named: "ic_menu_hamburger")!
     static let profile = UIImage(named: "image_profile")!
-
+    static let audioLine = UIImage(named: "ic_audio_line")!
+    static let bookmarkLine = UIImage(named: "ic_bookmark_line")!
+    
 }

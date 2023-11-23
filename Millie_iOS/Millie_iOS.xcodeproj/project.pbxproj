@@ -30,6 +30,7 @@
 		CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */; };
 		CD38E04F2B0F4FEF001C979C /* MyLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */; };
 		CD38E0512B0F5A67001C979C /* FollowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E0502B0F5A67001C979C /* FollowView.swift */; };
+		CD38E0532B0F5D6C001C979C /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E0522B0F5D6C001C979C /* BookmarkView.swift */; };
 		CD4DF3702B0D05F700FA2EC7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DF36F2B0D05F700FA2EC7 /* Dummy.swift */; };
 		CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925AD2B0C6E0500C4823D /* BestViewController.swift */; };
 		CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925B02B0C810800C4823D /* CategoryView.swift */; };
@@ -61,6 +62,7 @@
 		CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryViewController.swift; sourceTree = "<group>"; };
 		CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryView.swift; sourceTree = "<group>"; };
 		CD38E0502B0F5A67001C979C /* FollowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowView.swift; sourceTree = "<group>"; };
+		CD38E0522B0F5D6C001C979C /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		CD4DF36F2B0D05F700FA2EC7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		CD7925AD2B0C6E0500C4823D /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		CD7925B02B0C810800C4823D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			children = (
 				CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */,
 				CD38E0502B0F5A67001C979C /* FollowView.swift */,
+				CD38E0522B0F5D6C001C979C /* BookmarkView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
 				CD4DF3702B0D05F700FA2EC7 /* Dummy.swift in Sources */,
+				CD38E0532B0F5D6C001C979C /* BookmarkView.swift in Sources */,
 				3CBFE3D22B0DBE310057A3F5 /* DetailViewController.swift in Sources */,
 				CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */,
 				2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */,

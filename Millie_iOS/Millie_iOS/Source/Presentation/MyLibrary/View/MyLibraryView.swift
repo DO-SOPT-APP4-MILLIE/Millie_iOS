@@ -74,6 +74,9 @@ final class MyLibraryView: UIView {
         return view
     }()
     
+    public let recentAudioView = BookmarkView()
+    public let favoriteBookView = BookmarkView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -89,8 +92,15 @@ final class MyLibraryView: UIView {
     private func setupStyle() {
         followingView.followLabel.text = "팔로잉"
         followingView.countLabel.text = "0"
+        
         followerView.followLabel.text = "팔로잉"
         followerView.countLabel.text = "0"
+        
+        recentAudioView.iconImageView.image = Image.audioLine.withRenderingMode(.alwaysTemplate)
+        recentAudioView.descriptionLabel.text = "최근 들은 오디오가\n없어요."
+        
+        favoriteBookView.iconImageView.image = Image.bookmarkLine.withRenderingMode(.alwaysTemplate)
+        favoriteBookView.descriptionLabel.text = "나의 인생책을 직접\n설정해보세요."
     }
     
     private func setupHierarchy() {
@@ -102,7 +112,9 @@ final class MyLibraryView: UIView {
                                 subscribeButton,
                                 followingView,
                                 dividerView,
-                                followerView)
+                                followerView,
+                                recentAudioView,
+                                favoriteBookView)
     }
     
     private func setupLayout() {
@@ -149,6 +161,20 @@ final class MyLibraryView: UIView {
         followerView.snp.makeConstraints {
             $0.centerY.equalTo(followingView.snp.centerY)
             $0.leading.equalTo(dividerView.snp.trailing).offset(4)
+        }
+        
+        recentAudioView.snp.makeConstraints {
+            $0.top.equalTo(profileImageView.snp.bottom).offset(32)
+            $0.leading.equalToSuperview().inset(24)
+            $0.width.equalTo(125)
+            $0.height.equalTo(117)
+        }
+        
+        favoriteBookView.snp.makeConstraints {
+            $0.top.equalTo(profileImageView.snp.bottom).offset(32)
+            $0.leading.equalTo(recentAudioView.snp.trailing).offset(10)
+            $0.width.equalTo(125)
+            $0.height.equalTo(117)
         }
     }
 }
