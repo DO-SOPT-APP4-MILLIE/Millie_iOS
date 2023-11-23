@@ -14,7 +14,7 @@ class TodayMonthlyCollectionViewCell: UICollectionViewCell {
     private var monthlyImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = Image.todayMonthlyImage
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     

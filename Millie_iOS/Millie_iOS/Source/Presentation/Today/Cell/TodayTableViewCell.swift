@@ -41,9 +41,9 @@ class TodayTableViewCell: UITableViewCell {
         return view
     }()
     
-    private let originalView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .brown
+    private let originalView: TodayOriginalView = {
+        let view = TodayOriginalView()
+        view.backgroundColor = .milWhite
         return view
     }()
     
@@ -76,6 +76,8 @@ class TodayTableViewCell: UITableViewCell {
         fistView.fistCollectionView.dataSource = self
         monthlyView.monthlyCollectionView.delegate = self
         monthlyView.monthlyCollectionView.dataSource = self
+        originalView.originalCollectionView.delegate = self
+        originalView.originalCollectionView.dataSource = self
     }
     
     private func setupHierarchy() {
@@ -138,6 +140,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return CGSize(width: 331, height: 447)
         case monthlyView.monthlyCollectionView:
             return CGSize(width: 140, height: 274)
+        case originalView.originalCollectionView:
+            return CGSize(width: 289, height: 309)
         default:
             return CGSize.zero
         }
@@ -153,6 +157,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return 12.0
         case monthlyView.monthlyCollectionView:
             return 13.0
+        case originalView.originalCollectionView:
+            return 12.0
         default:
             return 0.0
         }
@@ -162,14 +168,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
             return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
-        case nowBestView.bestCollectionView:
-            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
-        case fistView.fistCollectionView:
-            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
-        case monthlyView.monthlyCollectionView:
-            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         default:
-            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         }
     }
     
@@ -196,6 +196,8 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return 6
         case monthlyView.monthlyCollectionView:
             return 10
+        case originalView.originalCollectionView:
+            return 4
         default:
             return 0
         }
@@ -214,6 +216,9 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return cell
         case monthlyView.monthlyCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayMonthlyCollectionViewCell.identifier, for: indexPath) as? TodayMonthlyCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case originalView.originalCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayOriginalCollectionViewCell.identifier, for: indexPath) as? TodayOriginalCollectionViewCell else { return UICollectionViewCell() }
             return cell
         default:
             return UICollectionViewCell()

@@ -21,5 +21,6 @@ public enum Image {
     static let smallBookImage = UIImage(named: "today_img_best_01")
     static let todayFistImage = UIImage(named: "today_card_week_1")
     static let todayMonthlyImage = UIImage(named: "today_new_book_01")
+    static let todayOriginalImage = UIImage(named: "today_card_original_01")
 
 }

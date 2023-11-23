@@ -1,5 +1,5 @@
 //
-//  TodayFistCollectionViewCell.swift
+//  TodayOriginalCollectionViewCell.swift
 //  Millie_iOS
 //
 //  Created by 신지원 on 11/23/23.
@@ -7,15 +7,14 @@
 
 import UIKit
 
-class TodayFistCollectionViewCell: UICollectionViewCell {
+class TodayOriginalCollectionViewCell: UICollectionViewCell {
     
-    static let identifier: String = "FistCollectionViewCell"
+    static let identifier: String = "OriginalCollectionViewCell"
     
-    private var fistImageView: UIImageView = {
+    private var originalImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = Image.todayFistImage
+        imageView.image = Image.todayOriginalImage
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 13.0 //수정해야 함
         return imageView
     }()
     
@@ -30,11 +29,11 @@ class TodayFistCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupHierarchy() {
-        self.addSubview(fistImageView)
+        self.addSubview(originalImageView)
     }
     
     private func setupLayout() {
-        fistImageView.snp.makeConstraints() {
+        originalImageView.snp.makeConstraints() {
             $0.edges.equalToSuperview()
         }
     }
