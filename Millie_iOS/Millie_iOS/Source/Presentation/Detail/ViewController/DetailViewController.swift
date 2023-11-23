@@ -28,8 +28,20 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        target()
+        
         setupNavigtion()
         setupStyle()
+    }
+    
+    private func target() {
+        rootView.detailBottomView.saveButton.addTarget(self,
+                                                       action: #selector(saveButtonTap),
+                                                       for: .touchUpInside)
+        
+        rootView.detailBottomView.readButton.addTarget(self,
+                                                       action: #selector(readButtonTap),
+                                                       for: .touchUpInside)
     }
     
     private func setupNavigtion() {
@@ -61,6 +73,16 @@ class DetailViewController: UIViewController {
     @objc
     private func rightSettingButtonTap() {
         
+    }
+    
+    @objc
+    private func saveButtonTap() {
+        print("saveButtonTap")
+    }
+    
+    @objc
+    private func readButtonTap() {
+        print("readButtonTap")
     }
     
     private func bindData() {
