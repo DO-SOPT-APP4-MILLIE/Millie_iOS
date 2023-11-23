@@ -9,19 +9,15 @@ import UIKit
 
 class DetailBottomView: UIView {
     
-    public let saveIconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "detail_ic_save")
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
-    
-    public let saveLabel: UILabel = {
-        let label = UILabel()
-        label.text = "담기"
-        label.textColor = .darkGrey01
-        label.font = .millieBody9
-        return label
+    public let saveButton: UIButton = {
+        let button = UIButton()
+        let saveIcon = UIImage(named: "detail_ic_save")
+        button.setImage(saveIcon, for: .normal)
+        button.setTitle("담기", for: .normal)
+        button.titleLabel?.font = .millieBody9
+        button.setTitleColor(.darkGrey01, for: .normal)
+        button.tintColor = .darkGrey01
+        return button
     }()
     
     public let readButton: UIButton = {
@@ -41,6 +37,8 @@ class DetailBottomView: UIView {
         
         setupHierarchy()
         setupLayout()
+        
+        saveButton.alignTextBelow()
     }
     
     required init?(coder: NSCoder) {
@@ -48,27 +46,22 @@ class DetailBottomView: UIView {
     }
     
     private func setupHierarchy() {
-        self.addSubviews(saveIconImageView,
-                         saveLabel,
+        self.addSubviews(saveButton,
                          readButton)
     }
     
     private func setupLayout() {
-        saveIconImageView.snp.makeConstraints {
+        saveButton.snp.makeConstraints {
             $0.top.equalToSuperview().offset(12)
             $0.leading.equalToSuperview().offset(22)
-            $0.height.equalTo(24)
-        }
-        
-        saveLabel.snp.makeConstraints {
-            $0.centerX.equalTo(saveIconImageView.snp.centerX)
-            $0.top.equalTo(saveIconImageView.snp.bottom)
+            $0.width.equalTo(42)
+            $0.height.equalTo(42)
         }
         
         readButton.snp.makeConstraints {
-            $0.top.equalTo(saveIconImageView.snp.top)
-            $0.leading.equalToSuperview().offset(79)
+            $0.top.equalTo(saveButton.snp.top)
             $0.trailing.equalToSuperview().offset(-24)
+            $0.width.equalTo(285)
             $0.height.equalTo(42)
         }
     }
