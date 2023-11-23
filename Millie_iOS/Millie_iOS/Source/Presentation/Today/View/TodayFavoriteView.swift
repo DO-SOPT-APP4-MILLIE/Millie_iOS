@@ -47,7 +47,7 @@ class TodayFavoriteView: UIView {
         
         favoriteButton.snp.makeConstraints() {
             $0.centerY.equalTo(favoriteLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(31)
+            $0.trailing.equalToSuperview().inset(27)
         }
         
         favoriteCollectionView.snp.makeConstraints() {

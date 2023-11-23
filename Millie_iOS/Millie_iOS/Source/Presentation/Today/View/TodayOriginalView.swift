@@ -60,7 +60,7 @@ class TodayOriginalView: UIView {
         
         originalButton.snp.makeConstraints() {
             $0.centerY.equalTo(originalLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(31)
+            $0.trailing.equalToSuperview().inset(27)
         }
         
         originalCollectionView.snp.makeConstraints() {

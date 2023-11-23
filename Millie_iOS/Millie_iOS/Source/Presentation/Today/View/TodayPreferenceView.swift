@@ -11,7 +11,7 @@ class TodayPreferenceView: UIView {
 
     private var preferenceLabel: UILabel = {
         let label = UILabel.todayLabel()
-        label.text = "밀리 오리지널"
+        label.text = "이번 주 취향별 추천 책"
         return label
     }()
     
@@ -52,7 +52,7 @@ class TodayPreferenceView: UIView {
         
         preferenceButton.snp.makeConstraints() {
             $0.centerY.equalTo(preferenceLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(31)
+            $0.trailing.equalToSuperview().inset(27)
         }
         
         preferenceCollectionView.snp.makeConstraints() {

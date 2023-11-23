@@ -62,7 +62,7 @@ class TodayBestView: UIView {
         
         bestButton.snp.makeConstraints() {
             $0.centerY.equalTo(bestLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(31)
+            $0.trailing.equalToSuperview().inset(27)
         }
         
         bestCollectionView.snp.makeConstraints() {

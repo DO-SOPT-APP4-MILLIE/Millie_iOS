@@ -47,7 +47,7 @@ class TodayMonthlyView: UIView {
         
         monthlyButton.snp.makeConstraints() {
             $0.centerY.equalTo(monthlyLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(31)
+            $0.trailing.equalToSuperview().inset(27)
         }
         
         monthlyCollectionView.snp.makeConstraints() {

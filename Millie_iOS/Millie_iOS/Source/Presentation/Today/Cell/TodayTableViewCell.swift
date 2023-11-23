@@ -143,9 +143,9 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
         case monthlyView.monthlyCollectionView:
             return CGSize(width: 140, height: 274)
         case originalView.originalCollectionView:
-            return CGSize(width: 289, height: 309)
+            return CGSize(width: 290, height: 310)
         case preferenceView.preferenceCollectionView:
-            return CGSize(width: 154, height: 249)
+            return CGSize(width: 156, height: 249)
         default:
             return CGSize.zero
         }
@@ -173,7 +173,7 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         switch collectionView {
         case preferenceView.preferenceCollectionView:
-            return UIEdgeInsets(top: 0, left: 22, bottom: 0, right: 25)
+            return UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 24)
         default:
             return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         }

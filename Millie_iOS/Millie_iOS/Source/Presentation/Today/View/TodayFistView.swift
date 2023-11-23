@@ -47,7 +47,7 @@ class TodayFistView: UIView {
         
         fistButton.snp.makeConstraints() {
             $0.centerY.equalTo(fistLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(31)
+            $0.trailing.equalToSuperview().inset(27)
         }
         
         fistCollectionView.snp.makeConstraints() {
