@@ -20,5 +20,6 @@ public enum Image {
     static let thumbsUp = UIImage(named: "today_ic_thumbs_up")!
     static let smallBookImage = UIImage(named: "today_img_best_01")
     static let todayFistImage = UIImage(named: "today_card_week_1")
+    static let todayMonthlyImage = UIImage(named: "today_new_book_01")
 
 }

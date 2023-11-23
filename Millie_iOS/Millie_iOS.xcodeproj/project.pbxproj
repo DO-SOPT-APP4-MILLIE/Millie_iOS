@@ -17,6 +17,8 @@
 		2C140B122B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */; };
 		2C140B142B0E7F55006ECA2C /* TodayFistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B132B0E7F55006ECA2C /* TodayFistView.swift */; };
 		2C140B162B0E8059006ECA2C /* TodayFistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B152B0E8059006ECA2C /* TodayFistCollectionViewCell.swift */; };
+		2C140B182B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B172B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift */; };
+		2C140B1A2B0ED6D9006ECA2C /* TodayMonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B192B0ED6D9006ECA2C /* TodayMonthlyView.swift */; };
 		2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */; };
 		2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */; };
 		2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A812B0A7D00007074F8 /* TodayViewController.swift */; };
@@ -56,6 +58,8 @@
 		2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBestCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C140B132B0E7F55006ECA2C /* TodayFistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFistView.swift; sourceTree = "<group>"; };
 		2C140B152B0E8059006ECA2C /* TodayFistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFistCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C140B172B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMonthlyCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C140B192B0ED6D9006ECA2C /* TodayMonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMonthlyView.swift; sourceTree = "<group>"; };
 		2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				2C140B062B0E28DB006ECA2C /* TodayFavoriteCollectionViewCell.swift */,
 				2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */,
 				2C140B152B0E8059006ECA2C /* TodayFistCollectionViewCell.swift */,
+				2C140B172B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				2C140B042B0E1E13006ECA2C /* TodayFavoriteView.swift */,
 				2C140B0F2B0E79A5006ECA2C /* TodayBestView.swift */,
 				2C140B132B0E7F55006ECA2C /* TodayFistView.swift */,
+				2C140B192B0ED6D9006ECA2C /* TodayMonthlyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -414,8 +420,10 @@
 				2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */,
 				2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */,
 				2C140B122B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift in Sources */,
+				2C140B182B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift in Sources */,
 				2C140B162B0E8059006ECA2C /* TodayFistCollectionViewCell.swift in Sources */,
 				3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */,
+				2C140B1A2B0ED6D9006ECA2C /* TodayMonthlyView.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
 				CD4DF3702B0D05F700FA2EC7 /* Dummy.swift in Sources */,
 				2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */,

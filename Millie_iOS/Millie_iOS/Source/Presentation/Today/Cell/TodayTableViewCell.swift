@@ -35,9 +35,9 @@ class TodayTableViewCell: UITableViewCell {
         return view
     }()
     
-    private let monthlyView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .darkGray
+    private let monthlyView: TodayMonthlyView = {
+        let view = TodayMonthlyView()
+        view.backgroundColor = .milWhite
         return view
     }()
     
@@ -74,6 +74,8 @@ class TodayTableViewCell: UITableViewCell {
         nowBestView.bestCollectionView.dataSource = self
         fistView.fistCollectionView.delegate = self
         fistView.fistCollectionView.dataSource = self
+        monthlyView.monthlyCollectionView.delegate = self
+        monthlyView.monthlyCollectionView.dataSource = self
     }
     
     private func setupHierarchy() {
@@ -134,6 +136,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return CGSize(width: 221, height: 87)
         case fistView.fistCollectionView:
             return CGSize(width: 331, height: 447)
+        case monthlyView.monthlyCollectionView:
+            return CGSize(width: 140, height: 274)
         default:
             return CGSize.zero
         }
@@ -147,6 +151,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return 60.0
         case fistView.fistCollectionView:
             return 12.0
+        case monthlyView.monthlyCollectionView:
+            return 13.0
         default:
             return 0.0
         }
@@ -160,6 +166,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         case fistView.fistCollectionView:
             return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+        case monthlyView.monthlyCollectionView:
+            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         default:
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
@@ -169,6 +177,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
         switch collectionView {
         case nowBestView.bestCollectionView:
             return 3
+        case monthlyView.monthlyCollectionView:
+            return 2
         default:
             return 1
         }
@@ -184,6 +194,8 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return 6
         case fistView.fistCollectionView:
             return 6
+        case monthlyView.monthlyCollectionView:
+            return 10
         default:
             return 0
         }
@@ -199,6 +211,9 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return cell
         case fistView.fistCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayFistCollectionViewCell.identifier, for: indexPath) as? TodayFistCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case monthlyView.monthlyCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayMonthlyCollectionViewCell.identifier, for: indexPath) as? TodayMonthlyCollectionViewCell else { return UICollectionViewCell() }
             return cell
         default:
             return UICollectionViewCell()
