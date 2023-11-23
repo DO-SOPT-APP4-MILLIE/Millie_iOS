@@ -19,19 +19,19 @@ class TodayTableViewCell: UITableViewCell {
     
     public let favoriteView: TodayFavoriteView =  {
         let view = TodayFavoriteView()
-        view.backgroundColor = .white
+        view.backgroundColor = .milWhite
         return view
     }()
     
     private let nowBestView: TodayBestView = {
         let view = TodayBestView()
-        view.backgroundColor = .white
+        view.backgroundColor = .milWhite
         return view
     }()
     
     private let fistView: TodayFistView = {
         let view = TodayFistView()
-        view.backgroundColor = .white
+        view.backgroundColor = .milWhite
         return view
     }()
     
