@@ -85,6 +85,8 @@ final class MyLibraryView: UIView {
     
     public let shelfStackView = ShelfStackView()
     
+    public let shelfCategoryStackView = ShelfCategoryStackView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -124,7 +126,8 @@ final class MyLibraryView: UIView {
                                 recentAudioView,
                                 favoriteBookView,
                                 dividerView,
-                                shelfStackView)
+                                shelfStackView,
+                                shelfCategoryStackView)
     }
     
     private func setupLayout() {
@@ -196,6 +199,12 @@ final class MyLibraryView: UIView {
         shelfStackView.snp.makeConstraints {
             $0.top.equalTo(recentAudioView.snp.bottom).offset(56)
             $0.left.equalToSuperview().offset(24)
+        }
+        
+        shelfCategoryStackView.snp.makeConstraints {
+            $0.top.equalTo(dividerView.snp.bottom).offset(58)
+            $0.leading.trailing.equalToSuperview().inset(24)
+            $0.bottom.equalToSuperview()
         }
     }
 }
