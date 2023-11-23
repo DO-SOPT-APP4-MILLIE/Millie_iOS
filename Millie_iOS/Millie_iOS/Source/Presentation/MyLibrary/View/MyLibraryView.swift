@@ -52,8 +52,6 @@ final class MyLibraryView: UIView {
     public let subscribeButton: UIButton = {
         var configuration = UIButton.Configuration.plain()
         configuration.contentInsets = .init(top: 12.0, leading: 16.0, bottom: 12.0, trailing: 16.0)
-        configuration.imagePlacement = .leading
-        configuration.imagePadding = 8
         
         let button = UIButton()
         button.setButtonAttributedTitle(text: "정기구독하기", font: .millieSubHeader8, color: .darkGrey03)
@@ -85,6 +83,45 @@ final class MyLibraryView: UIView {
     
     public let shelfStackView = ShelfStackView()
     
+    public let totalCountButton: UIButton = {
+        var configuration = UIButton.Configuration.plain()
+        configuration.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+        configuration.imagePlacement = .trailing
+        configuration.imagePadding = 4
+        
+        let button = UIButton()
+        button.setImage(Image.arrowDown, for: .normal)
+        button.tintColor = .lightGrey07
+        button.configuration = configuration
+        return button
+    }()
+    
+    public let sortButton: UIButton = {
+        var configuration = UIButton.Configuration.plain()
+        configuration.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+        configuration.imagePlacement = .trailing
+        configuration.imagePadding = 0
+        
+        let button = UIButton()
+        button.setButtonAttributedTitle(text: "분야별", font: .millieBody5, color: .darkGrey01)
+        button.setImage(Image.arrowBottom, for: .normal)
+        button.tintColor = .darkGrey01
+        button.configuration = configuration
+        return button
+    }()
+    
+    public let searchButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Image.search, for: .normal)
+        return button
+    }()
+    
+    public let kebabButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Image.kebab, for: .normal)
+        return button
+    }()
+    
     public let shelfCategoryStackView = ShelfCategoryStackView()
     
     override init(frame: CGRect) {
@@ -111,6 +148,12 @@ final class MyLibraryView: UIView {
         
         favoriteBookView.iconImageView.image = Image.bookmarkLine.withRenderingMode(.alwaysTemplate)
         favoriteBookView.descriptionLabel.text = "나의 인생책을 직접\n설정해보세요."
+        
+        var myLibraryCount: Int = 0
+        for myLibrary in shelfCategoryStackView.myLibraryList {
+            myLibraryCount += myLibrary.books.count
+        }
+        totalCountButton.setButtonAttributedTitle(text: "전체 \(myLibraryCount)권", font: .millieSubHeader7, color: .darkGrey01)
     }
     
     private func setupHierarchy() {
@@ -127,6 +170,10 @@ final class MyLibraryView: UIView {
                                 favoriteBookView,
                                 dividerView,
                                 shelfStackView,
+                                totalCountButton,
+                                sortButton,
+                                searchButton,
+                                kebabButton,
                                 shelfCategoryStackView)
     }
     
@@ -201,8 +248,30 @@ final class MyLibraryView: UIView {
             $0.left.equalToSuperview().offset(24)
         }
         
+        totalCountButton.snp.makeConstraints {
+            $0.centerY.equalTo(searchButton.snp.centerY)
+            $0.leading.equalToSuperview().inset(24)
+        }
+        
+        sortButton.snp.makeConstraints {
+            $0.centerY.equalTo(searchButton.snp.centerY)
+            $0.trailing.equalTo(searchButton.snp.leading).offset(-17)
+        }
+        
+        searchButton.snp.makeConstraints {
+            $0.top.equalTo(dividerView.snp.bottom).offset(16)
+            $0.trailing.equalTo(kebabButton.snp.leading).offset(-16)
+            $0.size.equalTo(19)
+        }
+        
+        kebabButton.snp.makeConstraints {
+            $0.top.equalTo(dividerView.snp.bottom).offset(16)
+            $0.trailing.equalToSuperview().inset(24)
+            $0.size.equalTo(19)
+        }
+        
         shelfCategoryStackView.snp.makeConstraints {
-            $0.top.equalTo(dividerView.snp.bottom).offset(58)
+            $0.top.equalTo(kebabButton.snp.bottom).offset(22)
             $0.leading.trailing.equalToSuperview().inset(24)
             $0.bottom.equalToSuperview()
         }

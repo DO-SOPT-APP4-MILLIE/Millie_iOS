@@ -17,24 +17,8 @@ final class MyLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        target()
-        register()
-        delegate()
 
         setupStyle()
-    }
-    
-    private func target() {
-        
-    }
-    
-    private func register() {
-        
-    }
-    
-    private func delegate() {
-        
     }
     
     private func setupStyle() {

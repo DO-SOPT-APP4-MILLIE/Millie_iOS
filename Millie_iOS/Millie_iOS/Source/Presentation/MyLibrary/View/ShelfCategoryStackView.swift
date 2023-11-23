@@ -11,7 +11,7 @@ import SnapKit
     
 final class ShelfCategoryStackView: UIStackView {
     
-    private let myLibraryList: [MyLibrary] = MyLibraryDummyData
+    public let myLibraryList: [MyLibrary] = MyLibraryDummyData
 
     override init(frame: CGRect) {
         super.init(frame: frame)
