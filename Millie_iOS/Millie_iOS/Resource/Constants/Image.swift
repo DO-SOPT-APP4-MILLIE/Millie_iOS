@@ -17,5 +17,7 @@ public enum Image {
     static let wandok = UIImage(named: "ic_wandok_line")!
     static let feed = UIImage(named: "ic_feed_line")!
     static let grid = UIImage(named: "ic_feed_num_line")!
+    static let add = UIImage(named: "ic_add post_line")!
+    static let hamburger = UIImage(named: "ic_menu_hamburger")!
 
 }

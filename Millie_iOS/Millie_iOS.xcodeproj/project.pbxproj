@@ -27,6 +27,8 @@
 		3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */; };
 		3CBFE3D22B0DBE310057A3F5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */; };
 		CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B98C52B0DA34900CACFA1 /* BestView.swift */; };
+		CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */; };
+		CD38E04F2B0F4FEF001C979C /* MyLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */; };
 		CD4DF3702B0D05F700FA2EC7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DF36F2B0D05F700FA2EC7 /* Dummy.swift */; };
 		CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925AD2B0C6E0500C4823D /* BestViewController.swift */; };
 		CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925B02B0C810800C4823D /* CategoryView.swift */; };
@@ -55,6 +57,8 @@
 		3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD0B98C52B0DA34900CACFA1 /* BestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestView.swift; sourceTree = "<group>"; };
+		CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryViewController.swift; sourceTree = "<group>"; };
+		CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryView.swift; sourceTree = "<group>"; };
 		CD4DF36F2B0D05F700FA2EC7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		CD7925AD2B0C6E0500C4823D /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		CD7925B02B0C810800C4823D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		2CA96A972B0A7E5C007074F8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CD38E0492B0F4F61001C979C /* MyLibrary */,
 				3CBFE3CE2B0DBE020057A3F5 /* Detail */,
 				CD7925AA2B0C6DEA00C4823D /* Best */,
 				2CA96A9A2B0A7F02007074F8 /* Today */,
@@ -229,6 +234,31 @@
 				3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CD38E0492B0F4F61001C979C /* MyLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				CD38E04B2B0F4F75001C979C /* View */,
+				CD38E04A2B0F4F6A001C979C /* ViewController */,
+			);
+			path = MyLibrary;
+			sourceTree = "<group>";
+		};
+		CD38E04A2B0F4F6A001C979C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CD38E04B2B0F4F75001C979C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CD7925AA2B0C6DEA00C4823D /* Best */ = {
@@ -359,6 +389,7 @@
 			files = (
 				CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */,
 				CD7925BA2B0CBBD000C4823D /* Books.swift in Sources */,
+				CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */,
 				CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */,
 				CD7925B32B0C842900C4823D /* CategoryStackView.swift in Sources */,
 				2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */,
@@ -376,6 +407,7 @@
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 				3CBFE3C82B0DBD520057A3F5 /* UIStackView+.swift in Sources */,
 				CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */,
+				CD38E04F2B0F4FEF001C979C /* MyLibraryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
