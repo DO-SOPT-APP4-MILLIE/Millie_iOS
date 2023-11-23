@@ -29,6 +29,7 @@
 		CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B98C52B0DA34900CACFA1 /* BestView.swift */; };
 		CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */; };
 		CD38E04F2B0F4FEF001C979C /* MyLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */; };
+		CD38E0512B0F5A67001C979C /* FollowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E0502B0F5A67001C979C /* FollowView.swift */; };
 		CD4DF3702B0D05F700FA2EC7 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DF36F2B0D05F700FA2EC7 /* Dummy.swift */; };
 		CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925AD2B0C6E0500C4823D /* BestViewController.swift */; };
 		CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925B02B0C810800C4823D /* CategoryView.swift */; };
@@ -59,6 +60,7 @@
 		CD0B98C52B0DA34900CACFA1 /* BestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestView.swift; sourceTree = "<group>"; };
 		CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryViewController.swift; sourceTree = "<group>"; };
 		CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryView.swift; sourceTree = "<group>"; };
+		CD38E0502B0F5A67001C979C /* FollowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowView.swift; sourceTree = "<group>"; };
 		CD4DF36F2B0D05F700FA2EC7 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		CD7925AD2B0C6E0500C4823D /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		CD7925B02B0C810800C4823D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				CD38E04E2B0F4FEF001C979C /* MyLibraryView.swift */,
+				CD38E0502B0F5A67001C979C /* FollowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */,
 				CD7925BA2B0CBBD000C4823D /* Books.swift in Sources */,
 				CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */,
+				CD38E0512B0F5A67001C979C /* FollowView.swift in Sources */,
 				CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */,
 				CD7925B32B0C842900C4823D /* CategoryStackView.swift in Sources */,
 				2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */,
