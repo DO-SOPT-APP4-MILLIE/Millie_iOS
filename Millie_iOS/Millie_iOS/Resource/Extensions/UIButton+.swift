@@ -39,4 +39,10 @@ extension UIButton {
         titleEdgeInsets = UIEdgeInsets(top: spacing, left: -image.size.width, bottom: -image.size.height, right: 0)
         imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + spacing), left: 0, bottom: 0, right: -titleSize.width)
     }
+    
+    func setButtonAttributedTitle(text: String, font: UIFont, color: UIColor) {
+        let attributedString = NSMutableAttributedString(string: text, attributes: [.font: font, .foregroundColor: color])
+        
+        self.setAttributedTitle(attributedString, for: .normal)
+    }
 }
