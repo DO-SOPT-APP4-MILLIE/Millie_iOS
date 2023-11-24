@@ -1,5 +1,5 @@
 //
-//  BookImageView.swift
+//  MyLibraryBookView.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/23/23.
@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class BookImageView: UIView {
+final class MyLibraryBookView: UIView {
     
     public let imageContainerView: UIView = {
         let view = UIView()

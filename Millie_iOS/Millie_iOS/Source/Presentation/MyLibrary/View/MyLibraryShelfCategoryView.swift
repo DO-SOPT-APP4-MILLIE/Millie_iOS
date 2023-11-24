@@ -1,5 +1,5 @@
 //
-//  ShelfCategoryView.swift
+//  MyLibraryShelfCategoryView.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/23/23.
@@ -9,18 +9,18 @@ import UIKit
 
 import SnapKit
 
-final class ShelfCategoryView: UIView {
+final class MyLibraryShelfCategoryView: UIView {
         
     public let containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .milWhite
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
         return view
     }()
     
-    public let firstBookImageView = BookImageView()
-    public let secondBookImageView = BookImageView()
+    public let firstBookImageView = MyLibraryBookView()
+    public let secondBookImageView = MyLibraryBookView()
     
     public let categoryLabel: UILabel = {
         let label = UILabel()

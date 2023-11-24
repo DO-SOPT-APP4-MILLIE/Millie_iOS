@@ -1,5 +1,5 @@
 //
-//  FollowView.swift
+//  MyLibraryFollowView.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/23/23.
@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class FollowView: UIView {
+final class MyLibraryFollowView: UIView {
     
     public let followLabel: UILabel = {
         let label = UILabel()

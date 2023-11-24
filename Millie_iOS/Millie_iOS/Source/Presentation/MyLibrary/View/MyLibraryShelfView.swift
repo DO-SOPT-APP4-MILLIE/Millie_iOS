@@ -1,5 +1,5 @@
 //
-//  ShelfView.swift
+//  MyLibraryShelfView.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/23/23.
@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class ShelfView: UIView {
+final class MyLibraryShelfView: UIView {
     
     public let shelfLabel: UILabel = {
         let label = UILabel()

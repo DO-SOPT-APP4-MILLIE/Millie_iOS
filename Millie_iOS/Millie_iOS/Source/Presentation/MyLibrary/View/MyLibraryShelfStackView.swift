@@ -1,5 +1,5 @@
 //
-//  ShelfStackView.swift
+//  MyLibraryShelfStackView.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/23/23.
@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
     
-final class ShelfStackView: UIStackView {
+final class MyLibraryShelfStackView: UIStackView {
     
     private let shelfList = ["전체도서", "책장", "독서노트", "통계"]
     
@@ -32,7 +32,7 @@ final class ShelfStackView: UIStackView {
     
     private func setupHierarchy() {
         for shelf in shelfList {
-            let shelfView = ShelfView()
+            let shelfView = MyLibraryShelfView()
             shelfView.shelfLabel.text = shelf
             if shelf == "전체도서" {
                 shelfView.shelfLabel.font = .millieSubHeader2

@@ -62,8 +62,8 @@ final class MyLibraryView: UIView {
         return button
     }()
     
-    public let followingView = FollowView()
-    public let followerView = FollowView()
+    public let followingView = MyLibraryFollowView()
+    public let followerView = MyLibraryFollowView()
     
     public let separatorView: UIView = {
         let view = UIView()
@@ -72,8 +72,8 @@ final class MyLibraryView: UIView {
         return view
     }()
     
-    public let recentAudioView = BookmarkView()
-    public let favoriteBookView = BookmarkView()
+    public let recentAudioView = MyLibraryBookmarkView()
+    public let favoriteBookView = MyLibraryBookmarkView()
     
     public let dividerView: UIView = {
         let view = UIView()
@@ -81,7 +81,7 @@ final class MyLibraryView: UIView {
         return view
     }()
     
-    public let shelfStackView = ShelfStackView()
+    public let shelfStackView = MyLibraryShelfStackView()
     
     public let totalCountButton: UIButton = {
         var configuration = UIButton.Configuration.plain()
@@ -122,7 +122,7 @@ final class MyLibraryView: UIView {
         return button
     }()
     
-    public let shelfCategoryStackView = ShelfCategoryStackView()
+    public let shelfCategoryStackView = MyLibraryShelfCategoryStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

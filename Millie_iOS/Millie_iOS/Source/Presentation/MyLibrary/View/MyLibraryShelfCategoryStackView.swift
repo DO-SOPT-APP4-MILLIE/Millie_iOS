@@ -1,5 +1,5 @@
 //
-//  ShelfCategoryStackView.swift
+//  MyLibraryShelfCategoryStackView.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/23/23.
@@ -9,9 +9,9 @@ import UIKit
 
 import SnapKit
     
-final class ShelfCategoryStackView: UIStackView {
+final class MyLibraryShelfCategoryStackView: UIStackView {
     
-    public let myLibraryList: [MyLibrary] = MyLibraryDummyData
+    public let myLibraryList: [MyLibraryModel] = MyLibraryDummyData
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,14 +25,14 @@ final class ShelfCategoryStackView: UIStackView {
     }
     
     private func setupStyle() {
-        axis = .horizontal
-        distribution = .fillEqually
-        spacing = 13.0
+        self.axis = .horizontal
+        self.distribution = .fillEqually
+        self.spacing = 13.0
     }
     
     private func setupHierarchy() {
         for myLibrary in myLibraryList {
-            let shelfCategoryView = ShelfCategoryView()
+            let shelfCategoryView = MyLibraryShelfCategoryView()
             shelfCategoryView.categoryLabel.text = myLibrary.category
             shelfCategoryView.firstBookImageView.bookImageView.kfSetImage(url: myLibrary.books[0].imageUrl)
             if myLibrary.books.count > 1 {

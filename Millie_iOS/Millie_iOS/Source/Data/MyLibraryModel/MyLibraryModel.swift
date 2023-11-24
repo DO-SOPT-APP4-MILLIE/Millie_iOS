@@ -1,5 +1,5 @@
 //
-//  MyLibrary.swift
+//  MyLibraryModel.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/23/23.
@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct MyLibrary {
+struct MyLibraryModel {
     let category: String
-    let books: [MyLibraryBook]
+    let books: [MyLibraryBookModel]
     
-    init(category: String, books: [MyLibraryBook]) {
+    init(category: String, books: [MyLibraryBookModel]) {
         self.category = category
         self.books = books
     }
 }
 
-struct MyLibraryBook {
+struct MyLibraryBookModel {
     let id: Int
     let imageUrl: String
     

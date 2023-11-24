@@ -1,5 +1,5 @@
 //
-//  BookmarkView.swift
+//  MyLibraryBookmarkView.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/23/23.
@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class BookmarkView: UIView {
+final class MyLibraryBookmarkView: UIView {
     
     public let containerView: UIView = {
         let view = UIView()
@@ -24,7 +24,7 @@ final class BookmarkView: UIView {
         let view = UIView()
         view.clipsToBounds = true
         view.layer.cornerRadius = 10
-        view.backgroundColor = .white
+        view.backgroundColor = .milWhite
         return view
     }()
     
