@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_menu_hamburger.png",
+      "filename" : "shelf_ic_menu_hamburger.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "shelf_ic_menu_hamburger@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "shelf_ic_menu_hamburger@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

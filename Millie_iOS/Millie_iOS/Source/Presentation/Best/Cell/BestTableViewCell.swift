@@ -181,7 +181,7 @@ final class BestTableViewCell: UITableViewCell {
         }
     }
     
-    func bindData(index: Int, book: Book) {
+    func bindData(index: Int, book: BestModel) {
         rankingLabel.text = String(index + 1)
         bookImageView.kfSetImage(url: book.imageUrl)
         titleLabel.text = book.title

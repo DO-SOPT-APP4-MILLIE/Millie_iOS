@@ -11,7 +11,7 @@ import SnapKit
 
 final class BestView: UIView {
     
-    public let booksList: [Book] = BestDummyData
+    public let booksList: [BestModel] = BestDummyData
 
     public let backButton: UIButton = {
         let button = UIButton()
@@ -34,7 +34,7 @@ final class BestView: UIView {
         return scrollView
     }()
     
-    public let categoryStackView = CategoryStackView()
+    public let bestCategoryStackView = BestCategoryStackView()
     
     public let descriptionLabel: UILabel = {
         let label = UILabel()
@@ -80,7 +80,7 @@ final class BestView: UIView {
     public let upButton: UIButton = {
         let button = UIButton()
         button.setImage(Image.arrowTop, for: .normal)
-        button.backgroundColor = .white
+        button.backgroundColor = .milWhite
         button.layer.cornerRadius = 22
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.06
@@ -116,7 +116,7 @@ final class BestView: UIView {
                                 gridButton,
                                 tableView,
                                 upButton)
-        categoryScrollView.addSubview(categoryStackView)
+        categoryScrollView.addSubview(bestCategoryStackView)
     }
     
     private func setupLayout() {
@@ -135,7 +135,7 @@ final class BestView: UIView {
             $0.height.equalTo(42)
         }
         
-        categoryStackView.snp.makeConstraints {
+        bestCategoryStackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(24)
         }
