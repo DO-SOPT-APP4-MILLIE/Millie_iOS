@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140AFF2B0E075F006ECA2C /* TodayView.swift */; };
+		2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */; };
+		2C140B052B0E1E13006ECA2C /* TodayFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B042B0E1E13006ECA2C /* TodayFavoriteView.swift */; };
+		2C140B072B0E28DC006ECA2C /* TodayFavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B062B0E28DB006ECA2C /* TodayFavoriteCollectionViewCell.swift */; };
+		2C140B0C2B0E73A1006ECA2C /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B0B2B0E73A1006ECA2C /* UILabel+.swift */; };
+		2C140B0E2B0E7844006ECA2C /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B0D2B0E7844006ECA2C /* UICollectionView+.swift */; };
+		2C140B102B0E79A5006ECA2C /* TodayBestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B0F2B0E79A5006ECA2C /* TodayBestView.swift */; };
+		2C140B122B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */; };
+		2C140B142B0E7F55006ECA2C /* TodayFistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B132B0E7F55006ECA2C /* TodayFistView.swift */; };
+		2C140B162B0E8059006ECA2C /* TodayFistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B152B0E8059006ECA2C /* TodayFistCollectionViewCell.swift */; };
+		2C140B182B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B172B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift */; };
+		2C140B1A2B0ED6D9006ECA2C /* TodayMonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B192B0ED6D9006ECA2C /* TodayMonthlyView.swift */; };
+		2C140B1C2B0EDD4E006ECA2C /* TodayOriginalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B1B2B0EDD4E006ECA2C /* TodayOriginalView.swift */; };
+		2C140B1E2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B1D2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift */; };
+		2C140B222B0EE199006ECA2C /* TodayPreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B212B0EE199006ECA2C /* TodayPreferenceView.swift */; };
+		2C140B242B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B232B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift */; };
 		2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */; };
 		2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */; };
 		2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A812B0A7D00007074F8 /* TodayViewController.swift */; };
@@ -57,6 +73,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C140AFF2B0E075F006ECA2C /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
+		2C140B042B0E1E13006ECA2C /* TodayFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFavoriteView.swift; sourceTree = "<group>"; };
+		2C140B062B0E28DB006ECA2C /* TodayFavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C140B0B2B0E73A1006ECA2C /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		2C140B0D2B0E7844006ECA2C /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		2C140B0F2B0E79A5006ECA2C /* TodayBestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBestView.swift; sourceTree = "<group>"; };
+		2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBestCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C140B132B0E7F55006ECA2C /* TodayFistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFistView.swift; sourceTree = "<group>"; };
+		2C140B152B0E8059006ECA2C /* TodayFistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFistCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C140B172B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMonthlyCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C140B192B0ED6D9006ECA2C /* TodayMonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMonthlyView.swift; sourceTree = "<group>"; };
+		2C140B1B2B0EDD4E006ECA2C /* TodayOriginalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOriginalView.swift; sourceTree = "<group>"; };
+		2C140B1D2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOriginalCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C140B212B0EE199006ECA2C /* TodayPreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPreferenceView.swift; sourceTree = "<group>"; };
+		2C140B232B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPreferenceCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +151,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C140B032B0E1250006ECA2C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */,
+				2C140B062B0E28DB006ECA2C /* TodayFavoriteCollectionViewCell.swift */,
+				2C140B112B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift */,
+				2C140B152B0E8059006ECA2C /* TodayFistCollectionViewCell.swift */,
+				2C140B172B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift */,
+				2C140B1D2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift */,
+				2C140B232B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2C140B082B0E6D48006ECA2C /* Today */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
 		2CA96A712B0A7D00007074F8 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +239,8 @@
 				2CA96AB52B0A8A11007074F8 /* UIView+.swift */,
 				3CBFE3C72B0DBD520057A3F5 /* UIStackView+.swift */,
 				3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */,
+				2C140B0B2B0E73A1006ECA2C /* UILabel+.swift */,
+				2C140B0D2B0E7844006ECA2C /* UICollectionView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +269,8 @@
 		2CA96A982B0A7E63007074F8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CD7925B42B0CBB3600C4823D /* Books */,
+				2C140B082B0E6D48006ECA2C /* Today */,
 				CD38E05A2B0F6D2C001C979C /* MyLibraryModel */,
 				CD7925B42B0CBB3600C4823D /* BestModel */,
 			);
@@ -230,8 +287,9 @@
 		2CA96A9A2B0A7F02007074F8 /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				2CA96A9C2B0A7F13007074F8 /* ViewController */,
+				2C140B032B0E1250006ECA2C /* Cell */,
 				2CA96A9B2B0A7F09007074F8 /* View */,
+				2CA96A9C2B0A7F13007074F8 /* ViewController */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -239,6 +297,13 @@
 		2CA96A9B2B0A7F09007074F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C140AFF2B0E075F006ECA2C /* TodayView.swift */,
+				2C140B042B0E1E13006ECA2C /* TodayFavoriteView.swift */,
+				2C140B0F2B0E79A5006ECA2C /* TodayBestView.swift */,
+				2C140B132B0E7F55006ECA2C /* TodayFistView.swift */,
+				2C140B192B0ED6D9006ECA2C /* TodayMonthlyView.swift */,
+				2C140B1B2B0EDD4E006ECA2C /* TodayOriginalView.swift */,
+				2C140B212B0EE199006ECA2C /* TodayPreferenceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -452,7 +517,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C140B0E2B0E7844006ECA2C /* UICollectionView+.swift in Sources */,
+				2C140B0C2B0E73A1006ECA2C /* UILabel+.swift in Sources */,
 				CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */,
+				2C140B1C2B0EDD4E006ECA2C /* TodayOriginalView.swift in Sources */,
+				2C140B072B0E28DC006ECA2C /* TodayFavoriteCollectionViewCell.swift in Sources */,
 				3CA78DA52B0E386400EE3409 /* DetailWandokView.swift in Sources */,
 				3CA78DAF2B0E477E00EE3409 /* DetailBookDescriptionStackView.swift in Sources */,
 				3CA78DA72B0E388500EE3409 /* DetailPopularView.swift in Sources */,
@@ -468,8 +537,17 @@
 				2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */,
 				CD38E0592B0F68EB001C979C /* MyLibraryShelfView.swift in Sources */,
 				2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */,
+				2C140B122B0E79BF006ECA2C /* TodayBestCollectionViewCell.swift in Sources */,
+				2C140B182B0ED6BE006ECA2C /* TodayMonthlyCollectionViewCell.swift in Sources */,
+				2C140B162B0E8059006ECA2C /* TodayFistCollectionViewCell.swift in Sources */,
 				3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */,
+				2C140B1A2B0ED6D9006ECA2C /* TodayMonthlyView.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
+				2C140B222B0EE199006ECA2C /* TodayPreferenceView.swift in Sources */,
+				2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */,
+				2C140B242B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift in Sources */,
+				CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */,
+				2C140B102B0E79A5006ECA2C /* TodayBestView.swift in Sources */,
 				3CA78DB12B0E52E900EE3409 /* DetailDividerView.swift in Sources */,
 				CD4DF3702B0D05F700FA2EC7 /* BooksDummy.swift in Sources */,
 				CD38E0532B0F5D6C001C979C /* MyLibraryBookmarkView.swift in Sources */,
@@ -482,12 +560,16 @@
 				3CA78DA92B0E38A000EE3409 /* DetailWeeklyBestBookView.swift in Sources */,
 				3CA78DA12B0E383400EE3409 /* DetailSelectCategoryView.swift in Sources */,
 				2CA96AAB2B0A8314007074F8 /* UIFont+.swift in Sources */,
+				2C140B1E2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift in Sources */,
+				2C140B142B0E7F55006ECA2C /* TodayFistView.swift in Sources */,
 				2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */,
+				2C140B052B0E1E13006ECA2C /* TodayFavoriteView.swift in Sources */,
 				2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */,
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 				3CA78DA32B0E384900EE3409 /* DetailBookDescriptionView.swift in Sources */,
 				3CA78DAD2B0E393A00EE3409 /* DetailBottomView.swift in Sources */,
 				3CBFE3C82B0DBD520057A3F5 /* UIStackView+.swift in Sources */,
+				2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */,
 				CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */,
 				CD38E05E2B0F6DEA001C979C /* MyLibraryDummy.swift in Sources */,
 				CD38E0692B0F7D7E001C979C /* MyLibraryShelfCategoryStackView.swift in Sources */,

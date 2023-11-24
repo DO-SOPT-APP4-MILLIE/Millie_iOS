@@ -10,6 +10,12 @@ import UIKit
 import Kingfisher
 
 extension UIButton {
+    static func todayButton() -> UIButton {
+        let button = UIButton()
+        button.setImage(Image.arrowRight, for: .normal)
+        return button
+    }
+  
     func kfSetButtonImage(url : String, state: UIControl.State) {
         if let url = URL(string: url) {
             kf.setImage(with: url,
@@ -18,7 +24,7 @@ extension UIButton {
                         progressBlock: nil)
         }
     }
-    
+  
     func alignTextBelow(spacing: CGFloat = 4.0) {
         guard let image = self.imageView?.image else {
             return
