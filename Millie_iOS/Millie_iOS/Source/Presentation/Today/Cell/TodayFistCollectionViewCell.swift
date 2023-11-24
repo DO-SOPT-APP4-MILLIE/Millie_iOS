@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodayFistCollectionViewCell: UICollectionViewCell {
+final class TodayFistCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "FistCollectionViewCell"
     

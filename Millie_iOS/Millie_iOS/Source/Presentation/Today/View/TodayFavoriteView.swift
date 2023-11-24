@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TodayFavoriteView: UIView {
+import SnapKit
+
+final class TodayFavoriteView: UIView {
 
     private var favoriteLabel: UILabel = {
         let label = UILabel.todayLabel()

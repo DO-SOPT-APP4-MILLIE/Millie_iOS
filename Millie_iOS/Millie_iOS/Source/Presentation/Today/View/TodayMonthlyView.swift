@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TodayMonthlyView: UIView {
+import SnapKit
+
+final class TodayMonthlyView: UIView {
     
     private var monthlyLabel: UILabel = {
         let label = UILabel.todayLabel()

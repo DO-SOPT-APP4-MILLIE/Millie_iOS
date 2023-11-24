@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodayPreferenceCollectionViewCell: UICollectionViewCell {
+final class TodayPreferenceCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "PreferenceCollectionViewCell"
     

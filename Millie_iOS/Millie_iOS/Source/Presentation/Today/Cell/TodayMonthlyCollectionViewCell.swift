@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodayMonthlyCollectionViewCell: UICollectionViewCell {
+final class TodayMonthlyCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "MonthlyCollectionViewCell"
     

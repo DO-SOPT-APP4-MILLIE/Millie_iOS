@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class TodayBestView: UIView {
+final class TodayBestView: UIView {
     
     private var bestLabel: UILabel = {
         let label = UILabel.todayLabel()

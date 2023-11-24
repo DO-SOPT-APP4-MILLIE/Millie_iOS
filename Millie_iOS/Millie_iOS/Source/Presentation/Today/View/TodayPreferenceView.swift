@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TodayPreferenceView: UIView {
+import SnapKit
+
+final class TodayPreferenceView: UIView {
 
     private var preferenceLabel: UILabel = {
         let label = UILabel.todayLabel()

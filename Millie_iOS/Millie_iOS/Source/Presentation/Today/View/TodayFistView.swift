@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TodayFistView: UIView {
+import SnapKit
+
+final class TodayFistView: UIView {
 
     private var fistLabel: UILabel = {
         let label = UILabel.todayLabel()

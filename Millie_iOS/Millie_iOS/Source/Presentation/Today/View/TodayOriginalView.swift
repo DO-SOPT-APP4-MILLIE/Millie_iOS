@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TodayOriginalView: UIView {
+import SnapKit
+
+final class TodayOriginalView: UIView {
 
     private var originalLabel: UILabel = {
         let label = UILabel.todayLabel()

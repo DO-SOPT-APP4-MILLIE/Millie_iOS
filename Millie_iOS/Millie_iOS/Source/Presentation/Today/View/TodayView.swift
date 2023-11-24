@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class TodayView: UIView {
+final class TodayView: UIView {
     
     public let todayTableView: UITableView = {
         let view = UITableView()
