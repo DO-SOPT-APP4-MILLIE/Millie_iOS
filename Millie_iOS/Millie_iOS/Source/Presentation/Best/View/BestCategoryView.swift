@@ -1,5 +1,5 @@
 //
-//  CategoryView.swift
+//  BestCategoryView.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/21/23.
@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class CategoryView: UIView {
+final class BestCategoryView: UIView {
     
     public let categoryLabel: UILabel = {
         let label = UILabel()

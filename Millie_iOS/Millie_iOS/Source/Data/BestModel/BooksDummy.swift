@@ -7,7 +7,7 @@
 
 import Foundation
 
-let BestDummyData: [Book] = [.init(id: 1,
+let BestDummyData: [BestModel] = [.init(id: 1,
                                title: "트렌드 코리아 2024",
                                imageUrl: "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788959897179.jpg",
                                author: "김난도, 전미영, 최지혜",

@@ -1,5 +1,5 @@
 //
-//  Books.swift
+//  BestModel.swift
 //  Millie_iOS
 //
 //  Created by Hyowon Jeon on 11/21/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Book {
+struct BestModel {
     let id: Int
     let title: String
     let imageUrl: String
