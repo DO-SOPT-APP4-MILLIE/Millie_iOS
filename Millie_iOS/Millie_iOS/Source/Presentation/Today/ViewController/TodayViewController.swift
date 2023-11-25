@@ -25,6 +25,7 @@ final class TodayViewController: UIViewController {
     private func register() {
         rootView.todayTableView.register(TodayHeaderView.self, forHeaderFooterViewReuseIdentifier: TodayHeaderView.identifier)
         rootView.todayTableView.register(TodayTableViewCell.self, forCellReuseIdentifier: TodayTableViewCell.identifier)
+        rootView.todayTableView.register(TodayFooterView.self, forHeaderFooterViewReuseIdentifier: TodayFooterView.identifier)
     }
     
     private func delegate() {
@@ -56,5 +57,14 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 374.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: TodayFooterView.identifier) as? TodayFooterView else { return UIView()}
+        return footer
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 361.0
     }
 }

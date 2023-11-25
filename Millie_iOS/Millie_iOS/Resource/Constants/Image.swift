@@ -60,4 +60,5 @@ public enum Image {
     static let todayOriginalImage = UIImage(named: "today_card_original_01")!
     static let todayPreferenceImage = UIImage(named: "today_rec_02")!
     static let todayBanner = UIImage(named: "today_img_banner")!
+    static let todayFooter = UIImage(named: "today_footer")!
 }
