@@ -76,6 +76,8 @@ final class TodayTableViewCell: UITableViewCell {
         originalView.originalTagCollectionView.dataSource = self
         preferenceView.preferenceCollectionView.delegate = self
         preferenceView.preferenceCollectionView.dataSource = self
+        preferenceView.preferenceTagCollectionView.delegate = self
+        preferenceView.preferenceTagCollectionView.dataSource = self
     }
     
     private func setupHierarchy() {
@@ -140,6 +142,10 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return CGSize(width: Int(label.intrinsicContentSize.width) + 24 , height: 31)
         case preferenceView.preferenceCollectionView:
             return CGSize(width: 156.adjusted, height: 249.adjusted)
+            case preferenceView.preferenceTagCollectionView:
+            let label: UILabel = UILabel()
+            label.text = TodayPreferenceTagDummyData[indexPath.row]
+            return CGSize(width: Int(label.intrinsicContentSize.width) + 24 , height: 31)
         default:
             return CGSize.zero
         }
@@ -161,6 +167,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return 10.0.adjusted
         case preferenceView.preferenceCollectionView:
             return 18.0.adjusted
+        case preferenceView.preferenceTagCollectionView:
+            return 10.0.adjusted
         default:
             return 0.0
         }
@@ -206,6 +214,8 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return TodayOriginalTagDummyData.count
         case preferenceView.preferenceCollectionView:
             return 6
+        case preferenceView.preferenceTagCollectionView:
+            return TodayPreferenceTagDummyData.count
         default:
             return 0
         }
@@ -234,6 +244,10 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return cell
         case preferenceView.preferenceCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayPreferenceCollectionViewCell.identifier, for: indexPath) as? TodayPreferenceCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case preferenceView.preferenceTagCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayPreferenceTagCollectionViewCell.identifier, for: indexPath) as? TodayPreferenceTagCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(text: TodayPreferenceTagDummyData[indexPath.row])
             return cell
         default:
             return UICollectionViewCell()

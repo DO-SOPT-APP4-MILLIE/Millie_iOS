@@ -19,6 +19,7 @@ final class TodayPreferenceView: UIView {
     
     private var preferenceButton = UIButton.todayButton()
     public var preferenceCollectionView = UICollectionView.todayCollectionView()
+    public var preferenceTagCollectionView = UICollectionView.todayCollectionView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,6 +37,7 @@ final class TodayPreferenceView: UIView {
     
     private func register() {
         preferenceCollectionView.register(TodayPreferenceCollectionViewCell.self, forCellWithReuseIdentifier: TodayPreferenceCollectionViewCell.identifier)
+        preferenceTagCollectionView.register(TodayPreferenceTagCollectionViewCell.self, forCellWithReuseIdentifier: TodayPreferenceTagCollectionViewCell.identifier)
     }
     
     private func setupStlye() {
@@ -43,7 +45,7 @@ final class TodayPreferenceView: UIView {
     }
     
     private func setupHierarchy() {
-        self.addSubviews(preferenceLabel, preferenceButton, preferenceCollectionView)
+        self.addSubviews(preferenceLabel, preferenceButton, preferenceTagCollectionView, preferenceCollectionView)
     }
     
     private func setupLayout() {
@@ -57,8 +59,14 @@ final class TodayPreferenceView: UIView {
             $0.trailing.equalToSuperview().inset(27.adjusted)
         }
         
+        preferenceTagCollectionView.snp.makeConstraints {
+            $0.top.equalTo(preferenceLabel.snp.bottom).offset(18.5.adjusted)
+            $0.width.equalToSuperview()
+            $0.height.equalTo(31.adjusted)
+        }
+        
         preferenceCollectionView.snp.makeConstraints() {
-            $0.top.equalTo(preferenceLabel.snp.bottom).offset(68.adjusted)
+            $0.top.equalTo(preferenceTagCollectionView.snp.bottom).offset(22.adjusted)
             $0.width.equalToSuperview()
             $0.height.equalTo(798.adjusted)
         }
