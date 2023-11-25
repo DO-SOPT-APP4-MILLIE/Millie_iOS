@@ -23,12 +23,11 @@ class DetailSelectCategoryView: UIView {
         
         button.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
         button.layer.borderWidth = 0.5
-        button.layer.cornerRadius = 15
+        button.layer.cornerRadius = 18
         button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
         button.layer.shadowOpacity = 1.0
         button.layer.shadowOffset = CGSize(width: 2, height: 4)
         button.layer.shadowRadius = 12
-        button.layer.cornerRadius = 20
         
         return button
     }()
@@ -65,14 +64,14 @@ class DetailSelectCategoryView: UIView {
     
     private func setupLayout() {
         electricBookButton.snp.makeConstraints {
-            $0.top.equalTo(self.snp.top)
+            $0.top.bottom.equalToSuperview()
             $0.trailing.equalTo(self.snp.centerX).offset(-8)
             $0.width.equalTo(84)
             $0.height.equalTo(36)
         }
         
         audioBookButton.snp.makeConstraints {
-            $0.top.equalTo(electricBookButton.snp.top)
+            $0.top.bottom.equalToSuperview()
             $0.leading.equalTo(self.snp.centerX)
             $0.width.equalTo(97)
             $0.height.equalTo(36)

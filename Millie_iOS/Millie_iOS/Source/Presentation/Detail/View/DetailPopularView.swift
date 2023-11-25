@@ -67,8 +67,8 @@ class DetailPopularView: UIView {
     
     private func setupLayout() {
         popularTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(self)
-            $0.leading.equalToSuperview().offset(24)
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview().inset(24)
         }
         
         popularImageView.snp.makeConstraints {
@@ -84,7 +84,7 @@ class DetailPopularView: UIView {
         
         divider.snp.makeConstraints {
             $0.top.equalTo(popularDescriptionLabel.snp.bottom).offset(24)
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.trailing.bottom.equalToSuperview()
             $0.height.equalTo(11)
         }
     }

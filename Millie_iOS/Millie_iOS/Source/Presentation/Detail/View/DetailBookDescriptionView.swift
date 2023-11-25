@@ -87,7 +87,7 @@ class DetailBookDescriptionView: UIView {
     
     private func setupLayout() {
         bookImageView.snp.makeConstraints {
-            $0.top.equalTo(self.snp.top)
+            $0.top.equalToSuperview()
             $0.centerX.equalToSuperview()
             $0.width.equalTo(220)
         }
@@ -119,6 +119,7 @@ class DetailBookDescriptionView: UIView {
             $0.top.equalTo(bookInfoStackView.snp.bottom).offset(24)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(11)
+            $0.bottom.equalToSuperview()
         }
     }
 }

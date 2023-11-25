@@ -163,8 +163,8 @@ class DetailMoreDescriptionView: UIView {
     
     private func setupLayout() {
         subTitleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(22)
-            $0.leading.equalToSuperview().offset(24)
+            $0.top.equalToSuperview().inset(22)
+            $0.leading.equalToSuperview().inset(24)
         }
         
         subContentLabel.snp.makeConstraints {
@@ -250,6 +250,7 @@ class DetailMoreDescriptionView: UIView {
         divider6.snp.makeConstraints {
             $0.leading.trailing.bottom.equalToSuperview()
             $0.top.equalTo(divider5.snp.bottom)
+            $0.height.equalTo(124)
         }
     }
 }

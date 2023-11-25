@@ -127,8 +127,8 @@ class DetailWeeklyBestBookView: UIView {
     
     private func setupLayout() {
         bestBookImageView.snp.makeConstraints {
-            $0.top.equalTo(self)
-            $0.leading.equalToSuperview().offset(24)
+            $0.top.equalToSuperview().inset(13)
+            $0.leading.equalToSuperview().inset(24)
         }
         
         bestBookTitleLabel.snp.makeConstraints {
@@ -185,7 +185,7 @@ class DetailWeeklyBestBookView: UIView {
         
         divider2.snp.makeConstraints {
             $0.top.equalTo(bestBook2AuthorsLabel.snp.bottom).offset(34)
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.trailing.bottom.equalToSuperview()
             $0.height.equalTo(11)
         }
     }

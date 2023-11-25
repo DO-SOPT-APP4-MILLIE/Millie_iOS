@@ -80,18 +80,18 @@ class DetailWandokView: UIView {
     
     private func setupLayout() {
         bookDescriptionLabel.snp.makeConstraints {
-            $0.top.equalTo(self.snp.top)
-            $0.leading.equalTo(self.snp.leading).offset(24)
+            $0.top.equalToSuperview().inset(22)
+            $0.leading.equalToSuperview().inset(24)
         }
         
         wandokImageView.snp.makeConstraints {
             $0.top.equalTo(bookDescriptionLabel.snp.bottom).offset(31)
-            $0.width.equalTo(self.snp.width)
+            $0.width.equalToSuperview()
         }
         
         wandokPointIconImageView.snp.makeConstraints {
             $0.top.equalTo(wandokImageView.snp.bottom).offset(2)
-            $0.leading.equalTo(self.snp.leading).offset(50)
+            $0.leading.equalToSuperview().inset(50)
             $0.width.equalTo(16)
         }
         
@@ -116,6 +116,7 @@ class DetailWandokView: UIView {
             $0.top.equalTo(wandokTextLabel.snp.bottom).offset(24)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(11)
+            $0.bottom.equalToSuperview()
         }
     }
 
