@@ -14,6 +14,7 @@ class TodayFooterView: UITableViewHeaderFooterView {
     private var infoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = Image.todayFooter
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
