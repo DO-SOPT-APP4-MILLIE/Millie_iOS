@@ -35,9 +35,6 @@ final class TodayViewController: UIViewController {
 }
 
 extension TodayViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 4165.0 //수정예정
-    }
 }
 
 extension TodayViewController: UITableViewDataSource {
@@ -50,13 +47,17 @@ extension TodayViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 3342.0
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TodayHeaderView.identifier) as? TodayHeaderView else { return UIView()}
         return header
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        var height = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.width
         return height
     }
     
