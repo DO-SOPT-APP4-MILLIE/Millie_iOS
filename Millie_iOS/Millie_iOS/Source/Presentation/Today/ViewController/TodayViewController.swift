@@ -23,6 +23,7 @@ final class TodayViewController: UIViewController {
     }
     
     private func register() {
+        rootView.todayTableView.register(TodayHeaderView.self, forHeaderFooterViewReuseIdentifier: TodayHeaderView.identifier)
         rootView.todayTableView.register(TodayTableViewCell.self, forCellReuseIdentifier: TodayTableViewCell.identifier)
     }
     
@@ -46,5 +47,14 @@ extension TodayViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TodayTableViewCell.identifier, for: indexPath) as? TodayTableViewCell else { return TodayTableViewCell() }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TodayHeaderView.identifier) as? TodayHeaderView else { return UIView()}
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 374.0
     }
 }

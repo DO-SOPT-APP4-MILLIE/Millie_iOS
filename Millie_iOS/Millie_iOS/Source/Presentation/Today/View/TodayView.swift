@@ -12,7 +12,7 @@ import SnapKit
 final class TodayView: UIView {
     
     public let todayTableView: UITableView = {
-        let view = UITableView()
+        let view = UITableView(frame: .zero, style: .grouped)
         view.backgroundColor = .milWhite
         return view
     }()

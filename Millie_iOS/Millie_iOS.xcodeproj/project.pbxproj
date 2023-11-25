@@ -39,6 +39,7 @@
 		2CA96AB22B0A85AE007074F8 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB12B0A85AE007074F8 /* UIButton+.swift */; };
 		2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB32B0A865B007074F8 /* UIColor+.swift */; };
 		2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96AB52B0A8A11007074F8 /* UIView+.swift */; };
+		2CD28DCF2B11C8E200E4733C /* TodayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD28DCE2B11C8E200E4733C /* TodayHeaderView.swift */; };
 		3CA78D9F2B0E357200EE3409 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA78D9E2B0E357200EE3409 /* DetailView.swift */; };
 		3CA78DA12B0E383400EE3409 /* DetailSelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA78DA02B0E383400EE3409 /* DetailSelectCategoryView.swift */; };
 		3CA78DA32B0E384900EE3409 /* DetailBookDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA78DA22B0E384900EE3409 /* DetailBookDescriptionView.swift */; };
@@ -104,6 +105,7 @@
 		2CA96AB12B0A85AE007074F8 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		2CA96AB32B0A865B007074F8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		2CA96AB52B0A8A11007074F8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		2CD28DCE2B11C8E200E4733C /* TodayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeaderView.swift; sourceTree = "<group>"; };
 		3CA78D9E2B0E357200EE3409 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3CA78DA02B0E383400EE3409 /* DetailSelectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSelectCategoryView.swift; sourceTree = "<group>"; };
 		3CA78DA22B0E384900EE3409 /* DetailBookDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookDescriptionView.swift; sourceTree = "<group>"; };
@@ -269,7 +271,6 @@
 		2CA96A982B0A7E63007074F8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				CD7925B42B0CBB3600C4823D /* Books */,
 				2C140B082B0E6D48006ECA2C /* Today */,
 				CD38E05A2B0F6D2C001C979C /* MyLibraryModel */,
 				CD7925B42B0CBB3600C4823D /* BestModel */,
@@ -287,6 +288,7 @@
 		2CA96A9A2B0A7F02007074F8 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				2CD28DCD2B11C8D300E4733C /* HeaderFooterView */,
 				2C140B032B0E1250006ECA2C /* Cell */,
 				2CA96A9B2B0A7F09007074F8 /* View */,
 				2CA96A9C2B0A7F13007074F8 /* ViewController */,
@@ -314,6 +316,14 @@
 				2CA96A812B0A7D00007074F8 /* TodayViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2CD28DCD2B11C8D300E4733C /* HeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				2CD28DCE2B11C8E200E4733C /* TodayHeaderView.swift */,
+			);
+			path = HeaderFooterView;
 			sourceTree = "<group>";
 		};
 		3CBFE3CE2B0DBE020057A3F5 /* Detail */ = {
@@ -532,6 +542,7 @@
 				CD38E0672B0F7D40001C979C /* MyLibraryShelfCategoryView.swift in Sources */,
 				CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */,
 				CD7925B32B0C842900C4823D /* BestCategoryStackView.swift in Sources */,
+				2CD28DCF2B11C8E200E4733C /* TodayHeaderView.swift in Sources */,
 				2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */,
 				3CA78DAB2B0E38F500EE3409 /* DetailMoreDescriptionView.swift in Sources */,
 				2CA96AB42B0A865B007074F8 /* UIColor+.swift in Sources */,
@@ -546,7 +557,7 @@
 				2C140B222B0EE199006ECA2C /* TodayPreferenceView.swift in Sources */,
 				2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */,
 				2C140B242B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift in Sources */,
-				CD7925B12B0C810800C4823D /* CategoryView.swift in Sources */,
+				CD7925B12B0C810800C4823D /* BestCategoryView.swift in Sources */,
 				2C140B102B0E79A5006ECA2C /* TodayBestView.swift in Sources */,
 				3CA78DB12B0E52E900EE3409 /* DetailDividerView.swift in Sources */,
 				CD4DF3702B0D05F700FA2EC7 /* BooksDummy.swift in Sources */,

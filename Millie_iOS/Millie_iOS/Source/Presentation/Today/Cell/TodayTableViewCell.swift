@@ -11,12 +11,6 @@ final class TodayTableViewCell: UITableViewCell {
     
     static let identifier: String = "TodayTableViewCell"
     
-    private let mainView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .orange
-        return view
-    }()
-    
     public let favoriteView: TodayFavoriteView =  {
         let view = TodayFavoriteView()
         view.backgroundColor = .milWhite
@@ -83,18 +77,12 @@ final class TodayTableViewCell: UITableViewCell {
     }
     
     private func setupHierarchy() {
-        contentView.addSubviews(mainView, favoriteView, nowBestView, fistView, monthlyView, originalView, preferenceView)
+        contentView.addSubviews(favoriteView, nowBestView, fistView, monthlyView, originalView, preferenceView)
     }
     
     private func setupLayout() {
-        mainView.snp.makeConstraints() {
-            $0.top.equalTo(safeAreaInsets.top)
-            $0.width.equalToSuperview()
-            $0.height.equalTo(super.snp.width)
-        }
-        
         favoriteView.snp.makeConstraints() {
-            $0.top.equalTo(mainView.snp.bottom).offset(32)
+            $0.top.equalToSuperview()
             $0.width.equalToSuperview()
             $0.height.equalTo(135)
         }
