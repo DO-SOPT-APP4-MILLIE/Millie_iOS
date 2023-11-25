@@ -72,6 +72,8 @@ final class TodayTableViewCell: UITableViewCell {
         monthlyView.monthlyCollectionView.dataSource = self
         originalView.originalCollectionView.delegate = self
         originalView.originalCollectionView.dataSource = self
+        originalView.originalTagCollectionView.delegate = self
+        originalView.originalTagCollectionView.dataSource = self
         preferenceView.preferenceCollectionView.delegate = self
         preferenceView.preferenceCollectionView.dataSource = self
     }
@@ -108,11 +110,11 @@ final class TodayTableViewCell: UITableViewCell {
         originalView.snp.makeConstraints() {
             $0.top.equalTo(monthlyView.snp.bottom).offset(56)
             $0.width.equalToSuperview()
-            $0.height.equalTo(446.adjusted)
+            $0.height.equalTo(456.adjusted)
         }
         
         preferenceView.snp.makeConstraints() {
-            $0.top.equalTo(originalView.snp.bottom).offset(40)
+            $0.top.equalTo(originalView.snp.bottom).offset(40+10)
             $0.width.equalToSuperview()
             $0.height.equalTo(889.adjusted)
         }
@@ -131,7 +133,11 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
         case monthlyView.monthlyCollectionView:
             return CGSize(width: 140.adjusted, height: 274.adjusted)
         case originalView.originalCollectionView:
-            return CGSize(width: 290.adjusted, height: 310.adjusted)
+            return CGSize(width: 300.adjusted, height: 330.adjusted)
+        case originalView.originalTagCollectionView:
+            let label: UILabel = UILabel()
+            label.text = TodayOriginalTagDummyData[indexPath.row]
+            return CGSize(width: Int(label.intrinsicContentSize.width) + 24 , height: 31)
         case preferenceView.preferenceCollectionView:
             return CGSize(width: 156.adjusted, height: 249.adjusted)
         default:
@@ -151,6 +157,8 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return 13.0.adjusted
         case originalView.originalCollectionView:
             return 12.0.adjusted
+        case originalView.originalTagCollectionView:
+            return 10.0.adjusted
         case preferenceView.preferenceCollectionView:
             return 18.0.adjusted
         default:
@@ -194,6 +202,8 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return 10
         case originalView.originalCollectionView:
             return 4
+        case originalView.originalTagCollectionView:
+            return TodayOriginalTagDummyData.count
         case preferenceView.preferenceCollectionView:
             return 6
         default:
@@ -217,6 +227,10 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return cell
         case originalView.originalCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayOriginalCollectionViewCell.identifier, for: indexPath) as? TodayOriginalCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case originalView.originalTagCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayOriginalTagCollectionViewCell.identifier, for: indexPath) as? TodayOriginalTagCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(text: TodayOriginalTagDummyData[indexPath.row])
             return cell
         case preferenceView.preferenceCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayPreferenceCollectionViewCell.identifier, for: indexPath) as? TodayPreferenceCollectionViewCell else { return UICollectionViewCell() }

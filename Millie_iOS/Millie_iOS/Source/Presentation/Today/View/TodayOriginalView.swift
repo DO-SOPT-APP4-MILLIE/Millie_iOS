@@ -27,6 +27,7 @@ final class TodayOriginalView: UIView {
     
     private var originalButton = UIButton.todayButton()
     public var originalCollectionView = UICollectionView.todayCollectionView()
+    public var originalTagCollectionView = UICollectionView.todayCollectionView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,11 +43,12 @@ final class TodayOriginalView: UIView {
     }
     
     private func register() {
+        originalTagCollectionView.register(TodayOriginalTagCollectionViewCell.self, forCellWithReuseIdentifier: TodayOriginalTagCollectionViewCell.identifier)
         originalCollectionView.register(TodayOriginalCollectionViewCell.self, forCellWithReuseIdentifier: TodayOriginalCollectionViewCell.identifier)
     }
     
     private func setupHierarchy() {
-        self.addSubviews(originalLabel, originalInfoLabel, originalButton, originalCollectionView)
+        self.addSubviews(originalLabel, originalInfoLabel, originalButton, originalTagCollectionView, originalCollectionView)
     }
     
     private func setupLayout() {
@@ -65,8 +67,14 @@ final class TodayOriginalView: UIView {
             $0.trailing.equalToSuperview().inset(27.adjusted)
         }
         
+        originalTagCollectionView.snp.makeConstraints() {
+            $0.top.equalTo(originalInfoLabel.snp.bottom).offset(15.adjusted)
+            $0.width.equalToSuperview()
+            $0.height.equalTo(31.adjusted)
+        }
+        
         originalCollectionView.snp.makeConstraints() {
-            $0.top.equalTo(originalInfoLabel.snp.bottom).offset(68.adjusted)
+            $0.top.equalTo(originalTagCollectionView.snp.bottom).offset(22.adjusted)
             $0.width.equalToSuperview()
             $0.height.equalTo(309.adjusted)
         }
