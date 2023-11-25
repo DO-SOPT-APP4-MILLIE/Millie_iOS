@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 final class TodayTableViewCell: UITableViewCell {
     
     static let identifier: String = "TodayTableViewCell"

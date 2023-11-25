@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 final class TodayFistCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "FistCollectionViewCell"

@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class TodayOriginalTagCollectionViewCell: UICollectionViewCell {
+final class TodayOriginalTagCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "OriginalTagCollectionViewCell"
     

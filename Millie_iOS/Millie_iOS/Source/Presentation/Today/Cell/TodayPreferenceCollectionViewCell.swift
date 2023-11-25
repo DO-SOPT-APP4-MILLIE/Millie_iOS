@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 final class TodayPreferenceCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "PreferenceCollectionViewCell"
