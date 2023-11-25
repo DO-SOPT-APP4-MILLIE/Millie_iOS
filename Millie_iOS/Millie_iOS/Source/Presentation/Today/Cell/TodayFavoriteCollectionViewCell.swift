@@ -71,7 +71,7 @@ final class TodayFavoriteCollectionViewCell: UICollectionViewCell {
         
         favoriteIconImageView.snp.makeConstraints() {
             $0.centerX.centerY.equalToSuperview()
-            $0.size.equalTo(24)
+            $0.size.equalTo(24.adjusted)
         }
     }
 }

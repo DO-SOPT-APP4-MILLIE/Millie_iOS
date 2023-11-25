@@ -82,39 +82,39 @@ final class TodayTableViewCell: UITableViewCell {
     
     private func setupLayout() {
         favoriteView.snp.makeConstraints() {
-            $0.top.equalToSuperview().inset(32)
+            $0.top.equalToSuperview().inset(32.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(135)
+            $0.height.equalTo(135.adjusted)
         }
         
         nowBestView.snp.makeConstraints() {
-            $0.top.equalTo(favoriteView.snp.bottom).offset(45)
+            $0.top.equalTo(favoriteView.snp.bottom).offset(45.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(352)
+            $0.height.equalTo(352.adjusted)
         }
         
         fistView.snp.makeConstraints() {
-            $0.top.equalTo(nowBestView.snp.bottom).offset(55)
+            $0.top.equalTo(nowBestView.snp.bottom).offset(55.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(501)
+            $0.height.equalTo(501.adjusted)
         }
         
         monthlyView.snp.makeConstraints() {
             $0.top.equalTo(fistView.snp.bottom).offset(55)
             $0.width.equalToSuperview()
-            $0.height.equalTo(637)
+            $0.height.equalTo(637.adjusted)
         }
         
         originalView.snp.makeConstraints() {
             $0.top.equalTo(monthlyView.snp.bottom).offset(56)
             $0.width.equalToSuperview()
-            $0.height.equalTo(446)
+            $0.height.equalTo(446.adjusted)
         }
         
         preferenceView.snp.makeConstraints() {
             $0.top.equalTo(originalView.snp.bottom).offset(40)
             $0.width.equalToSuperview()
-            $0.height.equalTo(889)
+            $0.height.equalTo(889.adjusted)
         }
     }
 }
@@ -123,17 +123,17 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
-            return CGSize(width: 56, height: 81)
+            return CGSize(width: 56.adjusted, height: 81.adjusted)
         case nowBestView.bestCollectionView:
-            return CGSize(width: 221, height: 87)
+            return CGSize(width: 221.adjusted, height: 87.adjusted)
         case fistView.fistCollectionView:
-            return CGSize(width: 331, height: 447)
+            return CGSize(width: 331.adjusted, height: 447.adjusted)
         case monthlyView.monthlyCollectionView:
-            return CGSize(width: 140, height: 274)
+            return CGSize(width: 140.adjusted, height: 274.adjusted)
         case originalView.originalCollectionView:
-            return CGSize(width: 290, height: 310)
+            return CGSize(width: 290.adjusted, height: 310.adjusted)
         case preferenceView.preferenceCollectionView:
-            return CGSize(width: 156, height: 249)
+            return CGSize(width: 156.adjusted, height: 249.adjusted)
         default:
             return CGSize.zero
         }
@@ -142,17 +142,17 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
-            return 16.0
+            return 16.0.adjusted
         case nowBestView.bestCollectionView:
-            return 60.0
+            return 60.0.adjusted
         case fistView.fistCollectionView:
-            return 12.0
+            return 12.0.adjusted
         case monthlyView.monthlyCollectionView:
-            return 13.0
+            return 13.0.adjusted
         case originalView.originalCollectionView:
-            return 12.0
+            return 12.0.adjusted
         case preferenceView.preferenceCollectionView:
-            return 18.0
+            return 18.0.adjusted
         default:
             return 0.0
         }
@@ -161,9 +161,9 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         switch collectionView {
         case preferenceView.preferenceCollectionView:
-            return UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 24)
+            return UIEdgeInsets(top: 0, left: 25.adjusted, bottom: 0, right: 24.adjusted)
         default:
-            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+            return UIEdgeInsets(top: 0, left: 24.adjusted, bottom: 0, right: 24.adjusted)
         }
     }
     

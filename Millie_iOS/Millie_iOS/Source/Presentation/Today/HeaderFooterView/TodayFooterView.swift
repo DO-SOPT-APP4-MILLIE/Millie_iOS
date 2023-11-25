@@ -36,7 +36,7 @@ class TodayFooterView: UITableViewHeaderFooterView {
     private func setupLayout() {
         infoImageView.snp.makeConstraints() {
             $0.bottom.width.equalToSuperview()
-            $0.height.equalTo(361)
+            $0.height.equalTo(361.adjusted)
         }
     }
 }

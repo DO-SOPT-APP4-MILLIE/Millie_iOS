@@ -51,24 +51,24 @@ final class TodayBestView: UIView {
     
     private func setupLayout() {
         bestLabel.snp.makeConstraints() {
-            $0.top.equalToSuperview().inset(3)
-            $0.leading.equalToSuperview().inset(24)
+            $0.top.equalToSuperview().inset(3.adjusted)
+            $0.leading.equalToSuperview().inset(24.adjusted)
         }
         
         bestInfoLabel.snp.makeConstraints() {
-            $0.top.equalTo(bestLabel.snp.bottom).offset(8)
+            $0.top.equalTo(bestLabel.snp.bottom).offset(8.adjusted)
             $0.leading.equalTo(bestLabel.snp.leading)
         }
         
         bestButton.snp.makeConstraints() {
             $0.centerY.equalTo(bestLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(27)
+            $0.trailing.equalToSuperview().inset(27.adjusted)
         }
         
         bestCollectionView.snp.makeConstraints() {
-            $0.top.equalTo(bestInfoLabel.snp.bottom).offset(20)
+            $0.top.equalTo(bestInfoLabel.snp.bottom).offset(20.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(277)
+            $0.height.equalTo(277.adjusted)
         }
     }
 }

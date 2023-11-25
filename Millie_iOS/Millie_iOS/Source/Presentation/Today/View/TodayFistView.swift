@@ -44,18 +44,18 @@ final class TodayFistView: UIView {
     private func setupLayout() {
         fistLabel.snp.makeConstraints() {
             $0.top.equalToSuperview()
-            $0.leading.equalToSuperview().inset(25)
+            $0.leading.equalToSuperview().inset(25.adjusted)
         }
         
         fistButton.snp.makeConstraints() {
             $0.centerY.equalTo(fistLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(27)
+            $0.trailing.equalToSuperview().inset(27.adjusted)
         }
         
         fistCollectionView.snp.makeConstraints() {
-            $0.top.equalTo(fistLabel.snp.bottom).offset(20)
+            $0.top.equalTo(fistLabel.snp.bottom).offset(20.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(447)
+            $0.height.equalTo(447.adjusted)
         }
     }
 }

@@ -51,24 +51,24 @@ final class TodayOriginalView: UIView {
     
     private func setupLayout() {
         originalLabel.snp.makeConstraints() {
-            $0.top.equalToSuperview().inset(3)
-            $0.leading.equalToSuperview().inset(24)
+            $0.top.equalToSuperview().inset(3.adjusted)
+            $0.leading.equalToSuperview().inset(24.adjusted)
         }
         
         originalInfoLabel.snp.makeConstraints() {
-            $0.top.equalTo(originalLabel.snp.bottom).offset(8)
+            $0.top.equalTo(originalLabel.snp.bottom).offset(8.adjusted)
             $0.leading.equalTo(originalLabel.snp.leading)
         }
         
         originalButton.snp.makeConstraints() {
             $0.centerY.equalTo(originalLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(27)
+            $0.trailing.equalToSuperview().inset(27.adjusted)
         }
         
         originalCollectionView.snp.makeConstraints() {
-            $0.top.equalTo(originalInfoLabel.snp.bottom).offset(68)
+            $0.top.equalTo(originalInfoLabel.snp.bottom).offset(68.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(309)
+            $0.height.equalTo(309.adjusted)
         }
     }
 }
