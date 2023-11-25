@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "ic_audio_fill-2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "ic_audio_fill-3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
