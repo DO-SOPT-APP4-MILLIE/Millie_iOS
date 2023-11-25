@@ -15,7 +15,8 @@ final class TodayFistCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.image = Image.todayFistImage
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 13.0 //수정해야 함
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 13.0
         return imageView
     }()
     
