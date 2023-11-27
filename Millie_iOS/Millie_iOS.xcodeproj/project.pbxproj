@@ -53,6 +53,7 @@
 		3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */; };
 		3CBFE3D22B0DBE310057A3F5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */; };
 		CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B98C52B0DA34900CACFA1 /* BestView.swift */; };
+		CD1BDA9D2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BDA9C2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift */; };
 		CD336F292B11C2A00059565B /* DetailPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336F282B11C2A00059565B /* DetailPopupViewController.swift */; };
 		CD336F2B2B11C2B00059565B /* DetailPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336F2A2B11C2B00059565B /* DetailPopupView.swift */; };
 		CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */; };
@@ -120,6 +121,7 @@
 		3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD0B98C52B0DA34900CACFA1 /* BestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestView.swift; sourceTree = "<group>"; };
+		CD1BDA9C2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopupMyFavoriteView.swift; sourceTree = "<group>"; };
 		CD336F282B11C2A00059565B /* DetailPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopupViewController.swift; sourceTree = "<group>"; };
 		CD336F2A2B11C2B00059565B /* DetailPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopupView.swift; sourceTree = "<group>"; };
 		CD38E04C2B0F4F87001C979C /* MyLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryViewController.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				CD336F2A2B11C2B00059565B /* DetailPopupView.swift */,
+				CD1BDA9C2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				2CA96AAB2B0A8314007074F8 /* UIFont+.swift in Sources */,
 				2C140B1E2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift in Sources */,
 				2C140B142B0E7F55006ECA2C /* TodayFistView.swift in Sources */,
+				CD1BDA9D2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift in Sources */,
 				2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */,
 				2C140B052B0E1E13006ECA2C /* TodayFavoriteView.swift in Sources */,
 				2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */,

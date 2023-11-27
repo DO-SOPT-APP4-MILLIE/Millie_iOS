@@ -11,6 +11,8 @@ import SnapKit
 
 final class DetailPopupView: UIView {
     
+    public var isSelected: Bool = false
+    
     public let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .milWhite
@@ -45,10 +47,12 @@ final class DetailPopupView: UIView {
         return button
     }()
     
+    public let myFavoriteView = DetailPopupMyFavoriteView()
+    
     public let cancelButton: UIButton = {
         let button = UIButton()
         button.setButtonAttributedTitle(text: "취소", font: .millieBody2, color: .darkGrey03)
-        button.backgroundColor = .lightGrey01
+        button.backgroundColor = .lightGrey03
         return button
     }()
     
@@ -62,7 +66,6 @@ final class DetailPopupView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupStyle()
         setupHierarchy()
         setupLayout()
     }
@@ -71,15 +74,12 @@ final class DetailPopupView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupStyle() {
-
-    }
-    
     private func setupHierarchy() {
         addSubview(containerView)
         containerView.addSubviews(titleLabel,
                                   descriptionLabel,
                                   addShelfutton,
+                                  myFavoriteView,
                                   cancelButton,
                                   addButton)
     }
@@ -106,15 +106,20 @@ final class DetailPopupView: UIView {
             $0.height.equalTo(57)
         }
         
+        myFavoriteView.snp.makeConstraints {
+            $0.top.equalTo(addShelfutton.snp.bottom).offset(36)
+            $0.leading.trailing.equalToSuperview().inset(25)
+        }
+        
         cancelButton.snp.makeConstraints {
-            $0.top.equalTo(addShelfutton.snp.bottom).offset(109)
+            $0.top.equalTo(myFavoriteView.snp.bottom).offset(56)
             $0.leading.bottom.equalToSuperview()
             $0.trailing.equalTo(containerView.snp.centerX)
             $0.height.equalTo(55)
         }
         
         addButton.snp.makeConstraints {
-            $0.top.equalTo(addShelfutton.snp.bottom).offset(109)
+            $0.top.equalTo(myFavoriteView.snp.bottom).offset(56)
             $0.trailing.bottom.equalToSuperview()
             $0.leading.equalTo(containerView.snp.centerX)
             $0.height.equalTo(55)
