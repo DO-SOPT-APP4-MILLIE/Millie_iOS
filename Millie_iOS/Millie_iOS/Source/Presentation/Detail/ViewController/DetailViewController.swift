@@ -78,6 +78,11 @@ class DetailViewController: UIViewController {
     @objc
     private func saveButtonTap() {
         print("saveButtonTap")
+        let vc = DetailPopupViewController()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        
+        self.present(vc, animated: true)
     }
     
     @objc
