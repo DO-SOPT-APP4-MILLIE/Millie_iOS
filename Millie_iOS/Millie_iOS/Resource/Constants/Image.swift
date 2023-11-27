@@ -63,4 +63,13 @@ public enum Image {
     static let todayFooter = UIImage(named: "today_footer")!
     static let todayLogo = UIImage(named: "logo")!
     static let todayBell = UIImage(named: "today_ic_info")!
+    
+    static let tabFeed = UIImage(named: "Property 1=feed_default")!
+    static let tabSearch = UIImage(named: "Property 1=search_default")!
+    static let tabMylibrary = UIImage(named: "Property 1=shelf_default")!
+    static let tabSetting = UIImage(named: "Property 1=setting_default")!
+    static let tabBook = UIImage(named: "Group 179")!
+    static let tabStory = UIImage(named: "btn_story")!
+    static let tabRoad = UIImage(named: "btn_millieroad")!
+    static let tabAudio = UIImage(named: "btn_audiobook")!
 }

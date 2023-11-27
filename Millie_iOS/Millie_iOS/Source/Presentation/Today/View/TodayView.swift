@@ -17,6 +17,8 @@ final class TodayView: UIView {
         return view
     }()
     
+    private let tabBarView = TodayTabBarView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -29,12 +31,17 @@ final class TodayView: UIView {
     }
     
     private func setupHierarchy() {
-        self.addSubview(todayTableView)
+        self.addSubviews(todayTableView, tabBarView)
     }
     
     private func setupLayout() {
         todayTableView.snp.makeConstraints() {
             $0.edges.equalToSuperview()
+        }
+        
+        tabBarView.snp.makeConstraints() {
+            $0.bottom.width.equalToSuperview()
+            $0.height.equalTo(92)
         }
     }
 }
