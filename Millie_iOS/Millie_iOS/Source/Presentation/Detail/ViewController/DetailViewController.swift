@@ -46,6 +46,9 @@ class DetailViewController: UIViewController {
         rootView.detailBottomView.readButton.addTarget(self,
                                                        action: #selector(readButtonTap),
                                                        for: .touchUpInside)
+        
+        rootView.detailToastMessageView.goToMyLibraryButton.addTarget(self,
+                                                                      action: #selector(goToMyLibraryButtonTap), for: .touchUpInside)
     }
     
     private func setupNavigtion() {
@@ -92,7 +95,15 @@ class DetailViewController: UIViewController {
     
     @objc
     private func readButtonTap() {
-        print("readButtonTap")
+        
+    }
+    
+    @objc
+    private func goToMyLibraryButtonTap() {
+        let vc = MyLibraryViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func showGoToMyLibraryToastMessage() {
         view.bringSubviewToFront(rootView.detailToastMessageView)
         self.rootView.detailToastMessageView.alpha = 0.0
