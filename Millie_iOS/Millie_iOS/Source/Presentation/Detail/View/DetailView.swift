@@ -50,15 +50,14 @@ class DetailView: UIView {
     }
     
     private func setupHierarchy() {
-        self.addSubview(scrollView)
+        self.addSubviews(scrollView, detailBottomView)
         scrollView.addSubview(contentView)
         contentView.addSubviews(detailSelectCategoryView,
                               detailBookDescriptionView,
                               detailWandokView,
                               detailPopularView,
                               detailWeeklyBestBookView,
-                              detailMoreDescriptionView,
-                              detailBottomView)
+                              detailMoreDescriptionView)
     }
     
     private func setupLayout() {
@@ -68,50 +67,42 @@ class DetailView: UIView {
         }
         
         contentView.snp.makeConstraints {
-            $0.edges.equalTo(scrollView.contentLayoutGuide)
-            $0.width.equalTo(scrollView)
-            $0.height.greaterThanOrEqualTo(self.snp.height)
+            $0.edges.width.equalToSuperview()
         }
         
         detailSelectCategoryView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(13)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(36)
         }
         
         detailBookDescriptionView.snp.makeConstraints {
             $0.top.equalTo(detailSelectCategoryView.snp.bottom).offset(26)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(540)
         }
         
         detailWandokView.snp.makeConstraints {
             $0.top.equalTo(detailBookDescriptionView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(540)
         }
         
         detailPopularView.snp.makeConstraints {
             $0.top.equalTo(detailWandokView.snp.bottom).offset(22)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(500)
         }
         
         detailWeeklyBestBookView.snp.makeConstraints {
             $0.top.equalTo(detailPopularView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(400)
         }
         
         detailMoreDescriptionView.snp.makeConstraints {
             $0.top.equalTo(detailWeeklyBestBookView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(650)
-            $0.bottom.equalTo(contentView.snp.bottom)
+            $0.bottom.equalToSuperview()
         }
         
         detailBottomView.snp.makeConstraints {
-            $0.bottom.equalTo(self)
+            $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(100)
         }
