@@ -25,6 +25,8 @@
 		2C140B242B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B232B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift */; };
 		2C7D86AF2B158B3E002BF09F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D86AE2B158B3E002BF09F /* Config.swift */; };
 		2C7D86B12B158BFF002BF09F /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D86B02B158BFF002BF09F /* URLs.swift */; };
+		2C7D86B42B15B847002BF09F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2C7D86B32B15B847002BF09F /* Moya */; };
+		2C7D86B72B15B857002BF09F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2C7D86B62B15B857002BF09F /* Alamofire */; };
 		2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */; };
 		2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */; };
 		2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A812B0A7D00007074F8 /* TodayViewController.swift */; };
@@ -162,8 +164,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7D86B72B15B857002BF09F /* Alamofire in Frameworks */,
 				2CA96AAE2B0A8578007074F8 /* Kingfisher in Frameworks */,
 				2CA96A9F2B0A7F62007074F8 /* SnapKit in Frameworks */,
+				2C7D86B42B15B847002BF09F /* Moya in Frameworks */,
 				2CA96AA12B0A7F62007074F8 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +497,8 @@
 				2CA96A9E2B0A7F62007074F8 /* SnapKit */,
 				2CA96AA02B0A7F62007074F8 /* SnapKit-Dynamic */,
 				2CA96AAD2B0A8578007074F8 /* Kingfisher */,
+				2C7D86B32B15B847002BF09F /* Moya */,
+				2C7D86B62B15B857002BF09F /* Alamofire */,
 			);
 			productName = Millie_iOS;
 			productReference = 2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */;
@@ -525,6 +531,8 @@
 			packageReferences = (
 				2CA96A9D2B0A7F62007074F8 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2CA96AAC2B0A8578007074F8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2C7D86B22B15B847002BF09F /* XCRemoteSwiftPackageReference "Moya" */,
+				2C7D86B52B15B857002BF09F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 2CA96A7B2B0A7D00007074F8 /* Products */;
 			projectDirPath = "";
@@ -826,6 +834,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2C7D86B22B15B847002BF09F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		2C7D86B52B15B857002BF09F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 		2CA96A9D2B0A7F62007074F8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -845,6 +869,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C7D86B32B15B847002BF09F /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C7D86B22B15B847002BF09F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		2C7D86B62B15B857002BF09F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C7D86B52B15B857002BF09F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		2CA96A9E2B0A7F62007074F8 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2CA96A9D2B0A7F62007074F8 /* XCRemoteSwiftPackageReference "SnapKit" */;
