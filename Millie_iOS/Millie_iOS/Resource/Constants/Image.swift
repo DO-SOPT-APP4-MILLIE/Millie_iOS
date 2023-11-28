@@ -54,10 +54,11 @@ public enum Image {
     
     //Today
     static let thumbsUp = UIImage(named: "today_ic_thumbs_up")!
-    static let smallBookImage = UIImage(named: "today_img_best_01")
-    static let todayFistImage = UIImage(named: "today_card_week_1")
-    static let todayMonthlyImage = UIImage(named: "today_new_book_01")
-    static let todayOriginalImage = UIImage(named: "today_card_original_01")
-    static let todayPreferenceImage = UIImage(named: "today_rec_02")
-    
+    static let smallBookImage = UIImage(named: "today_img_best_01")!
+    static let todayFistImage = UIImage(named: "today_card_week_1")!
+    static let todayMonthlyImage = UIImage(named: "today_new_book_01")!
+    static let todayOriginalImage = UIImage(named: "today_card_original_01")!
+    static let todayPreferenceImage = UIImage(named: "today_rec_02")!
+    static let todayBanner = UIImage(named: "today_img_banner")!
+    static let todayFooter = UIImage(named: "today_footer")!
 }

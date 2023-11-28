@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 final class TodayOriginalCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "OriginalCollectionViewCell"

@@ -43,19 +43,19 @@ final class TodayMonthlyView: UIView {
     
     private func setupLayout() {
         monthlyLabel.snp.makeConstraints() {
-            $0.top.equalToSuperview().inset(13.5)
-            $0.leading.equalToSuperview().inset(25)
+            $0.top.equalToSuperview().inset(13.5.adjusted)
+            $0.leading.equalToSuperview().inset(25.adjusted)
         }
         
         monthlyButton.snp.makeConstraints() {
             $0.centerY.equalTo(monthlyLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(27)
+            $0.trailing.equalToSuperview().inset(27.adjusted)
         }
         
         monthlyCollectionView.snp.makeConstraints() {
-            $0.top.equalTo(monthlyLabel.snp.bottom).offset(23.5)
+            $0.top.equalTo(monthlyLabel.snp.bottom).offset(23.5.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(582)
+            $0.height.equalTo(582.adjusted)
         }
     }
 }

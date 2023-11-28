@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 final class TodayMonthlyCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "MonthlyCollectionViewCell"

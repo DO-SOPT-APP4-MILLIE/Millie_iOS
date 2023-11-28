@@ -7,15 +7,11 @@
 
 import UIKit
 
+import SnapKit
+
 final class TodayTableViewCell: UITableViewCell {
     
     static let identifier: String = "TodayTableViewCell"
-    
-    private let mainView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .orange
-        return view
-    }()
     
     public let favoriteView: TodayFavoriteView =  {
         let view = TodayFavoriteView()
@@ -78,55 +74,53 @@ final class TodayTableViewCell: UITableViewCell {
         monthlyView.monthlyCollectionView.dataSource = self
         originalView.originalCollectionView.delegate = self
         originalView.originalCollectionView.dataSource = self
+        originalView.originalTagCollectionView.delegate = self
+        originalView.originalTagCollectionView.dataSource = self
         preferenceView.preferenceCollectionView.delegate = self
         preferenceView.preferenceCollectionView.dataSource = self
+        preferenceView.preferenceTagCollectionView.delegate = self
+        preferenceView.preferenceTagCollectionView.dataSource = self
     }
     
     private func setupHierarchy() {
-        contentView.addSubviews(mainView, favoriteView, nowBestView, fistView, monthlyView, originalView, preferenceView)
+        contentView.addSubviews(favoriteView, nowBestView, fistView, monthlyView, originalView, preferenceView)
     }
     
     private func setupLayout() {
-        mainView.snp.makeConstraints() {
-            $0.top.equalTo(safeAreaInsets.top)
-            $0.width.equalToSuperview()
-            $0.height.equalTo(super.snp.width)
-        }
-        
         favoriteView.snp.makeConstraints() {
-            $0.top.equalTo(mainView.snp.bottom).offset(32)
+            $0.top.equalToSuperview().inset(32.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(135)
+            $0.height.equalTo(135.adjusted)
         }
         
         nowBestView.snp.makeConstraints() {
-            $0.top.equalTo(favoriteView.snp.bottom).offset(45)
+            $0.top.equalTo(favoriteView.snp.bottom).offset(45.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(352)
+            $0.height.equalTo(352.adjusted)
         }
         
         fistView.snp.makeConstraints() {
-            $0.top.equalTo(nowBestView.snp.bottom).offset(55)
+            $0.top.equalTo(nowBestView.snp.bottom).offset(55.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(501)
+            $0.height.equalTo(501.adjusted)
         }
         
         monthlyView.snp.makeConstraints() {
             $0.top.equalTo(fistView.snp.bottom).offset(55)
             $0.width.equalToSuperview()
-            $0.height.equalTo(637)
+            $0.height.equalTo(637.adjusted)
         }
         
         originalView.snp.makeConstraints() {
             $0.top.equalTo(monthlyView.snp.bottom).offset(56)
             $0.width.equalToSuperview()
-            $0.height.equalTo(446)
+            $0.height.equalTo(456.adjusted)
         }
         
         preferenceView.snp.makeConstraints() {
-            $0.top.equalTo(originalView.snp.bottom).offset(40)
+            $0.top.equalTo(originalView.snp.bottom).offset(40+10)
             $0.width.equalToSuperview()
-            $0.height.equalTo(889)
+            $0.height.equalTo(889.adjusted)
         }
     }
 }
@@ -135,17 +129,25 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
-            return CGSize(width: 56, height: 81)
+            return CGSize(width: 56.adjusted, height: 81.adjusted)
         case nowBestView.bestCollectionView:
-            return CGSize(width: 221, height: 87)
+            return CGSize(width: 221.adjusted, height: 87.adjusted)
         case fistView.fistCollectionView:
-            return CGSize(width: 331, height: 447)
+            return CGSize(width: 331.adjusted, height: 447.adjusted)
         case monthlyView.monthlyCollectionView:
-            return CGSize(width: 140, height: 274)
+            return CGSize(width: 140.adjusted, height: 274.adjusted)
         case originalView.originalCollectionView:
-            return CGSize(width: 290, height: 310)
+            return CGSize(width: 300.adjusted, height: 330.adjusted)
+        case originalView.originalTagCollectionView:
+            let label: UILabel = UILabel()
+            label.text = TodayOriginalTagDummyData[indexPath.row]
+            return CGSize(width: Int(label.intrinsicContentSize.width) + 24 , height: 31)
         case preferenceView.preferenceCollectionView:
-            return CGSize(width: 156, height: 249)
+            return CGSize(width: 156.adjusted, height: 249.adjusted)
+            case preferenceView.preferenceTagCollectionView:
+            let label: UILabel = UILabel()
+            label.text = TodayPreferenceTagDummyData[indexPath.row]
+            return CGSize(width: Int(label.intrinsicContentSize.width) + 24 , height: 31)
         default:
             return CGSize.zero
         }
@@ -154,17 +156,21 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
-            return 16.0
+            return 16.0.adjusted
         case nowBestView.bestCollectionView:
-            return 60.0
+            return 60.0.adjusted
         case fistView.fistCollectionView:
-            return 12.0
+            return 12.0.adjusted
         case monthlyView.monthlyCollectionView:
-            return 13.0
+            return 13.0.adjusted
         case originalView.originalCollectionView:
-            return 12.0
+            return 12.0.adjusted
+        case originalView.originalTagCollectionView:
+            return 10.0.adjusted
         case preferenceView.preferenceCollectionView:
-            return 18.0
+            return 18.0.adjusted
+        case preferenceView.preferenceTagCollectionView:
+            return 10.0.adjusted
         default:
             return 0.0
         }
@@ -173,9 +179,9 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         switch collectionView {
         case preferenceView.preferenceCollectionView:
-            return UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 24)
+            return UIEdgeInsets(top: 0, left: 25.adjusted, bottom: 0, right: 24.adjusted)
         default:
-            return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+            return UIEdgeInsets(top: 0, left: 24.adjusted, bottom: 0, right: 24.adjusted)
         }
     }
     
@@ -206,8 +212,12 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return 10
         case originalView.originalCollectionView:
             return 4
+        case originalView.originalTagCollectionView:
+            return TodayOriginalTagDummyData.count
         case preferenceView.preferenceCollectionView:
             return 6
+        case preferenceView.preferenceTagCollectionView:
+            return TodayPreferenceTagDummyData.count
         default:
             return 0
         }
@@ -230,8 +240,16 @@ extension TodayTableViewCell: UICollectionViewDataSource {
         case originalView.originalCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayOriginalCollectionViewCell.identifier, for: indexPath) as? TodayOriginalCollectionViewCell else { return UICollectionViewCell() }
             return cell
+        case originalView.originalTagCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayOriginalTagCollectionViewCell.identifier, for: indexPath) as? TodayOriginalTagCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(text: TodayOriginalTagDummyData[indexPath.row])
+            return cell
         case preferenceView.preferenceCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayPreferenceCollectionViewCell.identifier, for: indexPath) as? TodayPreferenceCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case preferenceView.preferenceTagCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayPreferenceTagCollectionViewCell.identifier, for: indexPath) as? TodayPreferenceTagCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(text: TodayPreferenceTagDummyData[indexPath.row])
             return cell
         default:
             return UICollectionViewCell()

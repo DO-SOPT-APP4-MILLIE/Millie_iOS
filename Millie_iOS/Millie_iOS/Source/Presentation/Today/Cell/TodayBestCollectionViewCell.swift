@@ -75,24 +75,24 @@ final class TodayBestCollectionViewCell: UICollectionViewCell {
     
     private func setupLayout() {
         rankingLabel.snp.makeConstraints() {
-            $0.bottom.equalTo(super.snp.centerY).offset(-1)
-            $0.leading.equalToSuperview().inset(3)
+            $0.bottom.equalTo(super.snp.centerY).offset(-1.adjusted)
+            $0.leading.equalToSuperview().inset(3.adjusted)
         }
         
         rankingChangeLabel.snp.makeConstraints() {
-            $0.top.equalTo(super.snp.centerY).offset(1)
+            $0.top.equalTo(super.snp.centerY).offset(1.adjusted)
             $0.centerX.equalTo(rankingLabel.snp.centerX)
         }
         
         bookImageView.snp.makeConstraints() {
-            $0.leading.equalToSuperview().inset(35)
-            $0.width.equalTo(61)
+            $0.leading.equalToSuperview().inset(35.adjusted)
+            $0.width.equalTo(61.adjusted)
             $0.height.equalToSuperview()
         }
         
         bookTitleLabel.snp.makeConstraints() {
-            $0.top.equalToSuperview().inset(21)
-            $0.leading.equalTo(bookImageView.snp.trailing).offset(17)
+            $0.top.equalToSuperview().inset(21.adjusted)
+            $0.leading.equalTo(bookImageView.snp.trailing).offset(17.adjusted)
         }
         
         bookAuthorLabel.snp.makeConstraints() {

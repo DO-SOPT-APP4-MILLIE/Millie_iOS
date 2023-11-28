@@ -44,18 +44,18 @@ final class TodayFavoriteView: UIView {
     private func setupLayout() {
         favoriteLabel.snp.makeConstraints() {
             $0.top.equalToSuperview()
-            $0.leading.equalToSuperview().inset(24)
+            $0.leading.equalToSuperview().inset(24.adjusted)
         }
         
         favoriteButton.snp.makeConstraints() {
             $0.centerY.equalTo(favoriteLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(27)
+            $0.trailing.equalToSuperview().inset(27.adjusted)
         }
         
         favoriteCollectionView.snp.makeConstraints() {
-            $0.top.equalTo(favoriteButton.snp.bottom).offset(20)
+            $0.top.equalTo(favoriteButton.snp.bottom).offset(20.adjusted)
             $0.width.equalToSuperview()
-            $0.height.equalTo(81)
+            $0.height.equalTo(81.adjusted)
         }
     }
 }
