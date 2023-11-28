@@ -9,6 +9,8 @@ import UIKit
 
 final class DetailPopupViewController: UIViewController {
     
+    weak var delegate: PopupDelegate?
+    
     private let rootView = DetailPopupView()
     
     override func loadView() {
@@ -37,7 +39,9 @@ final class DetailPopupViewController: UIViewController {
     }
     
     @objc func addButtonDidTap() {
-        self.dismiss(animated: true)
+        self.dismiss(animated: true) {
+            self.delegate?.showToastMessage()
+        }
     }
     
     @objc func myFavoriteViewDidTap() {

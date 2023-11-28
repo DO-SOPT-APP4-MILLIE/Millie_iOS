@@ -9,6 +9,10 @@ import UIKit
 
 import SnapKit
 
+protocol PopupDelegate: AnyObject {
+    func showToastMessage()
+}
+
 class DetailViewController: UIViewController {
     
     private let rootView = DetailView()
@@ -81,6 +85,7 @@ class DetailViewController: UIViewController {
         let vc = DetailPopupViewController()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overFullScreen
+        vc.delegate = self
         
         self.present(vc, animated: true)
     }
@@ -88,11 +93,33 @@ class DetailViewController: UIViewController {
     @objc
     private func readButtonTap() {
         print("readButtonTap")
+    func showGoToMyLibraryToastMessage() {
+        view.bringSubviewToFront(rootView.detailToastMessageView)
+        self.rootView.detailToastMessageView.alpha = 0.0
+        self.rootView.detailToastMessageView.isHidden = false
+        
+        UIView.animate(withDuration: 0.3) {
+            self.rootView.detailToastMessageView.alpha = 1.0
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.rootView.detailToastMessageView.alpha = 0.0
+            }) { _ in
+                self.rootView.detailToastMessageView.isHidden = true
+            }
+        }
     }
     
     private func bindData() {
         rootView.detailBookDescriptionView.archivedStackView.countLabel.text = "2.6만 개+"
         rootView.detailBookDescriptionView.postStackView.countLabel.text = "4개"
         rootView.detailBookDescriptionView.reviewStackView.countLabel.text = "29개"
+    }
+}
+
+extension DetailViewController: PopupDelegate {
+    func showToastMessage() {
+        showGoToMyLibraryToastMessage()
     }
 }
