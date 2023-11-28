@@ -11,6 +11,8 @@ import SnapKit
 
 final class DetailPopupMyFavoriteView: UIView {
     
+    public var isSelected: Bool = false
+    
     public let myFavoriteLabel: UILabel = {
         let label = UILabel()
         label.text = "☆ My Favorite"

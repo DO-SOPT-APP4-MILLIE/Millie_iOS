@@ -11,8 +11,6 @@ import SnapKit
 
 final class DetailPopupView: UIView {
     
-    public var isSelected: Bool = false
-    
     public let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .milWhite

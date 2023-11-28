@@ -41,14 +41,14 @@ final class DetailPopupViewController: UIViewController {
     }
     
     @objc func myFavoriteViewDidTap() {
-        if rootView.isSelected {
+        if rootView.myFavoriteView.isSelected {
             rootView.myFavoriteView.selectedView.layer.borderColor = UIColor.lightGrey03.cgColor
             rootView.myFavoriteView.selectedView.layer.borderWidth = 1.8
-            rootView.isSelected = false
+            rootView.myFavoriteView.isSelected = false
         } else {
             rootView.myFavoriteView.selectedView.layer.borderColor = UIColor.darkGrey03.cgColor
             rootView.myFavoriteView.selectedView.layer.borderWidth = 4
-            rootView.isSelected = true
+            rootView.myFavoriteView.isSelected = true
         }
     }
 }
