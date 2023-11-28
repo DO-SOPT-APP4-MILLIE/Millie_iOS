@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 class TodayFooterView: UITableViewHeaderFooterView {
 
     static let identifier: String = "TodayTableViewFooter"
