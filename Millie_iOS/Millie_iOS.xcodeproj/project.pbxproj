@@ -23,6 +23,8 @@
 		2C140B1E2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B1D2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift */; };
 		2C140B222B0EE199006ECA2C /* TodayPreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B212B0EE199006ECA2C /* TodayPreferenceView.swift */; };
 		2C140B242B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B232B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift */; };
+		2C7D86AF2B158B3E002BF09F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D86AE2B158B3E002BF09F /* Config.swift */; };
+		2C7D86B12B158BFF002BF09F /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D86B02B158BFF002BF09F /* URLs.swift */; };
 		2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */; };
 		2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */; };
 		2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A812B0A7D00007074F8 /* TodayViewController.swift */; };
@@ -97,6 +99,8 @@
 		2C140B1D2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOriginalCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C140B212B0EE199006ECA2C /* TodayPreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPreferenceView.swift; sourceTree = "<group>"; };
 		2C140B232B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPreferenceCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C7D86AE2B158B3E002BF09F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2C7D86B02B158BFF002BF09F /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				2CA96AA22B0A7FC9007074F8 /* Image.swift */,
+				2C7D86AE2B158B3E002BF09F /* Config.swift */,
+				2C7D86B02B158BFF002BF09F /* URLs.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				CD7925B12B0C810800C4823D /* BestCategoryView.swift in Sources */,
 				2C140B102B0E79A5006ECA2C /* TodayBestView.swift in Sources */,
 				3CA78DB12B0E52E900EE3409 /* DetailDividerView.swift in Sources */,
+				2C7D86B12B158BFF002BF09F /* URLs.swift in Sources */,
 				2CCC61A52B13963E00AD4916 /* TodayTabBarView.swift in Sources */,
 				2CD28DD92B1251E300E4733C /* MillieTagView.swift in Sources */,
 				2CD28DD12B11CF2800E4733C /* TodayFooterView.swift in Sources */,
@@ -607,6 +614,7 @@
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 				3CA78DA32B0E384900EE3409 /* DetailBookDescriptionView.swift in Sources */,
 				3CA78DAD2B0E393A00EE3409 /* DetailBottomView.swift in Sources */,
+				2C7D86AF2B158B3E002BF09F /* Config.swift in Sources */,
 				3CBFE3C82B0DBD520057A3F5 /* UIStackView+.swift in Sources */,
 				2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */,
 				CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */,
@@ -743,6 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://www.jaeyunandsangjune.p-e.kr/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L22KGAL4ND;
@@ -770,6 +779,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://www.jaeyunandsangjune.p-e.kr/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L22KGAL4ND;
