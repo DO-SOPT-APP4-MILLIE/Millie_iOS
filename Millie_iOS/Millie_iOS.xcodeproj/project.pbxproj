@@ -23,6 +23,11 @@
 		2C140B1E2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B1D2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift */; };
 		2C140B222B0EE199006ECA2C /* TodayPreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B212B0EE199006ECA2C /* TodayPreferenceView.swift */; };
 		2C140B242B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B232B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift */; };
+		2C7D86AF2B158B3E002BF09F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D86AE2B158B3E002BF09F /* Config.swift */; };
+		2C7D86B12B158BFF002BF09F /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D86B02B158BFF002BF09F /* URLs.swift */; };
+		2C7D86B42B15B847002BF09F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2C7D86B32B15B847002BF09F /* Moya */; };
+		2C7D86B72B15B857002BF09F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2C7D86B62B15B857002BF09F /* Alamofire */; };
+		2C7D86BD2B15D148002BF09F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D86BC2B15D148002BF09F /* NetworkResult.swift */; };
 		2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */; };
 		2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */; };
 		2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA96A812B0A7D00007074F8 /* TodayViewController.swift */; };
@@ -100,6 +105,9 @@
 		2C140B1D2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOriginalCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C140B212B0EE199006ECA2C /* TodayPreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPreferenceView.swift; sourceTree = "<group>"; };
 		2C140B232B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPreferenceCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C7D86AE2B158B3E002BF09F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2C7D86B02B158BFF002BF09F /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		2C7D86BC2B15D148002BF09F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA96A7D2B0A7D00007074F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA96A7F2B0A7D00007074F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,8 +172,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7D86B72B15B857002BF09F /* Alamofire in Frameworks */,
 				2CA96AAE2B0A8578007074F8 /* Kingfisher in Frameworks */,
 				2CA96A9F2B0A7F62007074F8 /* SnapKit in Frameworks */,
+				2C7D86B42B15B847002BF09F /* Moya in Frameworks */,
 				2CA96AA12B0A7F62007074F8 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +203,34 @@
 			isa = PBXGroup;
 			children = (
 				2CD28DDA2B12546D00E4733C /* TodayOriginalTagDummy.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		2C7D86B82B15B8A7002BF09F /* MyLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyLibrary;
+			sourceTree = "<group>";
+		};
+		2C7D86B92B15B8B9002BF09F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2C7D86BA2B15B8BE002BF09F /* Best */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Best;
+			sourceTree = "<group>";
+		};
+		2C7D86BB2B15B8C3002BF09F /* Today */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -250,6 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				2CA96AA22B0A7FC9007074F8 /* Image.swift */,
+				2C7D86AE2B158B3E002BF09F /* Config.swift */,
+				2C7D86B02B158BFF002BF09F /* URLs.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -307,6 +347,11 @@
 		2CA96A992B0A7E67007074F8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2C7D86BB2B15B8C3002BF09F /* Today */,
+				2C7D86BA2B15B8BE002BF09F /* Best */,
+				2C7D86B92B15B8B9002BF09F /* Detail */,
+				2C7D86B82B15B8A7002BF09F /* MyLibrary */,
+				2C7D86BC2B15D148002BF09F /* NetworkResult.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -520,6 +565,8 @@
 				2CA96A9E2B0A7F62007074F8 /* SnapKit */,
 				2CA96AA02B0A7F62007074F8 /* SnapKit-Dynamic */,
 				2CA96AAD2B0A8578007074F8 /* Kingfisher */,
+				2C7D86B32B15B847002BF09F /* Moya */,
+				2C7D86B62B15B857002BF09F /* Alamofire */,
 			);
 			productName = Millie_iOS;
 			productReference = 2CA96A7A2B0A7D00007074F8 /* Millie_iOS.app */;
@@ -552,6 +599,8 @@
 			packageReferences = (
 				2CA96A9D2B0A7F62007074F8 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2CA96AAC2B0A8578007074F8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2C7D86B22B15B847002BF09F /* XCRemoteSwiftPackageReference "Moya" */,
+				2C7D86B52B15B857002BF09F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 2CA96A7B2B0A7D00007074F8 /* Products */;
 			projectDirPath = "";
@@ -596,6 +645,7 @@
 				CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */,
 				CD38E0512B0F5A67001C979C /* MyLibraryFollowView.swift in Sources */,
 				CD38E0672B0F7D40001C979C /* MyLibraryShelfCategoryView.swift in Sources */,
+				2C7D86BD2B15D148002BF09F /* NetworkResult.swift in Sources */,
 				2CD28DD52B124C0C00E4733C /* TodayOriginalTagCollectionViewCell.swift in Sources */,
 				CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */,
 				2CD28DDB2B12546D00E4733C /* TodayOriginalTagDummy.swift in Sources */,
@@ -619,6 +669,7 @@
 				2C140B102B0E79A5006ECA2C /* TodayBestView.swift in Sources */,
 				CD336F2B2B11C2B00059565B /* DetailPopupView.swift in Sources */,
 				3CA78DB12B0E52E900EE3409 /* DetailDividerView.swift in Sources */,
+				2C7D86B12B158BFF002BF09F /* URLs.swift in Sources */,
 				2CCC61A52B13963E00AD4916 /* TodayTabBarView.swift in Sources */,
 				2CD28DD92B1251E300E4733C /* MillieTagView.swift in Sources */,
 				2CD28DD12B11CF2800E4733C /* TodayFooterView.swift in Sources */,
@@ -642,6 +693,7 @@
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 				3CA78DA32B0E384900EE3409 /* DetailBookDescriptionView.swift in Sources */,
 				3CA78DAD2B0E393A00EE3409 /* DetailBottomView.swift in Sources */,
+				2C7D86AF2B158B3E002BF09F /* Config.swift in Sources */,
 				3CBFE3C82B0DBD520057A3F5 /* UIStackView+.swift in Sources */,
 				2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */,
 				CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */,
@@ -779,6 +831,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://www.jaeyunandsangjune.p-e.kr/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L22KGAL4ND;
@@ -806,6 +859,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://www.jaeyunandsangjune.p-e.kr/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L22KGAL4ND;
@@ -852,6 +906,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2C7D86B22B15B847002BF09F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		2C7D86B52B15B857002BF09F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 		2CA96A9D2B0A7F62007074F8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -871,6 +941,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C7D86B32B15B847002BF09F /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C7D86B22B15B847002BF09F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		2C7D86B62B15B857002BF09F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C7D86B52B15B857002BF09F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		2CA96A9E2B0A7F62007074F8 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2CA96A9D2B0A7F62007074F8 /* XCRemoteSwiftPackageReference "SnapKit" */;
