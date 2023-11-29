@@ -15,7 +15,6 @@ final class TodayMonthlyCollectionViewCell: UICollectionViewCell {
     
     private var monthlyImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = Image.todayMonthlyImage
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -38,5 +37,9 @@ final class TodayMonthlyCollectionViewCell: UICollectionViewCell {
         monthlyImageView.snp.makeConstraints() {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    func dataBind(_ image: UIImage) {
+        monthlyImageView.image = image
     }
 }

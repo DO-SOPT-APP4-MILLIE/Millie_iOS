@@ -53,12 +53,46 @@ public enum Image {
     static let bell = UIImage(named: "ic_bell_line")!
     
     //Today
-    static let thumbsUp = UIImage(named: "today_ic_thumbs_up")!
     static let smallBookImage = UIImage(named: "today_img_best_01")!
-    static let todayFistImage = UIImage(named: "today_card_week_1")!
-    static let todayMonthlyImage = UIImage(named: "today_new_book_01")!
-    static let todayOriginalImage = UIImage(named: "today_card_original_01")!
-    static let todayPreferenceImage = UIImage(named: "today_rec_02")!
+    
+    static let todayFavoriteImage0 = UIImage(named: "favorite_1")!
+    static let todayFavoriteImage1 = UIImage(named: "favorite_2")!
+    static let todayFavoriteImage2 = UIImage(named: "favorite_3")!
+    static let todayFavoriteImage3 = UIImage(named: "favorite_4")!
+    static let todayFavoriteImage4 = UIImage(named: "favorite_5")!
+    static let todayFavoriteImage5 = UIImage(named: "favorite_6")!
+    static let todayFavoriteImage6 = UIImage(named: "favorite_7")!
+    
+    static let todayFistImage0 = UIImage(named: "today_card_week_1")!
+    static let todayFistImage1 = UIImage(named: "today_card_week_2")!
+    static let todayFistImage2 = UIImage(named: "today_card_week_3")!
+    static let todayFistImage3 = UIImage(named: "today_card_week_4")!
+    static let todayFistImage4 = UIImage(named: "today_card_week_5")!
+    static let todayFistImage5 = UIImage(named: "today_card_week_6")!
+    
+    static let todayMonthlyImage0 = UIImage(named: "today_new_book_01")!
+    static let todayMonthlyImage1 = UIImage(named: "today_new_book_02")!
+    static let todayMonthlyImage2 = UIImage(named: "today_new_book_03")!
+    static let todayMonthlyImage3 = UIImage(named: "today_new_book_04")!
+    static let todayMonthlyImage4 = UIImage(named: "today_new_book_05")!
+    static let todayMonthlyImage5 = UIImage(named: "today_new_book_06")!
+    static let todayMonthlyImage6 = UIImage(named: "today_new_book_07")!
+    static let todayMonthlyImage7 = UIImage(named: "today_new_book_08")!
+    static let todayMonthlyImage8 = UIImage(named: "today_new_book_09")!
+    static let todayMonthlyImage9 = UIImage(named: "today_new_book_10")!
+    
+    static let todayOriginalImage0 = UIImage(named: "today_card_original_01")!
+    static let todayOriginalImage1 = UIImage(named: "today_card_original_02")!
+    static let todayOriginalImage2 = UIImage(named: "today_card_original_03")!
+    static let todayOriginalImage3 = UIImage(named: "today_card_original_04")!
+    
+    static let todayPreferenceImage0 = UIImage(named: "today_rec_01")!
+    static let todayPreferenceImage1 = UIImage(named: "today_rec_02")!
+    static let todayPreferenceImage2 = UIImage(named: "today_rec_03")!
+    static let todayPreferenceImage3 = UIImage(named: "today_rec_04")!
+    static let todayPreferenceImage4 = UIImage(named: "today_rec_05")!
+    static let todayPreferenceImage5 = UIImage(named: "today_rec_06")!
+    
     static let todayBanner = UIImage(named: "today_img_banner")!
     static let todayFooter = UIImage(named: "today_footer")!
     static let todayLogo = UIImage(named: "logo")!

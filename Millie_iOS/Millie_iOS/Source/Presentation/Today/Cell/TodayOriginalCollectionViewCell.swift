@@ -15,7 +15,6 @@ final class TodayOriginalCollectionViewCell: UICollectionViewCell {
     
     private var originalImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = Image.todayOriginalImage
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -38,5 +37,9 @@ final class TodayOriginalCollectionViewCell: UICollectionViewCell {
         originalImageView.snp.makeConstraints() {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    func dataBind(_ image: UIImage) {
+        originalImageView.image = image
     }
 }
