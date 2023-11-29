@@ -13,7 +13,7 @@ public enum URLs {
     static let bestBook = "/api/books"
     
     //도서 Detail
-    static let detailBook = "/api/books/{bookId}"
+    static let detailBook = "/api/books"
 
     //유저 도서 담기
     static let archiveBook = "/api/books/{bookId}/archive"
