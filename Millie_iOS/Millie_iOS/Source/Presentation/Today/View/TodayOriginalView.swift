@@ -48,6 +48,7 @@ final class TodayOriginalView: UIView {
     }
     
     private func setupHierarchy() {
+        self.backgroundColor = .milWhite
         self.addSubviews(originalLabel, originalInfoLabel, originalButton, originalTagCollectionView, originalCollectionView)
     }
     

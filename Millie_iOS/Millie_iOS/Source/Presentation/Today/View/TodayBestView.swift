@@ -53,6 +53,8 @@ final class TodayBestView: UIView {
     }
     
     private func setupStyle() {
+        self.backgroundColor = .milWhite
+        
         bestCollectionView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         bestCollectionView.addGestureRecognizer(tapGesture)
