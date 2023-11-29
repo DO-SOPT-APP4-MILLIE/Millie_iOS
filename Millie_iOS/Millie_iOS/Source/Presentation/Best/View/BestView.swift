@@ -11,7 +11,7 @@ import SnapKit
 
 final class BestView: UIView {
     
-    public let booksList: [BestModel] = BestDummyData
+    public var booksList: [BestModel] = []
 
     public let backButton: UIButton = {
         let button = UIButton()

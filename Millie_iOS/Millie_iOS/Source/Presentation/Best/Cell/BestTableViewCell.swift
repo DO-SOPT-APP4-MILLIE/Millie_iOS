@@ -183,7 +183,7 @@ final class BestTableViewCell: UITableViewCell {
     
     func bindData(index: Int, book: BestModel) {
         rankingLabel.text = String(index + 1)
-        bookImageView.kfSetImage(url: book.imageUrl)
+        bookImageView.kfSetImage(url: book.thumbnail)
         titleLabel.text = book.title
         authorLabel.text = book.author
         completionRateLabel.text = "\(book.completionRate)%"

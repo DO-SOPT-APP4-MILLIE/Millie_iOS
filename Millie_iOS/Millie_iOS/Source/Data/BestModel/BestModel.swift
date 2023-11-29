@@ -7,20 +7,12 @@
 
 import Foundation
 
-struct BestModel {
+struct BestModel: Codable {
     let id: Int
     let title: String
-    let imageUrl: String
+    let thumbnail: String
     let author: String
     let completionRate: Int
     let readingTime: Int
-    
-    init(id: Int, title: String, imageUrl: String, author: String, completionRate: Int, readingTime: Int) {
-        self.id = id
-        self.title = title
-        self.imageUrl = imageUrl
-        self.author = author
-        self.completionRate = completionRate
-        self.readingTime = readingTime
-    }
+    let rankChange: Int?
 }
