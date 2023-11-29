@@ -51,6 +51,7 @@ public enum Image {
     static let kebab = UIImage(named: "ic_menu_kebab")!
     static let search = UIImage(named: "ic_search")!
     static let bell = UIImage(named: "ic_bell_line")!
+    static let tabBlackHome = UIImage(named: "shelf_btn_home")!
     
     //Today
     static let smallBookImage = UIImage(named: "today_img_best_01")!
@@ -101,6 +102,7 @@ public enum Image {
     static let tabFeed = UIImage(named: "Property 1=feed_default")!
     static let tabSearch = UIImage(named: "Property 1=search_default")!
     static let tabMylibrary = UIImage(named: "Property 1=shelf_default")!
+    static let tabYelloMylibrary = UIImage(named: "shelf_btn_my")!
     static let tabSetting = UIImage(named: "Property 1=setting_default")!
     static let tabBook = UIImage(named: "Group 179")!
     static let tabStory = UIImage(named: "btn_story")!

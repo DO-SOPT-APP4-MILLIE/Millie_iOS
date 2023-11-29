@@ -17,7 +17,7 @@ final class TodayView: UIView {
         return view
     }()
     
-    private let tabBarView = TodayTabBarView()
+    private let tabBarView = TabBarView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -9,44 +9,44 @@ import UIKit
 
 import SnapKit
 
-class TodayTabBarView: UIView {
+class TabBarView: UIView {
     
-    private var feedButton: UIButton = {
+    var feedButton: UIButton = {
         let button = UIButton()
         button.setImage(Image.tabFeed, for: .normal)
         button.tintColor = .darkGrey01
         return button
     }()
     
-    private var searchButton: UIButton = {
+    var searchButton: UIButton = {
         let button = UIButton()
         button.setImage(Image.tabSearch, for: .normal)
         button.tintColor = .darkGrey01
         return button
     }()
     
-    private var myLibararyButton: UIButton = {
+    var myLibararyButton: UIButton = {
         let button = UIButton()
         button.setImage(Image.tabMylibrary, for: .normal)
         button.tintColor = .darkGrey01
         return button
     }()
     
-    private var settingButton: UIButton = {
+    var settingButton: UIButton = {
         let button = UIButton()
         button.setImage(Image.tabSetting, for: .normal)
         button.tintColor = .darkGrey01
         return button
     }()
     
-    private var bookButton: UIButton = {
+    var bookButton: UIButton = {
         let button = UIButton()
         button.setImage(Image.tabBook, for: .normal)
         button.addTarget(self, action: #selector(bookButtonTap), for: .touchUpInside)
         return button
     }()
     
-    private var booKStackView : UIStackView = {
+    var booKStackView : UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -54,7 +54,7 @@ class TodayTabBarView: UIView {
         return stackView
     }()
     
-    private var storyButton : UIButton = {
+    var storyButton : UIButton = {
         let button = UIButton()
         button.backgroundColor = .milWhite
         button.setImage(Image.tabStory, for: .normal)
@@ -67,7 +67,7 @@ class TodayTabBarView: UIView {
         return button
     }()
     
-    private var roadButton : UIButton = {
+    var roadButton : UIButton = {
         let button = UIButton()
         button.backgroundColor = .milWhite
         button.setImage(Image.tabRoad, for: .normal)
@@ -80,7 +80,7 @@ class TodayTabBarView: UIView {
         return button
     }()
     
-    private var audioButton : UIButton = {
+    var audioButton : UIButton = {
         let button = UIButton()
         button.backgroundColor = .milWhite
         button.setImage(Image.tabAudio, for: .normal)
