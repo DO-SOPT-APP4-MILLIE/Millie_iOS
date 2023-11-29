@@ -68,6 +68,8 @@
 		3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */; };
 		3CBFE3D22B0DBE310057A3F5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */; };
 		3CD01B3F2B161C0D0012C85E /* DetailToastMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD01B3E2B161C0D0012C85E /* DetailToastMessageView.swift */; };
+		3CF9DD902B175E3B00EC5D08 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9DD8F2B175E3B00EC5D08 /* DetailService.swift */; };
+		3CF9DD922B175E7300EC5D08 /* DetailBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9DD912B175E7300EC5D08 /* DetailBody.swift */; };
 		CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B98C52B0DA34900CACFA1 /* BestView.swift */; };
 		CD1BDA9D2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BDA9C2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift */; };
 		CD336F292B11C2A00059565B /* DetailPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336F282B11C2A00059565B /* DetailPopupViewController.swift */; };
@@ -150,6 +152,8 @@
 		3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3CD01B3E2B161C0D0012C85E /* DetailToastMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailToastMessageView.swift; sourceTree = "<group>"; };
+		3CF9DD8F2B175E3B00EC5D08 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
+		3CF9DD912B175E7300EC5D08 /* DetailBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBody.swift; sourceTree = "<group>"; };
 		CD0B98C52B0DA34900CACFA1 /* BestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestView.swift; sourceTree = "<group>"; };
 		CD1BDA9C2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopupMyFavoriteView.swift; sourceTree = "<group>"; };
 		CD336F282B11C2A00059565B /* DetailPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopupViewController.swift; sourceTree = "<group>"; };
@@ -218,13 +222,6 @@
 			children = (
 			);
 			path = MyLibrary;
-			sourceTree = "<group>";
-		};
-		2C7D86B92B15B8B9002BF09F /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		2C7D86BA2B15B8BE002BF09F /* Best */ = {
@@ -356,8 +353,8 @@
 			isa = PBXGroup;
 			children = (
 				2C7D86BB2B15B8C3002BF09F /* Today */,
+				3CF9DD8E2B175E2D00EC5D08 /* Detail */,
 				2C7D86BA2B15B8BE002BF09F /* Best */,
-				2C7D86B92B15B8B9002BF09F /* Detail */,
 				2C7D86B82B15B8A7002BF09F /* MyLibrary */,
 				2C7D86BC2B15D148002BF09F /* NetworkResult.swift */,
 			);
@@ -440,6 +437,15 @@
 				3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3CF9DD8E2B175E2D00EC5D08 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3CF9DD8F2B175E3B00EC5D08 /* DetailService.swift */,
+				3CF9DD912B175E7300EC5D08 /* DetailBody.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		CD336F252B11C2610059565B /* DetailPopup */ = {
@@ -699,6 +705,7 @@
 				2C140B142B0E7F55006ECA2C /* TodayFistView.swift in Sources */,
 				CD1BDA9D2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift in Sources */,
 				2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */,
+				3CF9DD902B175E3B00EC5D08 /* DetailService.swift in Sources */,
 				2C140B052B0E1E13006ECA2C /* TodayFavoriteView.swift in Sources */,
 				2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */,
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
@@ -706,6 +713,7 @@
 				3CA78DAD2B0E393A00EE3409 /* DetailBottomView.swift in Sources */,
 				2C7D86AF2B158B3E002BF09F /* Config.swift in Sources */,
 				3CBFE3C82B0DBD520057A3F5 /* UIStackView+.swift in Sources */,
+				3CF9DD922B175E7300EC5D08 /* DetailBody.swift in Sources */,
 				2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */,
 				CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */,
 				CD38E05E2B0F6DEA001C979C /* MyLibraryDummy.swift in Sources */,
