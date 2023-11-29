@@ -20,8 +20,6 @@ final class TodayViewController: UIViewController {
         
         register()
         delegate()
-        
-        setupNavigation()
     }
     
     private func register() {
@@ -33,17 +31,6 @@ final class TodayViewController: UIViewController {
     private func delegate() {
         rootView.todayTableView.delegate = self
         rootView.todayTableView.dataSource = self
-    }
-    
-    private func setupNavigation() {
-        let logoButton = UIBarButtonItem(image: Image.todayLogo, style: .plain, target: self, action: #selector(nilTap))
-        self.navigationItem.leftBarButtonItem = logoButton
-        
-        let bellIcon = Image.todayBell.withRenderingMode(.alwaysOriginal)
-        let bellButton = UIBarButtonItem(image: bellIcon, style: .plain, target: self, action: #selector(nilTap))
-        
-        self.navigationItem.rightBarButtonItem = bellButton
-        self.navigationController?.navigationBar.tintColor = .black
     }
     
     @objc
