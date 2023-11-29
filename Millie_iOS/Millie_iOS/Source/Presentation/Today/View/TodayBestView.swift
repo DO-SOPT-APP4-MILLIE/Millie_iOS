@@ -9,7 +9,13 @@ import UIKit
 
 import SnapKit
 
+protocol TodayBestViewDelegate: AnyObject {
+    func pushToBestViewController()
+}
+
 final class TodayBestView: UIView {
+    
+    weak var delegate: TodayBestViewDelegate?
     
     private var bestLabel: UILabel = {
         let label = UILabel.todayLabel()
@@ -33,6 +39,7 @@ final class TodayBestView: UIView {
         
         register()
         
+        setupStyle()
         setupHierarchy()
         setupLayout()
     }
@@ -43,6 +50,12 @@ final class TodayBestView: UIView {
     
     private func register() {
         bestCollectionView.register(TodayBestCollectionViewCell.self, forCellWithReuseIdentifier: TodayBestCollectionViewCell.identifier)
+    }
+    
+    private func setupStyle() {
+        bestCollectionView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        bestCollectionView.addGestureRecognizer(tapGesture)
     }
     
     private func setupHierarchy() {
@@ -70,5 +83,10 @@ final class TodayBestView: UIView {
             $0.width.equalToSuperview()
             $0.height.equalTo(277.adjusted)
         }
+    }
+    
+    @objc
+    private func viewTapped(_ sender: UITapGestureRecognizer) {
+        delegate?.pushToBestViewController()
     }
 }

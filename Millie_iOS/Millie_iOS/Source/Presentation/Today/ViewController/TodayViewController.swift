@@ -62,6 +62,7 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TodayTableViewCell.identifier, for: indexPath) as? TodayTableViewCell else { return TodayTableViewCell() }
+        cell.setDelegate(self)
         return cell
     }
     
@@ -86,5 +87,12 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 361.0.adjusted
+    }
+}
+
+extension TodayViewController: TodayBestViewDelegate {
+    public func pushToBestViewController() {
+        let bestVC = BestViewController()
+        self.navigationController?.pushViewController(bestVC, animated: true)
     }
 }

@@ -54,8 +54,8 @@ final class TodayTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         getData()
-        
         delegate()
+        
         setupHierarchy()
         setupLayout()
     }
@@ -277,5 +277,9 @@ extension TodayTableViewCell: UICollectionViewDataSource {
         default:
             return UICollectionViewCell()
         }
+    }
+    
+    func setDelegate(_ delegate: TodayBestViewDelegate) {
+        nowBestView.delegate = delegate
     }
 }
