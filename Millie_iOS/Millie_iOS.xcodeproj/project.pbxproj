@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C03C6012B1632EC00A6979F /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03C6002B1632EC00A6979F /* TodayService.swift */; };
+		2C03C6032B16332100A6979F /* TodayBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03C6022B16332100A6979F /* TodayBody.swift */; };
 		2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140AFF2B0E075F006ECA2C /* TodayView.swift */; };
 		2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */; };
 		2C140B052B0E1E13006ECA2C /* TodayFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C140B042B0E1E13006ECA2C /* TodayFavoriteView.swift */; };
@@ -89,6 +91,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C03C6002B1632EC00A6979F /* TodayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayService.swift; sourceTree = "<group>"; };
+		2C03C6022B16332100A6979F /* TodayBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBody.swift; sourceTree = "<group>"; };
 		2C140AFF2B0E075F006ECA2C /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		2C140B012B0E124B006ECA2C /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		2C140B042B0E1E13006ECA2C /* TodayFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFavoriteView.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 		2C7D86BB2B15B8C3002BF09F /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				2C03C6002B1632EC00A6979F /* TodayService.swift */,
+				2C03C6022B16332100A6979F /* TodayBody.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -643,6 +649,7 @@
 				CD7925BA2B0CBBD000C4823D /* BestModel.swift in Sources */,
 				CD38E0552B0F6257001C979C /* MyLibraryShelfStackView.swift in Sources */,
 				CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */,
+				2C03C6032B16332100A6979F /* TodayBody.swift in Sources */,
 				CD38E0512B0F5A67001C979C /* MyLibraryFollowView.swift in Sources */,
 				CD38E0672B0F7D40001C979C /* MyLibraryShelfCategoryView.swift in Sources */,
 				2C7D86BD2B15D148002BF09F /* NetworkResult.swift in Sources */,
@@ -701,6 +708,7 @@
 				CD38E0692B0F7D7E001C979C /* MyLibraryShelfCategoryStackView.swift in Sources */,
 				CD336F292B11C2A00059565B /* DetailPopupViewController.swift in Sources */,
 				CD38E04F2B0F4FEF001C979C /* MyLibraryView.swift in Sources */,
+				2C03C6012B1632EC00A6979F /* TodayService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,7 +839,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				BASE_URL = "https://www.jaeyunandsangjune.p-e.kr/";
+				BASE_URL = "https://www.jaeyunandsangjune.p-e.kr";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L22KGAL4ND;
@@ -859,7 +867,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				BASE_URL = "https://www.jaeyunandsangjune.p-e.kr/";
+				BASE_URL = "https://www.jaeyunandsangjune.p-e.kr";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L22KGAL4ND;

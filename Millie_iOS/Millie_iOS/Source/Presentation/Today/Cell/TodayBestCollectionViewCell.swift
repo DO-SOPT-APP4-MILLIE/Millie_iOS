@@ -105,4 +105,23 @@ final class TodayBestCollectionViewCell: UICollectionViewCell {
             $0.leading.equalTo(bookTitleLabel.snp.leading)
         }
     }
+    
+    func dataBind(_ today: TodayData){
+        rankingLabel.text = String(today.id)
+        rankingChangeLabel.text = "?"
+        bookImageView.kfSetImage(url: today.thumbnail)
+        
+        let todayTitle = today.title
+        let maxLength = 15
+        if todayTitle.count < maxLength {
+            bookTitleLabel.text = todayTitle
+        }
+        else {
+            let editTitle = String(todayTitle.prefix(maxLength))
+            bookTitleLabel.text = editTitle + "…"
+        }
+        
+        bookAuthorLabel.text = today.author
+        bookInfoLabel.text = "\(today.completionRate)%|\(today.readingTime)분"
+    }
 }

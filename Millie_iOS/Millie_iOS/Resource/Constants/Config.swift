@@ -8,5 +8,5 @@
 import Foundation
 
 struct Config {
-    static let baseURL = Bundle.main.infoDictionary?["BASE_URL"] as! String
+    static var baseURL = Bundle.main.infoDictionary?["BASE_URL"] as! String
 }
