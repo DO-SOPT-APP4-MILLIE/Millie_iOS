@@ -73,7 +73,7 @@ class DetailViewController: UIViewController {
     }
     
     private func setupStyle() {
-        bindData()
+        
     }
     
     @objc
@@ -145,6 +145,26 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    
+    private func bindData(title: String, author: String, thumbnail: String, archivedCount: Int, postCount: Int, reviewCount: Int, description: String) {
+        rootView.detailBookDescriptionView.bookTitle.text = title
+        rootView.detailBookDescriptionView.bookAuthors.text = author
+        rootView.detailBookDescriptionView.bookImageView.kfSetImage(url: thumbnail)
+        rootView.detailBookDescriptionView.archivedStackView.countLabel.text = convertToTenThousandFormat(archivedCount)
+        rootView.detailBookDescriptionView.postStackView.countLabel.text = "\(postCount)개"
+        rootView.detailBookDescriptionView.reviewStackView.countLabel.text = "\(reviewCount)개"
+        rootView.detailWandokView.bookDescriptionLabel.text = description
+        rootView.detailWandokView.bookDescriptionLabel.numberOfLines = 2
+    }
+    
+    func convertToTenThousandFormat(_ number: Int) -> String {
+        if number < 10000 {
+            return "\(number)"
+        } else {
+            let tenThousandCount = Double(number) / 10000.0
+            
+            return String(format: "%.1f만 개+", tenThousandCount)
+        }
     }
 }
 
