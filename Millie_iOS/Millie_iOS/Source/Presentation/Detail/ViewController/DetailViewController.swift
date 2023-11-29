@@ -8,6 +8,7 @@
 import UIKit
 
 import SnapKit
+import Moya
 
 protocol PopupDelegate: AnyObject {
     func showToastMessage()
@@ -15,10 +16,18 @@ protocol PopupDelegate: AnyObject {
 
 class DetailViewController: UIViewController {
     
+    let memberID: Int = 1
+    
     private let rootView = DetailView()
     
     override func loadView() {
         self.view = rootView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getBookDetail()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -122,10 +131,20 @@ class DetailViewController: UIViewController {
         }
     }
     
-    private func bindData() {
-        rootView.detailBookDescriptionView.archivedStackView.countLabel.text = "2.6만 개+"
-        rootView.detailBookDescriptionView.postStackView.countLabel.text = "4개"
-        rootView.detailBookDescriptionView.reviewStackView.countLabel.text = "29개"
+    private func getBookDetail() {
+        let provider = MoyaProvider<DetailAPI>()
+        provider.request(.getBookDetail(memberID)) { result in
+            switch result {
+            case let .success(response):
+                let result = try? response.map(Details.self)
+                if let data = result?.data {
+                    self.bindData(title: data.title, author: data.author, thumbnail: data.thumbnail, archivedCount: data.archivedCount, postCount: data.postCount, reviewCount: data.reviewCount, description: data.Description)
+                }
+            case let .failure(error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     }
 }
 
