@@ -12,6 +12,7 @@ import SnapKit
 final class TodayTableViewCell: UITableViewCell {
     
     static let identifier: String = "TodayTableViewCell"
+    public var todayDummy: [TodayData] = []
     
     public let favoriteView: TodayFavoriteView =  {
         let view = TodayFavoriteView()
@@ -52,8 +53,9 @@ final class TodayTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        delegate()
+        getData()
         
+        delegate()
         setupHierarchy()
         setupLayout()
     }
@@ -61,6 +63,21 @@ final class TodayTableViewCell: UITableViewCell {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    func getData() {
+        TodayService.shared.getData() { today, error in
+            if let error = error {
+                print("Error: \(error)")
+            } else if let today = today {
+                DispatchQueue.main.async{
+                    for todayData in today.data {
+                        self.todayDummy.append(todayData)
+                        self.nowBestView.bestCollectionView.reloadData()
+                    }
+                }
+            }
+        }
     }
     
     private func delegate() {
@@ -144,7 +161,7 @@ extension TodayTableViewCell: UICollectionViewDelegateFlowLayout {
             return CGSize(width: Int(label.intrinsicContentSize.width) + 24 , height: 31)
         case preferenceView.preferenceCollectionView:
             return CGSize(width: 156.adjusted, height: 249.adjusted)
-            case preferenceView.preferenceTagCollectionView:
+        case preferenceView.preferenceTagCollectionView:
             let label: UILabel = UILabel()
             label.text = TodayPreferenceTagDummyData[indexPath.row]
             return CGSize(width: Int(label.intrinsicContentSize.width) + 24 , height: 31)
@@ -205,7 +222,7 @@ extension TodayTableViewCell: UICollectionViewDataSource {
         case favoriteView.favoriteCollectionView:
             return 7
         case nowBestView.bestCollectionView:
-            return 6
+            return todayDummy.count
         case fistView.fistCollectionView:
             return 6
         case monthlyView.monthlyCollectionView:
@@ -230,6 +247,7 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return cell
         case nowBestView.bestCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayBestCollectionViewCell.identifier, for: indexPath) as? TodayBestCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(todayDummy[indexPath.row])
             return cell
         case fistView.fistCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayFistCollectionViewCell.identifier, for: indexPath) as? TodayFistCollectionViewCell else { return UICollectionViewCell() }
