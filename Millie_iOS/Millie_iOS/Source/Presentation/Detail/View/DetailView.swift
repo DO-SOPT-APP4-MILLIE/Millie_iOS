@@ -21,6 +21,7 @@ class DetailView: UIView {
     public let detailWeeklyBestBookView = DetailWeeklyBestBookView()
     public let detailMoreDescriptionView = DetailMoreDescriptionView()
     public let detailBottomView = DetailBottomView()
+    public let detailToastMessageView = DetailToastMessageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +39,9 @@ class DetailView: UIView {
         self.backgroundColor = .white
         scrollView.backgroundColor = .white
         detailBottomView.backgroundColor = .white
+        detailToastMessageView.backgroundColor = .darkGrey02
+        detailToastMessageView.layer.cornerRadius = 4
+        detailToastMessageView.isHidden = true
         
         detailBookDescriptionView.archivedStackView.iconImageView.image = UIImage(named: "detail_profile")
         detailBookDescriptionView.archivedStackView.titleLabel.text = "이 책이 담긴 서재"
@@ -50,7 +54,7 @@ class DetailView: UIView {
     }
     
     private func setupHierarchy() {
-        self.addSubviews(scrollView, detailBottomView)
+        self.addSubviews(scrollView, detailBottomView, detailToastMessageView)
         scrollView.addSubview(contentView)
         contentView.addSubviews(detailSelectCategoryView,
                               detailBookDescriptionView,
@@ -105,6 +109,12 @@ class DetailView: UIView {
             $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(100)
+        }
+        
+        detailToastMessageView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(24)
+            $0.bottom.equalTo(detailBottomView.snp.top).offset(-20)
+            $0.height.equalTo(46)
         }
     }
 }
