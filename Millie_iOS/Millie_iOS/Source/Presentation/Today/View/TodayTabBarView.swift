@@ -56,19 +56,40 @@ class TodayTabBarView: UIView {
     
     private var storyButton : UIButton = {
         let button = UIButton()
+        button.backgroundColor = .milWhite
         button.setImage(Image.tabStory, for: .normal)
+        button.setTitle("스토리", for: .normal)
+        button.setTitleColor(.darkGrey03, for: .normal)
+        button.titleLabel?.font = .millieBody3
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageEdgeInsets = UIEdgeInsets(top: 12, left: 15, bottom: 12, right: 75)
+        button.layer.cornerRadius = 24
         return button
     }()
     
     private var roadButton : UIButton = {
         let button = UIButton()
+        button.backgroundColor = .milWhite
         button.setImage(Image.tabRoad, for: .normal)
+        button.setTitle("밀리로드", for: .normal)
+        button.setTitleColor(.darkGrey03, for: .normal)
+        button.titleLabel?.font = .millieBody3
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 78)
+        button.layer.cornerRadius = 24
         return button
     }()
     
     private var audioButton : UIButton = {
         let button = UIButton()
+        button.backgroundColor = .milWhite
         button.setImage(Image.tabAudio, for: .normal)
+        button.setTitle("오디오북", for: .normal)
+        button.setTitleColor(.darkGrey03, for: .normal)
+        button.titleLabel?.font = .millieBody3
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 78)
+        button.layer.cornerRadius = 24
         return button
     }()
     

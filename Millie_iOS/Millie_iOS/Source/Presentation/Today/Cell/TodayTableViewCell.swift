@@ -73,7 +73,6 @@ final class TodayTableViewCell: UITableViewCell {
                 DispatchQueue.main.async{
                     for todayData in today.data {
                         self.todayDummy.append(todayData)
-                        print("⭐️\(todayData)\n")
                         self.nowBestView.bestCollectionView.reloadData()
                     }
                 }
@@ -280,5 +279,3 @@ extension TodayTableViewCell: UICollectionViewDataSource {
         }
     }
 }
-
-
