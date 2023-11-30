@@ -11,13 +11,12 @@ import SnapKit
     
 final class MyLibraryShelfCategoryStackView: UIStackView {
     
-    public let myLibraryList: [MyLibraryModel] = MyLibraryDummyData
+    public var myLibraryList: [MyLibraryModel] = []
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupStyle()
-        setupHierarchy()
     }
     
     required init(coder: NSCoder) {
@@ -30,13 +29,13 @@ final class MyLibraryShelfCategoryStackView: UIStackView {
         self.spacing = 13.0
     }
     
-    private func setupHierarchy() {
+    public func setupHierarchy() {
         for myLibrary in myLibraryList {
             let shelfCategoryView = MyLibraryShelfCategoryView()
             shelfCategoryView.categoryLabel.text = myLibrary.category
-            shelfCategoryView.firstBookImageView.bookImageView.kfSetImage(url: myLibrary.books[0].imageUrl)
-            if myLibrary.books.count > 1 {
-                shelfCategoryView.secondBookImageView.bookImageView.kfSetImage(url: myLibrary.books[1].imageUrl)
+            shelfCategoryView.firstBookImageView.bookImageView.kfSetImage(url: myLibrary.book[0].thumbnail)
+            if myLibrary.book.count > 1 {
+                shelfCategoryView.secondBookImageView.bookImageView.kfSetImage(url: myLibrary.book[1].thumbnail)
             } else {
                 shelfCategoryView.secondBookImageView.removeFromSuperview()
             }

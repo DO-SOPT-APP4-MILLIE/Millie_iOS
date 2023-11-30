@@ -148,12 +148,6 @@ final class MyLibraryView: UIView {
         
         favoriteBookView.iconImageView.image = Image.bookmarkLine.withRenderingMode(.alwaysTemplate)
         favoriteBookView.descriptionLabel.text = "나의 인생책을 직접\n설정해보세요."
-        
-        var myLibraryCount: Int = 0
-        for myLibrary in shelfCategoryStackView.myLibraryList {
-            myLibraryCount += myLibrary.books.count
-        }
-        totalCountButton.setButtonAttributedTitle(text: "전체 \(myLibraryCount)권", font: .millieSubHeader7, color: .darkGrey01)
     }
     
     private func setupHierarchy() {

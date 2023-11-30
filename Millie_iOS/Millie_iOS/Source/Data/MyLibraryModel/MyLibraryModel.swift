@@ -7,22 +7,12 @@
 
 import Foundation
 
-struct MyLibraryModel {
+struct MyLibraryModel: Codable {
     let category: String
-    let books: [MyLibraryBookModel]
-    
-    init(category: String, books: [MyLibraryBookModel]) {
-        self.category = category
-        self.books = books
-    }
+    let book: [MyLibraryBookModel]
 }
 
-struct MyLibraryBookModel {
+struct MyLibraryBookModel: Codable {
     let id: Int
-    let imageUrl: String
-    
-    init(id: Int, imageUrl: String) {
-        self.id = id
-        self.imageUrl = imageUrl
-    }
+    let thumbnail: String
 }
