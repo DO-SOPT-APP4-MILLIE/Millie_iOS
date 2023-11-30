@@ -22,6 +22,21 @@ final class BestTableViewCell: UITableViewCell {
         return label
     }()
     
+    private let rankChangeView = UIView()
+    
+    private let rankChangeImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    private let rankChangeLabel: UILabel = {
+        let label = UILabel()
+        label.font = .millieBody7
+        label.textAlignment = .center
+        return label
+    }()
+    
     private let imageContainerView: UIView = {
         let view = UIView()
         view.layer.shadowColor = UIColor.black.cgColor
@@ -107,7 +122,10 @@ final class BestTableViewCell: UITableViewCell {
                                 titleLabel,
                                 authorLabel,
                                 detailView)
-        rankingView.addSubviews(rankingLabel)
+        rankingView.addSubviews(rankingLabel,
+                                rankChangeView)
+        rankChangeView.addSubviews(rankChangeImageView,
+                                   rankChangeLabel)
         imageContainerView.addSubview(bookImageView)
         detailView.addSubviews(wandokImageView,
                                completionRateLabel,
@@ -126,6 +144,21 @@ final class BestTableViewCell: UITableViewCell {
         rankingLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(12)
             $0.centerX.equalToSuperview()
+        }
+        
+        rankChangeView.snp.makeConstraints {
+            $0.top.equalTo(rankingLabel.snp.bottom)
+            $0.centerX.equalToSuperview()
+        }
+        
+        rankChangeImageView.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.centerY.equalTo(rankChangeLabel.snp.centerY)
+        }
+        
+        rankChangeLabel.snp.remakeConstraints {
+            $0.leading.equalTo(rankChangeImageView.snp.trailing).offset(2)
+            $0.top.trailing.bottom.equalToSuperview()
         }
         
         imageContainerView.snp.makeConstraints {
@@ -188,5 +221,30 @@ final class BestTableViewCell: UITableViewCell {
         authorLabel.text = book.author
         completionRateLabel.text = "\(book.completionRate)%"
         readingTimeLabel.text = "\(book.readingTime)분"
+        if let rankChange = book.rankChange {
+            if rankChange > 0 {
+                rankChangeImageView.image = Image.rankUp
+                rankChangeLabel.text = "\(rankChange)"
+                rankChangeLabel.textColor = .mainRed
+            } else if rankChange < 0 {
+                rankChangeImageView.image = Image.rankDown
+                rankChangeLabel.text = "\(abs(rankChange))"
+                rankChangeLabel.textColor = .mainBlue
+            } else {
+                rankChangeImageView.removeFromSuperview()
+                rankChangeLabel.text = "-"
+                rankChangeLabel.textColor = .darkGrey01
+                rankChangeLabel.snp.remakeConstraints {
+                    $0.edges.equalToSuperview()
+                }
+            }
+        } else {
+            rankChangeImageView.removeFromSuperview()
+            rankChangeLabel.text = "New"
+            rankChangeLabel.textColor = .subYello
+            rankChangeLabel.snp.remakeConstraints {
+                $0.edges.equalToSuperview()
+            }
+        }
     }
 }
