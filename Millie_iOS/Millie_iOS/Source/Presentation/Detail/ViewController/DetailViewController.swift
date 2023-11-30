@@ -97,6 +97,7 @@ class DetailViewController: UIViewController {
         let vc = DetailPopupViewController()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overFullScreen
+        vc.bookId = memberID
         vc.delegate = self
         
         self.present(vc, animated: true)
@@ -132,7 +133,7 @@ class DetailViewController: UIViewController {
     }
     
     private func getBookDetail() {
-        let provider = MoyaProvider<DetailAPI>()
+        let provider = MoyaProvider<DetailService>()
         provider.request(.getBookDetail(memberID)) { result in
             switch result {
             case let .success(response):
