@@ -11,7 +11,6 @@ class DetailBookDescriptionView: UIView {
     
     public let bookImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "detail_img_book")
         imageView.contentMode = .scaleAspectFit
         
         imageView.layer.borderWidth = 1
@@ -27,7 +26,6 @@ class DetailBookDescriptionView: UIView {
     
     public let bookTitle: UILabel = {
         let label = UILabel()
-        label.text = "트렌드 코리아 2024"
         label.textColor = .darkGrey03
         label.font = .spoqaHanSanNeo(.bold, size: 20)
         
@@ -36,7 +34,6 @@ class DetailBookDescriptionView: UIView {
     
     public let bookAuthors: UILabel = {
         let label = UILabel()
-        label.text = "김난도, 전미영, 최지혜, 이수진, 권정윤, 한다혜, 이준영, 이향은,…"
         label.textColor = .lightGrey07
         label.font = .spoqaHanSanNeo(.regular, size: 12)
         
@@ -89,7 +86,7 @@ class DetailBookDescriptionView: UIView {
         bookImageView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.centerX.equalToSuperview()
-            $0.width.equalTo(220)
+            $0.height.equalTo(326)
         }
         
         bookTitle.snp.makeConstraints {

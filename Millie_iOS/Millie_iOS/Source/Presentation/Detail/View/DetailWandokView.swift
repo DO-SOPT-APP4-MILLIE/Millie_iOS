@@ -11,7 +11,6 @@ class DetailWandokView: UIView {
     
     public let bookDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "국내 최고 트렌드 전망서\n청룡의 해, 2024년을 분석하다"
         label.textColor = .darkGrey03
         label.font = .spoqaHanSanNeo(.bold, size: 16)
         label.numberOfLines = 2
