@@ -54,8 +54,8 @@ final class TodayTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         getData()
-        
         delegate()
+        
         setupHierarchy()
         setupLayout()
     }
@@ -220,19 +220,19 @@ extension TodayTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
-            return 7
+            return TodayFavoriteData.count
         case nowBestView.bestCollectionView:
             return todayDummy.count
         case fistView.fistCollectionView:
-            return 6
+            return TodayFistData.count
         case monthlyView.monthlyCollectionView:
-            return 10
+            return TodayMonthlyData.count
         case originalView.originalCollectionView:
-            return 4
+            return TodayOriginalData.count
         case originalView.originalTagCollectionView:
             return TodayOriginalTagDummyData.count
         case preferenceView.preferenceCollectionView:
-            return 6
+            return TodayPreferenceData.count
         case preferenceView.preferenceTagCollectionView:
             return TodayPreferenceTagDummyData.count
         default:
@@ -244,6 +244,7 @@ extension TodayTableViewCell: UICollectionViewDataSource {
         switch collectionView {
         case favoriteView.favoriteCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayFavoriteCollectionViewCell.identifier, for: indexPath) as? TodayFavoriteCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(TodayFavoriteData[indexPath.row])
             return cell
         case nowBestView.bestCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayBestCollectionViewCell.identifier, for: indexPath) as? TodayBestCollectionViewCell else { return UICollectionViewCell() }
@@ -251,12 +252,15 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return cell
         case fistView.fistCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayFistCollectionViewCell.identifier, for: indexPath) as? TodayFistCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(TodayFistData[indexPath.row])
             return cell
         case monthlyView.monthlyCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayMonthlyCollectionViewCell.identifier, for: indexPath) as? TodayMonthlyCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(TodayMonthlyData[indexPath.row])
             return cell
         case originalView.originalCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayOriginalCollectionViewCell.identifier, for: indexPath) as? TodayOriginalCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(TodayOriginalData[indexPath.row])
             return cell
         case originalView.originalTagCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayOriginalTagCollectionViewCell.identifier, for: indexPath) as? TodayOriginalTagCollectionViewCell else { return UICollectionViewCell() }
@@ -264,6 +268,7 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return cell
         case preferenceView.preferenceCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayPreferenceCollectionViewCell.identifier, for: indexPath) as? TodayPreferenceCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(TodayPreferenceData[indexPath.row])
             return cell
         case preferenceView.preferenceTagCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayPreferenceTagCollectionViewCell.identifier, for: indexPath) as? TodayPreferenceTagCollectionViewCell else { return UICollectionViewCell() }
@@ -273,6 +278,8 @@ extension TodayTableViewCell: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
     }
+    
+    func setDelegate(_ delegate: TodayBestViewDelegate) {
+        nowBestView.delegate = delegate
+    }
 }
-
-

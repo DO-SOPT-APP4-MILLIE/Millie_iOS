@@ -15,7 +15,6 @@ final class TodayPreferenceCollectionViewCell: UICollectionViewCell {
     
     private var preferenceImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = Image.todayPreferenceImage
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -38,5 +37,9 @@ final class TodayPreferenceCollectionViewCell: UICollectionViewCell {
         preferenceImageView.snp.makeConstraints() {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    func dataBind(_ image: UIImage) {
+        preferenceImageView.image = image
     }
 }

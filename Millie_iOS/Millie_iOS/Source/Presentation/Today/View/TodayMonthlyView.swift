@@ -38,6 +38,7 @@ final class TodayMonthlyView: UIView {
     }
     
     private func setupHierarchy() {
+        self.backgroundColor = .milWhite
         self.addSubviews(monthlyLabel, monthlyButton, monthlyCollectionView)
     }
     

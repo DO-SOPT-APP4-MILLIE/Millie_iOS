@@ -30,11 +30,7 @@ final class TodayFavoriteCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
-    private let favoriteIconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = Image.thumbsUp
-        return imageView
-    }()
+    private let favoriteIconImageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,5 +69,10 @@ final class TodayFavoriteCollectionViewCell: UICollectionViewCell {
             $0.centerX.centerY.equalToSuperview()
             $0.size.equalTo(24.adjusted)
         }
+    }
+    
+    func dataBind(_ data: FavoriteModel) {
+        favoriteLabel.text = data.favoriteText
+        favoriteIconImageView.image = data.favoriteImage
     }
 }

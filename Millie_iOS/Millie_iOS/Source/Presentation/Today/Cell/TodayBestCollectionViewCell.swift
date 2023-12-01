@@ -111,6 +111,25 @@ final class TodayBestCollectionViewCell: UICollectionViewCell {
         rankingChangeLabel.text = "?"
         bookImageView.kfSetImage(url: today.thumbnail)
         
+        if let rankingStatue = today.rankChange {
+            if rankingStatue < 0 {
+                rankingChangeLabel.text = "▾ \(rankingStatue)"
+                rankingChangeLabel.textColor = .mainBlue
+            }
+            else if rankingStatue == 0 {
+                rankingChangeLabel.text = "-"
+                rankingChangeLabel.textColor = .milBlack
+            }
+            else {
+                rankingChangeLabel.text = "▴ \(rankingStatue)"
+                rankingChangeLabel.textColor = .mainRed
+            }
+        } else {
+            rankingChangeLabel.text = "New"
+            rankingChangeLabel.textColor = .mainYello
+        }
+        
+        
         let todayTitle = today.title
         let maxLength = 15
         if todayTitle.count < maxLength {

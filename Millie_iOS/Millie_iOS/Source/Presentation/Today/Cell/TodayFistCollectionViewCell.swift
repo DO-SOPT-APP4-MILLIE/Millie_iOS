@@ -15,7 +15,6 @@ final class TodayFistCollectionViewCell: UICollectionViewCell {
     
     private var fistImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = Image.todayFistImage
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 13.0
@@ -40,5 +39,9 @@ final class TodayFistCollectionViewCell: UICollectionViewCell {
         fistImageView.snp.makeConstraints() {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    func dataBind(_ image: UIImage) {
+        fistImageView.image = image
     }
 }
