@@ -11,6 +11,8 @@ final class DetailPopupViewController: UIViewController {
     
     weak var delegate: PopupDelegate?
     
+    public var bookId: Int = 0
+    
     private let rootView = DetailPopupView()
     
     override func loadView() {
@@ -39,8 +41,10 @@ final class DetailPopupViewController: UIViewController {
     }
     
     @objc func addButtonDidTap() {
-        self.dismiss(animated: true) {
-            self.delegate?.showToastMessage()
+        archiveBook(bookId: bookId, userId: 1) {
+            self.dismiss(animated: true) {
+                self.delegate?.showToastMessage()
+            }
         }
     }
     
@@ -54,5 +58,24 @@ final class DetailPopupViewController: UIViewController {
             rootView.myFavoriteView.selectedView.layer.borderWidth = 4
             rootView.myFavoriteView.isSelected = true
         }
+    }
+    
+    private func archiveBook(bookId: Int, userId: Int, completion: @escaping() -> Void) {
+        DetailAPI.shared.archiveBook(bookId: bookId, userId: userId, completion: { (response) in
+            switch response {
+            case .success(let code):
+                print("success", code)
+                completion()
+            case .requestErr(let code):
+                print("requestErr", code)
+                completion()
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkErr:
+                print("networkErr")
+            }
+        })
     }
 }

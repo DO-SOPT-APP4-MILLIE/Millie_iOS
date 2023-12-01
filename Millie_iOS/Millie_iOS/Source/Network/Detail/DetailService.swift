@@ -9,11 +9,12 @@ import Foundation
 
 import Moya
 
-enum DetailAPI {
+enum DetailService {
     case getBookDetail(Int)
+    case archiveBook(bookId: Int, userId: Int)
 }
 
-extension DetailAPI: TargetType {
+extension DetailService: TargetType {
     var baseURL: URL {
         return URL(string: Config.baseURL)!
     }
@@ -22,6 +23,8 @@ extension DetailAPI: TargetType {
         switch self {
         case .getBookDetail(let memberID):
             return URLs.detailBook + "/\(memberID)"
+        case .archiveBook(let bookId, _):
+            return URLs.detailBook + "/\(bookId)/archive"
         }
     }
     
@@ -29,6 +32,8 @@ extension DetailAPI: TargetType {
         switch self {
         case .getBookDetail:
             return .get
+        case .archiveBook:
+            return .post
         }
     }
     
@@ -37,10 +42,17 @@ extension DetailAPI: TargetType {
         case .getBookDetail:
             let params: [String: Any] = [:]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
+        case .archiveBook:
+            return .requestPlain
         }
     }
     
     var headers: [String : String]? {
-        return ["Content-Type": "application/json"]
+        switch self {
+        case .getBookDetail:
+            return ["Content-Type": "application/json"]
+        case .archiveBook(_, let userId):
+            return ["X-AUTH-ID": "\(userId)"]
+        }
     }
 }

@@ -95,6 +95,7 @@
 		CDDA608F2B17778C00AB8DF7 /* BestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA608E2B17778C00AB8DF7 /* BestAPI.swift */; };
 		CDDA60912B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA60902B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift */; };
 		CDDA60932B17785F00AB8DF7 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA60922B17785F00AB8DF7 /* GenericResponse.swift */; };
+		CDF393582B1849D2007C9252 /* DetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF393572B1849D2007C9252 /* DetailAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +184,7 @@
 		CDDA608E2B17778C00AB8DF7 /* BestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestAPI.swift; sourceTree = "<group>"; };
 		CDDA60902B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
 		CDDA60922B17785F00AB8DF7 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		CDF393572B1849D2007C9252 /* DetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,20 +225,6 @@
 				2CD28DDA2B12546D00E4733C /* TodayDummy.swift */,
 			);
 			path = Today;
-			sourceTree = "<group>";
-		};
-		2C7D86B82B15B8A7002BF09F /* MyLibrary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyLibrary;
-			sourceTree = "<group>";
-		};
-		2C7D86BA2B15B8BE002BF09F /* Best */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Best;
 			sourceTree = "<group>";
 		};
 		2C7D86BB2B15B8C3002BF09F /* Today */ = {
@@ -361,10 +349,10 @@
 		2CA96A992B0A7E67007074F8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CDDA60942B183C6600AB8DF7 /* New Group */,
 				CDDA608B2B17770600AB8DF7 /* Best */,
 				2C7D86BB2B15B8C3002BF09F /* Today */,
 				3CF9DD8E2B175E2D00EC5D08 /* Detail */,
-				2C7D86B82B15B8A7002BF09F /* MyLibrary */,
 				2C7D86BC2B15D148002BF09F /* NetworkResult.swift */,
 				CDDA60902B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift */,
 				CDDA60922B17785F00AB8DF7 /* GenericResponse.swift */,
@@ -455,6 +443,7 @@
 			children = (
 				3CF9DD8F2B175E3B00EC5D08 /* DetailService.swift */,
 				3CF9DD912B175E7300EC5D08 /* DetailBody.swift */,
+				CDF393572B1849D2007C9252 /* DetailAPI.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -577,6 +566,13 @@
 				CDDA608E2B17778C00AB8DF7 /* BestAPI.swift */,
 			);
 			path = Best;
+			sourceTree = "<group>";
+		};
+		CDDA60942B183C6600AB8DF7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -719,6 +715,7 @@
 				2CA96AA32B0A7FC9007074F8 /* Image.swift in Sources */,
 				3CA78D9F2B0E357200EE3409 /* DetailView.swift in Sources */,
 				3CA78DA92B0E38A000EE3409 /* DetailWeeklyBestBookView.swift in Sources */,
+				CDF393582B1849D2007C9252 /* DetailAPI.swift in Sources */,
 				3CA78DA12B0E383400EE3409 /* DetailSelectCategoryView.swift in Sources */,
 				2CA96AAB2B0A8314007074F8 /* UIFont+.swift in Sources */,
 				2C140B1E2B0EDD92006ECA2C /* TodayOriginalCollectionViewCell.swift in Sources */,
