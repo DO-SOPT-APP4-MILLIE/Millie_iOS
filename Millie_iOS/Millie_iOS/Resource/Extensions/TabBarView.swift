@@ -50,6 +50,7 @@ class TabBarView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
+        stackView.spacing = 8
         stackView.isHidden = true
         return stackView
     }()
@@ -61,6 +62,8 @@ class TabBarView: UIView {
         button.setTitle("스토리", for: .normal)
         button.setTitleColor(.darkGrey03, for: .normal)
         button.titleLabel?.font = .millieBody3
+        button.layer.borderColor = UIColor.darkGrey03.cgColor
+        button.layer.borderWidth = 1
         button.imageView?.contentMode = .scaleAspectFit
         button.imageEdgeInsets = UIEdgeInsets(top: 12, left: 15, bottom: 12, right: 75)
         button.layer.cornerRadius = 24
@@ -74,6 +77,8 @@ class TabBarView: UIView {
         button.setTitle("밀리로드", for: .normal)
         button.setTitleColor(.darkGrey03, for: .normal)
         button.titleLabel?.font = .millieBody3
+        button.layer.borderColor = UIColor.darkGrey03.cgColor
+        button.layer.borderWidth = 1
         button.imageView?.contentMode = .scaleAspectFit
         button.imageEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 78)
         button.layer.cornerRadius = 24
@@ -87,6 +92,8 @@ class TabBarView: UIView {
         button.setTitle("오디오북", for: .normal)
         button.setTitleColor(.darkGrey03, for: .normal)
         button.titleLabel?.font = .millieBody3
+        button.layer.borderColor = UIColor.darkGrey03.cgColor
+        button.layer.borderWidth = 1
         button.imageView?.contentMode = .scaleAspectFit
         button.imageEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 78)
         button.layer.cornerRadius = 24
@@ -107,7 +114,7 @@ class TabBarView: UIView {
     private func setupHierarchy() {
         self.backgroundColor = .milWhite
         booKStackView.addArrangedSubviews(storyButton, roadButton, audioButton)
-        self.addSubviews(feedButton, searchButton, myLibararyButton, settingButton, booKStackView, bookButton)
+        self.addSubviews(feedButton, searchButton, myLibararyButton, settingButton, bookButton, booKStackView)
     }
     
     private func setupLayout() {

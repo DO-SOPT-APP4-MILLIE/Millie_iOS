@@ -32,7 +32,7 @@ final class TodayView: UIView {
     }
     
     private func setupHierarchy() {
-        self.addSubviews(naviView, tabBarView, todayTableView)
+        self.addSubviews(naviView, todayTableView, tabBarView)
     }
     
     private func setupLayout() {
