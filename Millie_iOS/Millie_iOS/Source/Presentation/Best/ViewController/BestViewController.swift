@@ -43,6 +43,7 @@ final class BestViewController: UIViewController {
     
     private func delegate() {
         rootView.tableView.dataSource = self
+        rootView.tableView.delegate = self
     }
     
     private func setupStyle() {
@@ -85,6 +86,14 @@ final class BestViewController: UIViewController {
                 print("networkErr")
             }
         })
+    }
+}
+
+extension BestViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            self.navigationController?.pushViewController(DetailViewController(), animated: true)
+        }
     }
 }
 
