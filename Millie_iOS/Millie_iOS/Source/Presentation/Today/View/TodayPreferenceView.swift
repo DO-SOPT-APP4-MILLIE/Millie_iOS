@@ -42,6 +42,7 @@ final class TodayPreferenceView: UIView {
     
     private func setupStlye() {
         preferenceCollectionView.isScrollEnabled = false
+        self.backgroundColor = .milWhite
     }
     
     private func setupHierarchy() {

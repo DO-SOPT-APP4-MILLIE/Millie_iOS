@@ -38,6 +38,7 @@ final class TodayFavoriteView: UIView {
     }
     
     private func setupHierarchy() {
+        self.backgroundColor = .milWhite
         self.addSubviews(favoriteLabel, favoriteButton, favoriteCollectionView)
     }
     

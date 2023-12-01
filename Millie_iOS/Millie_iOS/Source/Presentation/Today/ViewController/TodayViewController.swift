@@ -20,8 +20,6 @@ final class TodayViewController: UIViewController {
         
         register()
         delegate()
-        
-        setupNavigation()
     }
     
     private func register() {
@@ -33,17 +31,6 @@ final class TodayViewController: UIViewController {
     private func delegate() {
         rootView.todayTableView.delegate = self
         rootView.todayTableView.dataSource = self
-    }
-    
-    private func setupNavigation() {
-        let logoButton = UIBarButtonItem(image: Image.todayLogo, style: .plain, target: self, action: #selector(nilTap))
-        self.navigationItem.leftBarButtonItem = logoButton
-        
-        let bellIcon = Image.todayBell.withRenderingMode(.alwaysOriginal)
-        let bellButton = UIBarButtonItem(image: bellIcon, style: .plain, target: self, action: #selector(nilTap))
-        
-        self.navigationItem.rightBarButtonItem = bellButton
-        self.navigationController?.navigationBar.tintColor = .black
     }
     
     @objc
@@ -62,6 +49,7 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TodayTableViewCell.identifier, for: indexPath) as? TodayTableViewCell else { return TodayTableViewCell() }
+        cell.setDelegate(self)
         return cell
     }
     
@@ -86,5 +74,12 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 361.0.adjusted
+    }
+}
+
+extension TodayViewController: TodayBestViewDelegate {
+    public func pushToBestViewController() {
+        let bestVC = BestViewController()
+        self.navigationController?.pushViewController(bestVC, animated: true)
     }
 }

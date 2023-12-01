@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "btn_audiobook.png",
+      "filename" : "ic_audio_fill.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "btn_audiobook@2x.png",
+      "filename" : "ic_audio_fill@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "btn_audiobook@3x.png",
+      "filename" : "ic_audio_fill@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

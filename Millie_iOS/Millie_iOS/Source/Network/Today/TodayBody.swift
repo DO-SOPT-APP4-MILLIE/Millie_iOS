@@ -20,4 +20,5 @@ struct TodayData: Codable {
     let author: String
     let completionRate: Int
     let readingTime: Int
+    let rankChange : Int?
 }

@@ -38,6 +38,7 @@ final class TodayFistView: UIView {
     }
     
     private func setupHierarchy() {
+        self.backgroundColor = .milWhite
         self.addSubviews(fistLabel, fistButton, fistCollectionView)
     }
     

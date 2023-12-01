@@ -11,6 +11,20 @@ import SnapKit
 
 final class MyLibraryView: UIView {
 
+    private let tabBarButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Image.tabBlackHome, for: .normal)
+        return button
+    }()
+    
+    private let tabBarView: TabBarView = {
+        let view = TabBarView()
+        view.bookButton.isHidden = true
+        view.booKStackView.isHidden = true
+        view.myLibararyButton.setImage(Image.tabYelloMylibrary, for: .normal)
+        return view
+    }()
+    
     public let addButton: UIButton = {
         let button = UIButton()
         button.setImage(Image.add, for: .normal)
@@ -157,7 +171,7 @@ final class MyLibraryView: UIView {
     }
     
     private func setupHierarchy() {
-        self.addSubview(scrollView)
+        self.addSubviews(scrollView, tabBarView)
         scrollView.addSubview(contentView)
         contentView.addSubviews(profileImageView,
                                 nicknameLabel,
@@ -175,6 +189,7 @@ final class MyLibraryView: UIView {
                                 searchButton,
                                 kebabButton,
                                 shelfCategoryStackView)
+        tabBarView.addSubview(tabBarButton)
     }
     
     private func setupLayout() {
@@ -274,6 +289,18 @@ final class MyLibraryView: UIView {
             $0.top.equalTo(kebabButton.snp.bottom).offset(22)
             $0.leading.trailing.equalToSuperview().inset(24)
             $0.bottom.equalToSuperview()
+        }
+        
+        tabBarView.snp.makeConstraints() {
+            $0.bottom.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(92)
+            
+            tabBarButton.snp.makeConstraints() {
+                $0.top.equalToSuperview().inset(7)
+                $0.centerX.equalToSuperview()
+                $0.size.equalTo(53)
+            }
         }
     }
 }
