@@ -23,6 +23,8 @@ final class BestViewController: UIViewController {
         delegate()
 
         setupStyle()
+        
+        getBestBooks()
     }
     
     private func target() {
@@ -59,6 +61,30 @@ final class BestViewController: UIViewController {
     
     @objc func upButtonDidTap() {
         rootView.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+    
+    private func getBestBooks() {
+        BestAPI.shared.getBestBooks(completion: { (response) in
+            switch response {
+            case .success(let data):
+                if let data = data as? [BestModel] {
+                    self.rootView.booksList = data
+                    self.rootView.countLabel.text = "총 \(data.count)권"
+                    self.rootView.tableView.snp.makeConstraints {
+                        $0.height.equalTo(data.count * 128 - 8)
+                    }
+                    self.rootView.tableView.reloadData()
+                }
+            case .requestErr(let code):
+                print("requestErr", code)
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkErr:
+                print("networkErr")
+            }
+        })
     }
 }
 

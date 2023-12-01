@@ -34,7 +34,7 @@ class DetailPopularView: UIView {
         let label = UILabel()
         label.text = "이 책이 속한 경제경영 분야\n역시 20대 여성이 가장 즐겨보고 있어요."
         label.textColor = .darkGrey03
-        label.font = .spoqaHanSanNeo(.bold, size: 16)
+        label.font = .millieBody4
         label.textAlignment = .center
         label.numberOfLines = 2
         
@@ -50,12 +50,17 @@ class DetailPopularView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setupStyle()
         setupHierarchy()
         setupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupStyle() {
+        popularDescriptionLabel.partFontChange(targetStrings: ["경제경영 분야", "20대 여성"], font: .millieSubHeader4, textColor: .darkGrey03)
     }
     
     private func setupHierarchy() {

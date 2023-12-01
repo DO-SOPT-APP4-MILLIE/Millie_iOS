@@ -17,6 +17,10 @@ public enum Image {
     static let arrowDown = UIImage(named: "ic_arrow_down")!
     static let arrowRight2 = UIImage(named: "ic_arrow2_right")!
     
+    //Rank
+    static let rankUp = UIImage(named: "ic_rank_up")!
+    static let rankDown = UIImage(named: "ic_rank_down")!
+    
     //Audio
     static let audioLine = UIImage(named: "ic_audio_line")!
     static let audioFill = UIImage(named: "ic_audio_fill")!

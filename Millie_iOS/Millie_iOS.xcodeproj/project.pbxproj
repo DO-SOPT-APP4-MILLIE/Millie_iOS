@@ -68,6 +68,9 @@
 		3CBFE3C82B0DBD520057A3F5 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3C72B0DBD520057A3F5 /* UIStackView+.swift */; };
 		3CBFE3CA2B0DBD670057A3F5 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */; };
 		3CBFE3D22B0DBE310057A3F5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */; };
+		3CD01B3F2B161C0D0012C85E /* DetailToastMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD01B3E2B161C0D0012C85E /* DetailToastMessageView.swift */; };
+		3CF9DD902B175E3B00EC5D08 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9DD8F2B175E3B00EC5D08 /* DetailService.swift */; };
+		3CF9DD922B175E7300EC5D08 /* DetailBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9DD912B175E7300EC5D08 /* DetailBody.swift */; };
 		CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B98C52B0DA34900CACFA1 /* BestView.swift */; };
 		CD1BDA9D2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BDA9C2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift */; };
 		CD336F292B11C2A00059565B /* DetailPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336F282B11C2A00059565B /* DetailPopupViewController.swift */; };
@@ -83,12 +86,15 @@
 		CD38E0622B0F70F9001C979C /* MyLibraryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E0612B0F70F9001C979C /* MyLibraryBookView.swift */; };
 		CD38E0672B0F7D40001C979C /* MyLibraryShelfCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E0662B0F7D3F001C979C /* MyLibraryShelfCategoryView.swift */; };
 		CD38E0692B0F7D7E001C979C /* MyLibraryShelfCategoryStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD38E0682B0F7D7E001C979C /* MyLibraryShelfCategoryStackView.swift */; };
-		CD4DF3702B0D05F700FA2EC7 /* BooksDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DF36F2B0D05F700FA2EC7 /* BooksDummy.swift */; };
 		CD7925AE2B0C6E0500C4823D /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925AD2B0C6E0500C4823D /* BestViewController.swift */; };
 		CD7925B12B0C810800C4823D /* BestCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925B02B0C810800C4823D /* BestCategoryView.swift */; };
 		CD7925B32B0C842900C4823D /* BestCategoryStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925B22B0C842900C4823D /* BestCategoryStackView.swift */; };
 		CD7925BA2B0CBBD000C4823D /* BestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925B92B0CBBD000C4823D /* BestModel.swift */; };
 		CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7925BE2B0CC31300C4823D /* BestTableViewCell.swift */; };
+		CDDA608D2B17770E00AB8DF7 /* BestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA608C2B17770E00AB8DF7 /* BestService.swift */; };
+		CDDA608F2B17778C00AB8DF7 /* BestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA608E2B17778C00AB8DF7 /* BestAPI.swift */; };
+		CDDA60912B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA60902B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift */; };
+		CDDA60932B17785F00AB8DF7 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA60922B17785F00AB8DF7 /* GenericResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +156,9 @@
 		3CBFE3C72B0DBD520057A3F5 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		3CBFE3C92B0DBD670057A3F5 /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3CD01B3E2B161C0D0012C85E /* DetailToastMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailToastMessageView.swift; sourceTree = "<group>"; };
+		3CF9DD8F2B175E3B00EC5D08 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
+		3CF9DD912B175E7300EC5D08 /* DetailBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBody.swift; sourceTree = "<group>"; };
 		CD0B98C52B0DA34900CACFA1 /* BestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestView.swift; sourceTree = "<group>"; };
 		CD1BDA9C2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopupMyFavoriteView.swift; sourceTree = "<group>"; };
 		CD336F282B11C2A00059565B /* DetailPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopupViewController.swift; sourceTree = "<group>"; };
@@ -165,12 +174,15 @@
 		CD38E0612B0F70F9001C979C /* MyLibraryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryBookView.swift; sourceTree = "<group>"; };
 		CD38E0662B0F7D3F001C979C /* MyLibraryShelfCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryShelfCategoryView.swift; sourceTree = "<group>"; };
 		CD38E0682B0F7D7E001C979C /* MyLibraryShelfCategoryStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryShelfCategoryStackView.swift; sourceTree = "<group>"; };
-		CD4DF36F2B0D05F700FA2EC7 /* BooksDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDummy.swift; sourceTree = "<group>"; };
 		CD7925AD2B0C6E0500C4823D /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		CD7925B02B0C810800C4823D /* BestCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestCategoryView.swift; sourceTree = "<group>"; };
 		CD7925B22B0C842900C4823D /* BestCategoryStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestCategoryStackView.swift; sourceTree = "<group>"; };
 		CD7925B92B0CBBD000C4823D /* BestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestModel.swift; sourceTree = "<group>"; };
 		CD7925BE2B0CC31300C4823D /* BestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestTableViewCell.swift; sourceTree = "<group>"; };
+		CDDA608C2B17770E00AB8DF7 /* BestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestService.swift; sourceTree = "<group>"; };
+		CDDA608E2B17778C00AB8DF7 /* BestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestAPI.swift; sourceTree = "<group>"; };
+		CDDA60902B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
+		CDDA60922B17785F00AB8DF7 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,13 +230,6 @@
 			children = (
 			);
 			path = MyLibrary;
-			sourceTree = "<group>";
-		};
-		2C7D86B92B15B8B9002BF09F /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		2C7D86BA2B15B8BE002BF09F /* Best */ = {
@@ -356,11 +361,13 @@
 		2CA96A992B0A7E67007074F8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CDDA608B2B17770600AB8DF7 /* Best */,
 				2C7D86BB2B15B8C3002BF09F /* Today */,
-				2C7D86BA2B15B8BE002BF09F /* Best */,
-				2C7D86B92B15B8B9002BF09F /* Detail */,
+				3CF9DD8E2B175E2D00EC5D08 /* Detail */,
 				2C7D86B82B15B8A7002BF09F /* MyLibrary */,
 				2C7D86BC2B15D148002BF09F /* NetworkResult.swift */,
+				CDDA60902B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift */,
+				CDDA60922B17785F00AB8DF7 /* GenericResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -430,6 +437,7 @@
 				3CA78DAA2B0E38F500EE3409 /* DetailMoreDescriptionView.swift */,
 				3CA78DAC2B0E393A00EE3409 /* DetailBottomView.swift */,
 				3CA78DB02B0E52E900EE3409 /* DetailDividerView.swift */,
+				3CD01B3E2B161C0D0012C85E /* DetailToastMessageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,6 +448,15 @@
 				3CBFE3D12B0DBE310057A3F5 /* DetailViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3CF9DD8E2B175E2D00EC5D08 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3CF9DD8F2B175E3B00EC5D08 /* DetailService.swift */,
+				3CF9DD912B175E7300EC5D08 /* DetailBody.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		CD336F252B11C2610059565B /* DetailPopup */ = {
@@ -540,7 +557,6 @@
 		CD7925B42B0CBB3600C4823D /* BestModel */ = {
 			isa = PBXGroup;
 			children = (
-				CD4DF36F2B0D05F700FA2EC7 /* BooksDummy.swift */,
 				CD7925B92B0CBBD000C4823D /* BestModel.swift */,
 			);
 			path = BestModel;
@@ -552,6 +568,15 @@
 				CD7925BE2B0CC31300C4823D /* BestTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CDDA608B2B17770600AB8DF7 /* Best */ = {
+			isa = PBXGroup;
+			children = (
+				CDDA608C2B17770E00AB8DF7 /* BestService.swift */,
+				CDDA608E2B17778C00AB8DF7 /* BestAPI.swift */,
+			);
+			path = Best;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -651,6 +676,7 @@
 				3CA78DA72B0E388500EE3409 /* DetailPopularView.swift in Sources */,
 				CD7925BA2B0CBBD000C4823D /* BestModel.swift in Sources */,
 				CD38E0552B0F6257001C979C /* MyLibraryShelfStackView.swift in Sources */,
+				CDDA60932B17785F00AB8DF7 /* GenericResponse.swift in Sources */,
 				CD38E04D2B0F4F87001C979C /* MyLibraryViewController.swift in Sources */,
 				2C03C6032B16332100A6979F /* TodayBody.swift in Sources */,
 				CD38E0512B0F5A67001C979C /* MyLibraryFollowView.swift in Sources */,
@@ -658,7 +684,8 @@
 				2C7D86BD2B15D148002BF09F /* NetworkResult.swift in Sources */,
 				2CD28DD52B124C0C00E4733C /* TodayOriginalTagCollectionViewCell.swift in Sources */,
 				CD0B98C62B0DA34900CACFA1 /* BestView.swift in Sources */,
-				2CD28DDB2B12546D00E4733C /* TodayDummy.swift in Sources */,
+				2CD28DDB2B12546D00E4733C /* TodayOriginalTagDummy.swift in Sources */,
+				CDDA60912B1777FD00AB8DF7 /* MoyaLoggerPlugin.swift in Sources */,
 				CD7925B32B0C842900C4823D /* BestCategoryStackView.swift in Sources */,
 				2CD28DCF2B11C8E200E4733C /* TodayHeaderView.swift in Sources */,
 				2CA96AB02B0A8590007074F8 /* UIImageView+.swift in Sources */,
@@ -673,6 +700,7 @@
 				2C140B1A2B0ED6D9006ECA2C /* TodayMonthlyView.swift in Sources */,
 				2CA96A822B0A7D00007074F8 /* TodayViewController.swift in Sources */,
 				2C140B222B0EE199006ECA2C /* TodayPreferenceView.swift in Sources */,
+				3CD01B3F2B161C0D0012C85E /* DetailToastMessageView.swift in Sources */,
 				2C140B022B0E124C006ECA2C /* TodayTableViewCell.swift in Sources */,
 				2C140B242B0EE1AD006ECA2C /* TodayPreferenceCollectionViewCell.swift in Sources */,
 				CD7925B12B0C810800C4823D /* BestCategoryView.swift in Sources */,
@@ -683,7 +711,6 @@
 				2CCC61A52B13963E00AD4916 /* TabBarView.swift in Sources */,
 				2CD28DD92B1251E300E4733C /* MillieTagView.swift in Sources */,
 				2CD28DD12B11CF2800E4733C /* TodayFooterView.swift in Sources */,
-				CD4DF3702B0D05F700FA2EC7 /* BooksDummy.swift in Sources */,
 				CD38E0532B0F5D6C001C979C /* MyLibraryBookmarkView.swift in Sources */,
 				3CBFE3D22B0DBE310057A3F5 /* DetailViewController.swift in Sources */,
 				CD7925B12B0C810800C4823D /* BestCategoryView.swift in Sources */,
@@ -698,16 +725,20 @@
 				2C140B142B0E7F55006ECA2C /* TodayFistView.swift in Sources */,
 				CD1BDA9D2B14AAEB00D86FEA /* DetailPopupMyFavoriteView.swift in Sources */,
 				2CA96AB62B0A8A11007074F8 /* UIView+.swift in Sources */,
+				3CF9DD902B175E3B00EC5D08 /* DetailService.swift in Sources */,
 				2C140B052B0E1E13006ECA2C /* TodayFavoriteView.swift in Sources */,
 				2C3BC28B2B178B9B00D3E0C0 /* TodayNavigationView.swift in Sources */,
 				2CA96A7E2B0A7D00007074F8 /* AppDelegate.swift in Sources */,
 				2CA96A802B0A7D00007074F8 /* SceneDelegate.swift in Sources */,
 				3CA78DA32B0E384900EE3409 /* DetailBookDescriptionView.swift in Sources */,
+				CDDA608F2B17778C00AB8DF7 /* BestAPI.swift in Sources */,
 				3CA78DAD2B0E393A00EE3409 /* DetailBottomView.swift in Sources */,
 				2C7D86AF2B158B3E002BF09F /* Config.swift in Sources */,
 				3CBFE3C82B0DBD520057A3F5 /* UIStackView+.swift in Sources */,
+				3CF9DD922B175E7300EC5D08 /* DetailBody.swift in Sources */,
 				2C140B002B0E075F006ECA2C /* TodayView.swift in Sources */,
 				CD7925BF2B0CC31300C4823D /* BestTableViewCell.swift in Sources */,
+				CDDA608D2B17770E00AB8DF7 /* BestService.swift in Sources */,
 				CD38E05E2B0F6DEA001C979C /* MyLibraryDummy.swift in Sources */,
 				CD38E0692B0F7D7E001C979C /* MyLibraryShelfCategoryStackView.swift in Sources */,
 				CD336F292B11C2A00059565B /* DetailPopupViewController.swift in Sources */,
